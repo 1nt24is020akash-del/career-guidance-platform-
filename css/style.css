@@ -119,30 +119,9 @@ img {
   padding-right: 1.5rem;
 }
 
-/* --- Subtle Prototype Notice Banner --- */
+/* --- Prototype Notice Banner (Removed) --- */
 .prototype-banner {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 0.45rem 1rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-  position: relative;
-  z-index: 100;
-  transition: background-color var(--transition-normal), border-color var(--transition-normal);
-}
-.prototype-pill {
-  background: var(--soft-blue);
-  color: var(--primary);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.18rem 0.55rem;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  display: none !important;
 }
 
 /* --- Grid Systems --- */
