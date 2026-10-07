@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerNova — Smarter Career Discovery &amp; Intelligent Job Matching</title>
+  <title>NEXORA — AI Career Intelligence & Opportunity Matching</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="assets/js/theme.js"></script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -29,11 +30,23 @@
     <header class="navbar">
       <div class="container navbar-inner">
         <!-- Left: Brand Logo -->
-        <a href="index.html" class="nav-logo">
+        <a href="index.html" class="nav-logo" aria-label="NEXORA Home">
           <div class="nav-logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg viewBox="0 0 36 36" fill="none">
+              <defs>
+                <linearGradient id="nexoraGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2563EB"/>
+                  <stop offset="45%" stop-color="#06B6D4"/>
+                  <stop offset="100%" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+              <path class="nexora-draw-n" d="M 8.5 27.5 L 8.5 8.5" stroke="url(#nexoraGrad)" stroke-width="3.5" stroke-linecap="round"/>
+              <path class="nexora-draw-n" d="M 8.5 9.5 L 23.5 26.5 L 23.5 9.5" stroke="url(#nexoraGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="nexora-draw-arrow" d="M 23.5 9.5 L 28.5 4.5 M 23.5 4.5 L 28.5 4.5 L 28.5 9.5" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="nexora-glow-dot" cx="28.5" cy="4.5" r="1.5" fill="#FFFFFF"/>
+            </svg>
           </div>
-          Career<span>Nova</span>
+          <span class="nav-logo-text">NEX<span class="brand-accent">ORA</span><span class="brand-sparkle">✦</span></span>
         </a>
 
         <!-- Center: Desktop Navigation Links -->
@@ -204,9 +217,9 @@
       <section class="section-py" style="background: var(--bg-secondary);">
         <div class="container">
           <div class="section-header">
-            <span class="section-tag">Why Choose CareerNova</span>
+            <span class="section-tag">Why Choose NEXORA</span>
             <h2>Architected for Accelerated Professional Growth</h2>
-            <p>Traditional job portals leave students overwhelmed. CareerNova replaces guesswork with structured progression.</p>
+            <p>Traditional job portals leave students overwhelmed. NEXORA replaces guesswork with structured progression.</p>
           </div>
 
           <div class="grid-3">
@@ -248,7 +261,7 @@
         <div class="container">
           <div class="section-header">
             <span class="section-tag">Guided Progression</span>
-            <h2>How CareerNova Works</h2>
+            <h2>How NEXORA Works</h2>
             <p>Four systematic steps designed to take you from uncertain student to career-ready specialist.</p>
           </div>
 
@@ -534,14 +547,14 @@
           <div class="section-header">
             <span class="section-tag">Real Success</span>
             <h2>Trusted by Ambitious Candidates</h2>
-            <p>Illustrative testimonials from students and career pivoters who accelerated their trajectory with CareerNova.</p>
+            <p>Illustrative testimonials from students and career pivoters who accelerated their trajectory with NEXORA.</p>
           </div>
 
           <div class="grid-3">
             <div class="card" style="padding: 2rem; display: flex; flex-direction: column;">
               <div style="color: #F59E0B; margin-bottom: 0.75rem;">★★★★★</div>
               <p style="font-style: italic; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1;">
-                "CareerNova removed the uncertainty from preparing for software engineer interviews. The roadmaps gave me a concrete week-by-week curriculum."
+                "NEXORA removed the uncertainty from preparing for software engineer interviews. The roadmaps gave me a concrete week-by-week curriculum."
               </p>
               <div style="display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" style="width: 42px; height: 42px; border-radius: var(--radius-full); object-fit: cover;">
@@ -589,7 +602,7 @@
           <div class="section-header">
             <span class="section-tag">Frequently Asked Questions</span>
             <h2>Common Questions Answered</h2>
-            <p>Learn more about how CareerNova computes compatibility scores and organizes roadmaps.</p>
+            <p>Learn more about how NEXORA computes compatibility scores and organizes roadmaps.</p>
           </div>
 
           <details class="faq-item" open>
@@ -616,7 +629,7 @@
           <details class="faq-item">
             <summary>How does the CSS-only theme switcher function?</summary>
             <div class="faq-answer">
-              CareerNova utilizes modern CSS pseudo-classes and CSS variables, allowing immediate toggling between Light and Dark mode directly within your browser without JavaScript.
+              NEXORA utilizes modern CSS pseudo-classes and CSS variables, allowing immediate toggling between Light and Dark mode directly within your browser without JavaScript.
             </div>
           </details>
         </div>
@@ -647,12 +660,24 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="index.html" class="nav-logo">
-              <div class="nav-logo-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              Career<span>Nova</span>
-            </a>
+            <a href="index.html" class="nav-logo" aria-label="NEXORA Home">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 36 36" fill="none">
+              <defs>
+                <linearGradient id="nexoraGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2563EB"/>
+                  <stop offset="45%" stop-color="#06B6D4"/>
+                  <stop offset="100%" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+              <path class="nexora-draw-n" d="M 8.5 27.5 L 8.5 8.5" stroke="url(#nexoraGrad)" stroke-width="3.5" stroke-linecap="round"/>
+              <path class="nexora-draw-n" d="M 8.5 9.5 L 23.5 26.5 L 23.5 9.5" stroke="url(#nexoraGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="nexora-draw-arrow" d="M 23.5 9.5 L 28.5 4.5 M 23.5 4.5 L 28.5 4.5 L 28.5 9.5" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="nexora-glow-dot" cx="28.5" cy="4.5" r="1.5" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">NEX<span class="brand-accent">ORA</span><span class="brand-sparkle">✦</span></span>
+        </a>
             <p>
               A modern, intelligent career guidance and job matching platform built strictly with pure HTML5 and CSS3.
             </p>
@@ -696,7 +721,7 @@
         </div>
 
         <div class="footer-bottom">
-          <div>&copy; 2026 CareerNova Platform. Built exclusively with HTML5 &amp; CSS3.</div>
+          <div>&copy; 2026 NEXORA Platform. Built exclusively with HTML5 &amp; CSS3.</div>
           <div class="footer-legal-links">
             <a href="about.html">Architecture</a>
             <a href="about.html">Privacy &amp; Ethics</a>

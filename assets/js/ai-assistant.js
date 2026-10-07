@@ -1,5 +1,5 @@
 /**
- * CareerNova — NovaAdvisor AI Assistant Engine
+ * NEXORA — NovaAdvisor AI Assistant Engine
  * Real-time conversational interface with prompt pill integration,
  * typing indicators, contextual responses, and session persistence.
  */

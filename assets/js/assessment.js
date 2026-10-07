@@ -1,5 +1,5 @@
 /**
- * CareerNova — Skill Assessment & Simulator Engine
+ * NEXORA — Skill Assessment & Simulator Engine
  * Powers track filtering on skill-assessment.html and
  * full interactive quiz stepper, timer, scoring, and score saving on assessment-demo.html.
  */
@@ -120,7 +120,7 @@
 
     // Display past score badge if exists
     try {
-      const savedScore = localStorage.getItem('careernova-assessment');
+      const savedScore = localStorage.getItem('nexora-assessment');
       if (savedScore) {
         const data = JSON.parse(savedScore);
         const banner = document.querySelector('.card[style*="linear-gradient"]');
@@ -299,10 +299,10 @@
         status: isPassed ? 'Verified Expert' : 'Candidate',
         completedAt: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
       };
-      localStorage.setItem('careernova-assessment', JSON.stringify(resultData));
+      localStorage.setItem('nexora-assessment', JSON.stringify(resultData));
 
-      if (window.CareerNovaPortal) {
-        window.CareerNovaPortal.toast(`Assessment Completed! You scored ${scorePct}%`, 'success');
+      if (window.NEXORAPortal) {
+        window.NEXORAPortal.toast(`Assessment Completed! You scored ${scorePct}%`, 'success');
       }
 
       // Render Result Card in place

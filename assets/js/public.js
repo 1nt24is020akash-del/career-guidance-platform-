@@ -1,5 +1,5 @@
 /**
- * CareerNova — Public Pages Interactive Module
+ * NEXORA — Public Pages Interactive Module
  * Handles mobile navbar toggle, simulated auth actions for demo login/register,
  * and seamless redirection to dashboard.
  */
@@ -25,14 +25,14 @@
         }
 
         // Store active session
-        localStorage.setItem('careernova-auth', 'true');
+        localStorage.setItem('nexora-auth', 'true');
         const profile = {
           name: profileName,
           email: emailInput ? emailInput.value : 'alex.rivera@stanford.edu',
           school: 'Stanford University',
           targetRole: 'AI / ML Engineer'
         };
-        localStorage.setItem('careernova-profile', JSON.stringify(profile));
+        localStorage.setItem('nexora-profile', JSON.stringify(profile));
 
         // Toast feedback
         const btn = form.querySelector('button[type="submit"]');

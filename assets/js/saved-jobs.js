@@ -1,5 +1,5 @@
 /**
- * CareerNova — Saved Jobs Module
+ * NEXORA — Saved Jobs Module
  * Manages rendering of bookmarked jobs from localStorage,
  * provides removal actions, empty state handling, and filter tabs.
  */
@@ -15,7 +15,7 @@
     function renderSavedJobs(filter = 'all') {
       if (!listContainer) return;
 
-      const savedJobs = window.CareerNovaPortal ? window.CareerNovaPortal.getSavedJobs() : [];
+      const savedJobs = window.NEXORAPortal ? window.NEXORAPortal.getSavedJobs() : [];
 
       // Filter
       let displayed = savedJobs;
@@ -109,8 +109,8 @@
         const removeBtn = e.target.closest('.btn-remove-saved');
         if (removeBtn) {
           const jobId = removeBtn.getAttribute('data-job-id');
-          if (window.CareerNovaPortal) {
-            window.CareerNovaPortal.toggleSaveJob(jobId);
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.toggleSaveJob(jobId);
             renderSavedJobs();
           }
           return;
@@ -119,10 +119,10 @@
         const applyBtn = e.target.closest('.btn-apply-saved');
         if (applyBtn) {
           const jobId = applyBtn.getAttribute('data-job-id');
-          const savedJobs = window.CareerNovaPortal ? window.CareerNovaPortal.getSavedJobs() : [];
+          const savedJobs = window.NEXORAPortal ? window.NEXORAPortal.getSavedJobs() : [];
           const job = savedJobs.find(j => String(j.id) === String(jobId));
-          if (job && window.CareerNovaPortal) {
-            window.CareerNovaPortal.applyJob({
+          if (job && window.NEXORAPortal) {
+            window.NEXORAPortal.applyJob({
               id: 'app-' + Date.now(),
               title: job.title,
               company: job.company,

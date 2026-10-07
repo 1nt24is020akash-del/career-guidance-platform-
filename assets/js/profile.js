@@ -1,5 +1,5 @@
 /**
- * CareerNova — Candidate Profile Module
+ * NEXORA — Candidate Profile Module
  * Handles candidate profile editing, dynamic skill tag manager,
  * and synchronizing profile state across portal headers and sidebar.
  */
@@ -14,7 +14,7 @@
     const skillContainer = document.querySelector('.skill-tags-wrap, div[style*="gap: 0.5rem; flex-wrap: wrap"]');
 
     // Load initial profile data
-    let profile = window.CareerNovaPortal ? window.CareerNovaPortal.getProfile() : null;
+    let profile = window.NEXORAPortal ? window.NEXORAPortal.getProfile() : null;
 
     if (profile && editForm) {
       const nameInput = editForm.querySelector('input[type="text"]');
@@ -42,7 +42,7 @@
         });
 
         // Save to localStorage
-        localStorage.setItem('careernova-profile', JSON.stringify(updated));
+        localStorage.setItem('nexora-profile', JSON.stringify(updated));
 
         // Update DOM in real-time
         if (profileBannerName && updated.name) {
@@ -52,8 +52,8 @@
           sidebarName.textContent = updated.name;
         }
 
-        if (window.CareerNovaPortal) {
-          window.CareerNovaPortal.toast('Candidate profile updated successfully!', 'success');
+        if (window.NEXORAPortal) {
+          window.NEXORAPortal.toast('Candidate profile updated successfully!', 'success');
         }
       });
     }
@@ -66,8 +66,8 @@
         const badge = e.target.closest('.badge');
         if (badge && e.altKey) {
           badge.remove();
-          if (window.CareerNovaPortal) {
-            window.CareerNovaPortal.toast(`Skill removed`, 'info');
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.toast(`Skill removed`, 'info');
           }
         }
       });

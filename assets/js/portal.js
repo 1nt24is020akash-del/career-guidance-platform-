@@ -1,5 +1,5 @@
 /**
- * CareerNova — Unified Student Portal Core Engine
+ * NEXORA — Unified Student Portal Core Engine
  * Manages dynamic navigation highlights, responsive drawer, notifications,
  * profile sync, and persistent state across all 15 portal pages.
  */
@@ -9,13 +9,13 @@
 
   // Local storage keys
   var STORAGE_KEYS = {
-    theme: 'careernova-theme',
-    profile: 'careernova-profile',
-    savedJobs: 'careernova-saved-jobs',
-    applications: 'careernova-applications',
-    assessment: 'careernova-assessment',
-    roadmap: 'careernova-roadmap',
-    notifications: 'careernova-notifications'
+    theme: 'nexora-theme',
+    profile: 'nexora-profile',
+    savedJobs: 'nexora-saved-jobs',
+    applications: 'nexora-applications',
+    assessment: 'nexora-assessment',
+    roadmap: 'nexora-roadmap',
+    notifications: 'nexora-notifications'
   };
 
   // Safe LocalStorage helpers
@@ -410,8 +410,8 @@
     initPortal();
   }
 
-  // Expose global CareerNova Portal API
-  window.CareerNovaPortal = {
+  // Expose global NEXORA Portal API
+  window.NEXORAPortal = {
     KEYS: STORAGE_KEYS,
     getStorage: getStorage,
     setStorage: setStorage,
@@ -474,5 +474,9 @@
     }
   };
 
+  // Expose Nexora Portal API
+  window.NexoraPortal = window.NEXORAPortal;
+
 })();
+
 

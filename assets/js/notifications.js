@@ -1,5 +1,5 @@
 /**
- * CareerNova — Notification Center Module
+ * NEXORA — Notification Center Module
  * Handles filter pills, "Mark All Read" action, and clearing unread badges.
  */
 
@@ -28,8 +28,8 @@
           el.style.display = 'none';
         });
 
-        if (window.CareerNovaPortal) {
-          window.CareerNovaPortal.toast('All notifications marked as read', 'success');
+        if (window.NEXORAPortal) {
+          window.NEXORAPortal.toast('All notifications marked as read', 'success');
         }
       });
     }

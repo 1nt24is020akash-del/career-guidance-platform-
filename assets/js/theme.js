@@ -1,18 +1,18 @@
 /**
- * CareerNova — Unified Global Theme Engine
+ * NEXORA — Unified Global Theme Engine
  * Rock-solid persistence across all pages, reloads, and browser sessions
- * Primary key: "careernova-theme" in localStorage
+ * Primary key: "nexora-theme" in localStorage
  */
 
 (function () {
   'use strict';
 
-  var THEME_STORAGE_KEY = 'careernova-theme';
+  var THEME_STORAGE_KEY = 'nexora-theme';
 
   // 1. Synchronous initialization function (runs immediately)
   function initTheme() {
     try {
-      var savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+      var savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || localStorage.getItem('nexora-theme');
       if (savedTheme === 'dark' || savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', savedTheme);
       } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -100,12 +100,15 @@
   }
 
   // Expose global API
-  window.CareerNovaTheme = {
+  window.NEXORATheme = {
     get: function () {
       return document.documentElement.getAttribute('data-theme') || 'light';
     },
     set: applyTheme,
     toggle: toggleTheme
   };
+
+  // Expose Nexora Theme API
+  window.NexoraTheme = window.NEXORATheme;
 
 })();

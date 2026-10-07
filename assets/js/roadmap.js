@@ -1,5 +1,5 @@
 /**
- * CareerNova — Learning Roadmap Interactive Module
+ * NEXORA — Learning Roadmap Interactive Module
  * Tab switching across tracks (Full-Stack, AI, Data Science, Cyber, Cloud),
  * search filtering, and milestone progress tracking.
  */
@@ -18,8 +18,8 @@
         this.style.borderColor = 'var(--primary-accent)';
         
         const text = this.textContent.trim();
-        if (window.CareerNovaPortal) {
-          window.CareerNovaPortal.toast(`Switched track to ${text}`, 'info');
+        if (window.NEXORAPortal) {
+          window.NEXORAPortal.toast(`Switched track to ${text}`, 'info');
         }
       });
     });

@@ -1,5 +1,5 @@
 /**
- * CareerNova — Job Opportunities & Search Module
+ * NEXORA — Job Opportunities & Search Module
  * Handles dynamic filtering, real-time search, company quick chips,
  * and persistent job bookmarking (Save / Unsave).
  */
@@ -24,7 +24,7 @@
 
     // Update bookmark button states based on saved jobs in localStorage
     function updateBookmarkButtons() {
-      const savedJobs = window.CareerNovaPortal ? window.CareerNovaPortal.getSavedJobs() : [];
+      const savedJobs = window.NEXORAPortal ? window.NEXORAPortal.getSavedJobs() : [];
       const savedIds = new Set(savedJobs.map(j => String(j.id)));
 
       jobArticles.forEach(article => {
@@ -135,8 +135,8 @@
           savedAt: new Date().toISOString()
         };
 
-        if (window.CareerNovaPortal) {
-          const isSaved = window.CareerNovaPortal.toggleSaveJob(jobObj);
+        if (window.NEXORAPortal) {
+          const isSaved = window.NEXORAPortal.toggleSaveJob(jobObj);
           updateBookmarkButtons();
         }
       }
@@ -149,8 +149,8 @@
           const title = article.querySelector('h3, h4')?.textContent.trim() || 'Software Engineer';
           const company = article.querySelector('.job-company-identity strong, .company-hire-meta h4')?.textContent.trim() || 'Tech Partner';
           
-          if (window.CareerNovaPortal) {
-            window.CareerNovaPortal.applyJob({
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.applyJob({
               id: 'app-' + Date.now(),
               title: title,
               company: company,

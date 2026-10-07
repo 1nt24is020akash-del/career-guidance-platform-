@@ -1,5 +1,5 @@
 /**
- * CareerNova — Interactive Resume Builder Engine
+ * NEXORA — Interactive Resume Builder Engine
  * Real-time two-way DOM synchronization between form inputs and live sheet preview,
  * template style switching, and print triggering.
  */
@@ -104,8 +104,8 @@
         syncEdu();
         syncProjects();
         syncSkills();
-        if (window.CareerNovaPortal) {
-          window.CareerNovaPortal.toast('Resume preview updated live!', 'success');
+        if (window.NEXORAPortal) {
+          window.NEXORAPortal.toast('Resume preview updated live!', 'success');
         }
       });
     }
@@ -134,8 +134,8 @@
             resumeSheet.style.borderTop = '4px solid var(--primary-accent)';
           }
         }
-        if (window.CareerNovaPortal) {
-          window.CareerNovaPortal.toast(`Switched template to ${this.textContent.trim()}`, 'info');
+        if (window.NEXORAPortal) {
+          window.NEXORAPortal.toast(`Switched template to ${this.textContent.trim()}`, 'info');
         }
       });
     });

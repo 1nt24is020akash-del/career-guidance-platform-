@@ -1,5 +1,5 @@
 /**
- * CareerNova — Career Explorer Module
+ * NEXORA — Career Explorer Module
  * Real-time career path filtering, search, and category switching.
  */
 

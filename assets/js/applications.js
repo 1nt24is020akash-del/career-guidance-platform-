@@ -1,5 +1,5 @@
 /**
- * CareerNova — Application Tracking Module
+ * NEXORA — Application Tracking Module
  * Hydrates candidate applications from localStorage,
  * provides live filtering, status tracking, and withdrawal actions.
  */
@@ -14,7 +14,7 @@
     function renderApplications(filterText = '') {
       if (!tableBody) return;
 
-      const apps = window.CareerNovaPortal ? window.CareerNovaPortal.getApplications() : [];
+      const apps = window.NEXORAPortal ? window.NEXORAPortal.getApplications() : [];
       const q = filterText.toLowerCase().trim();
 
       const filtered = apps.filter(app => {
@@ -111,11 +111,11 @@
         const btn = e.target.closest('.btn-withdraw-app');
         if (btn) {
           const appId = btn.getAttribute('data-app-id');
-          let apps = window.CareerNovaPortal ? window.CareerNovaPortal.getApplications() : [];
+          let apps = window.NEXORAPortal ? window.NEXORAPortal.getApplications() : [];
           apps = apps.filter(a => String(a.id) !== String(appId));
-          localStorage.setItem('careernova-applications', JSON.stringify(apps));
-          if (window.CareerNovaPortal) {
-            window.CareerNovaPortal.toast('Application withdrawn', 'info');
+          localStorage.setItem('nexora-applications', JSON.stringify(apps));
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.toast('Application withdrawn', 'info');
           }
           renderApplications();
         }

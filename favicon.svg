@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <rect width="36" height="36" rx="9" fill="#0B132B"/>
+  <defs>
+    <linearGradient id="nexoraFavGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <!-- Left Pillar -->
+  <path d="M 8.5 27.5 L 8.5 8.5" stroke="url(#nexoraFavGrad)" stroke-width="3.8" stroke-linecap="round"/>
+  <!-- Diagonal and Ascending Pillar -->
+  <path d="M 8.5 9.5 L 23.5 26.5 L 23.5 9.5" stroke="url(#nexoraFavGrad)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Upward Career Growth Vector ↗ -->
+  <path d="M 23.5 9.5 L 28.5 4.5 M 23.5 4.5 L 28.5 4.5 L 28.5 9.5" stroke="#38BDF8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28.5" cy="4.5" r="1.5" fill="#FFFFFF"/>
+</svg>

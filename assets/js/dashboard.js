@@ -1,5 +1,5 @@
 /**
- * CareerNova — Student Dashboard Module
+ * NEXORA — Student Dashboard Module
  * Dynamically hydrates overview metrics, readiness gauge, and candidate status.
  */
 
@@ -9,10 +9,10 @@
   document.addEventListener('DOMContentLoaded', function () {
     // Read cached state
     try {
-      const savedJobs = window.CareerNovaPortal ? window.CareerNovaPortal.getSavedJobs() : [];
-      const apps = window.CareerNovaPortal ? window.CareerNovaPortal.getApplications() : [];
-      const assessment = JSON.parse(localStorage.getItem('careernova-assessment') || 'null');
-      const profile = window.CareerNovaPortal ? window.CareerNovaPortal.getProfile() : null;
+      const savedJobs = window.NEXORAPortal ? window.NEXORAPortal.getSavedJobs() : [];
+      const apps = window.NEXORAPortal ? window.NEXORAPortal.getApplications() : [];
+      const assessment = JSON.parse(localStorage.getItem('nexora-assessment') || 'null');
+      const profile = window.NEXORAPortal ? window.NEXORAPortal.getProfile() : null;
 
       // Update KPI card: Recommended Jobs / Saved
       const kpiJobs = document.querySelector('.grid-4 .kpi-card:nth-child(3) .kpi-val');

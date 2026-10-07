@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAREERNOVA — MASTER RESPONSIVE DESIGN SYSTEM
+   NEXORA — MASTER RESPONSIVE DESIGN SYSTEM
    Universal Responsive Shell: Phone (320px+) to Ultra-Wide (2560px+)
    Pure CSS-Only Mobile Drawers & Zero-Horizontal Overflow Architecture
    ========================================================================== */
@@ -376,10 +376,33 @@ img, svg, video, canvas, audio, iframe, embed, object {
   .kpi-card {
     padding: 1.15rem 1rem !important;
   }
+
+  /* Responsive NEXORA Logo Badge & Wordmark */
+  .nav-logo-icon,
+  .nexora-badge {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 11px !important;
+  }
+  .nav-logo-icon svg,
+  .nexora-badge svg {
+    width: 23px !important;
+    height: 23px !important;
+  }
+  .nav-logo-text {
+    font-size: 1.25rem !important;
+  }
 }
 
 /* --- Breakpoint: <= 360px (Ultra Compact Screens) --- */
 @media (max-width: 360px) {
+  .nav-logo {
+    gap: 0.45rem !important;
+  }
+  .nav-logo-text {
+    font-size: 1.1rem !important;
+  }
+
   .portal-topbar-left h3 {
     max-width: 110px !important;
   }

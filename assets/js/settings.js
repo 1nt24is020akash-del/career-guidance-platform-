@@ -1,5 +1,5 @@
 /**
- * CareerNova — Settings Module
+ * NEXORA — Settings Module
  * Handles form save, preference persistence, and toast feedback.
  */
 
@@ -16,12 +16,12 @@
       const nameInput = document.getElementById('s_name');
       const emailInput = document.getElementById('s_email');
 
-      if (window.CareerNovaPortal) {
-        const profile = window.CareerNovaPortal.getProfile() || {};
+      if (window.NEXORAPortal) {
+        const profile = window.NEXORAPortal.getProfile() || {};
         if (nameInput) profile.name = nameInput.value.trim();
         if (emailInput) profile.email = emailInput.value.trim();
-        localStorage.setItem('careernova-profile', JSON.stringify(profile));
-        window.CareerNovaPortal.toast('Settings saved successfully!', 'success');
+        localStorage.setItem('nexora-profile', JSON.stringify(profile));
+        window.NEXORAPortal.toast('Settings saved successfully!', 'success');
       }
     });
   });

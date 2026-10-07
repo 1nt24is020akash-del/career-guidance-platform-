@@ -1,5 +1,5 @@
 /**
- * CareerNova — Structured Enterprise Companies & Job Opportunities Dataset
+ * NEXORA — Structured Enterprise Companies & Job Opportunities Dataset
  * Prototype & Demo Data Engine for Career Guidance Platform
  * Note: Clearly marked as prototype/demo listings. Official career portal links provided.
  */
@@ -474,6 +474,8 @@ const jobs = [
 
 // Attach to window for global access if needed
 if (typeof window !== "undefined") {
-  window.CareerNovaCompanies = companies;
-  window.CareerNovaJobs = jobs;
+  window.NEXORACompanies = companies;
+  window.NEXORAJobs = jobs;
+  window.NexoraCompanies = companies;
+  window.NexoraJobs = jobs;
 }
