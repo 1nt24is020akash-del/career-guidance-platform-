@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/visuals.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="assets/js/theme.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -208,22 +209,23 @@
 
         <div class="portal-content">
 
-          <!-- Top Recommendation Callout Banner -->
-          <div class="card" style="padding: 1.5rem 1.75rem; margin-bottom: 2rem; background: var(--surface); border-left: 4px solid var(--primary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div style="display: flex; align-items: center; gap: 1.25rem;">
-              <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--soft-teal); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-display); font-size: 1.15rem; flex-shrink: 0;">
-                98%
+          <!-- Top Recommendation Callout Banner with Visual Photography -->
+          <div class="card" style="padding: 1.5rem 1.75rem; margin-bottom: 2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
+              <div style="width: 72px; height: 72px; border-radius: var(--radius-md); overflow: hidden; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=300&q=80" alt="AI Neural Systems" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <div>
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
-                  <span class="badge badge-emerald">Optimal Career Fit</span>
-                  <span style="font-size: 0.8rem; color: var(--muted);">Algorithmic Benchmark v2.4</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                  <span class="badge badge-blue">98% Career Fit</span>
+                  <span class="badge badge-emerald">Optimal Placement</span>
+                  <span style="font-size: 0.78rem; color: var(--muted);">Algorithmic Benchmark v2.4</span>
                 </div>
-                <h4 style="margin: 0; font-size: 1.15rem; color: var(--text);">Top Recommendation: AI &amp; Machine Learning Engineer</h4>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.86rem; color: var(--muted);">Based on your Python, calculus, &amp; algorithms mastery. 142 direct hiring openings active.</p>
+                <h4 style="margin: 0; font-size: 1.2rem; color: var(--text);">Top Recommendation: AI &amp; Machine Learning Engineer</h4>
+                <p style="margin: 0.25rem 0 0 0; font-size: 0.88rem; color: var(--muted);">Based on verified Python, calculus, &amp; neural networks mastery. 142 direct hiring openings active.</p>
               </div>
             </div>
-            <div style="display: flex; gap: 0.75rem;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
               <a href="recommendations.html" class="btn btn-primary btn-sm">
                 View All Matches (4)
                 <svg viewBox="0 0 24 24" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -461,47 +463,56 @@
               </div>
             </div>
 
-            <!-- Recent Job Matches -->
+            <!-- Recent Job Matches with Official Company Logos -->
             <div class="card" style="padding: 1.75rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
                 <h4 style="margin: 0;">Recent Job Matches</h4>
-                <a href="job-matches.html" class="btn btn-secondary btn-sm">Explore All Jobs</a>
+                <a href="job-matches.html" class="btn btn-secondary btn-sm">Explore All Jobs &rarr;</a>
               </div>
 
-              <!-- Job 1 -->
-              <div class="job-item-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=100&q=80" alt="Synthetix" class="job-company-logo">
-                <div class="job-item-info">
-                  <div class="job-item-title"><a href="job-details.html">Junior ML Engineer</a></div>
-                  <div class="job-item-meta">
-                    <span>Synthetix AI</span>
-                    <span>&bull; $115k - $140k</span>
+              <!-- Job 1: Google -->
+              <div class="job-item-card" style="display: flex; align-items: center; gap: 1rem; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin-bottom: 0.75rem;">
+                <div class="company-logo-box" style="width: 42px; height: 42px; padding: 6px;">
+                  <img src="assets/logos/google.svg" alt="Google" onerror="this.parentElement.innerHTML='<div class=\'company-logo-fallback\' style=\'background:#EA4335;\'>G</div>'">
+                </div>
+                <div class="job-item-info" style="flex: 1;">
+                  <div class="job-item-title" style="font-weight: 700; font-size: 0.92rem;"><a href="job-details.html" style="color: var(--text);">Machine Learning Engineer</a></div>
+                  <div class="job-item-meta" style="font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.5rem; align-items: center;">
+                    <strong>Google</strong>
+                    <span>&bull;</span>
+                    <span style="color: var(--primary); font-weight: 600;">$140k - $195k</span>
                   </div>
                 </div>
                 <span class="badge badge-blue">98% Match</span>
               </div>
 
-              <!-- Job 2 -->
-              <div class="job-item-card">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80" alt="CloudScale" class="job-company-logo">
-                <div class="job-item-info">
-                  <div class="job-item-title"><a href="job-details.html">Associate Full-Stack Dev</a></div>
-                  <div class="job-item-meta">
-                    <span>CloudScale</span>
-                    <span>&bull; $98k - $125k</span>
+              <!-- Job 2: Microsoft -->
+              <div class="job-item-card" style="display: flex; align-items: center; gap: 1rem; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin-bottom: 0.75rem;">
+                <div class="company-logo-box" style="width: 42px; height: 42px; padding: 6px;">
+                  <img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.parentElement.innerHTML='<div class=\'company-logo-fallback\' style=\'background:#00A4EF;\'>MS</div>'">
+                </div>
+                <div class="job-item-info" style="flex: 1;">
+                  <div class="job-item-title" style="font-weight: 700; font-size: 0.92rem;"><a href="job-details.html" style="color: var(--text);">Associate Full-Stack Dev</a></div>
+                  <div class="job-item-meta" style="font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.5rem; align-items: center;">
+                    <strong>Microsoft</strong>
+                    <span>&bull;</span>
+                    <span style="color: var(--primary); font-weight: 600;">$125k - $170k</span>
                   </div>
                 </div>
                 <span class="badge badge-teal">94% Match</span>
               </div>
 
-              <!-- Job 3 -->
-              <div class="job-item-card">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=100&q=80" alt="CyberGuard" class="job-company-logo">
-                <div class="job-item-info">
-                  <div class="job-item-title"><a href="job-details.html">Security Analyst</a></div>
-                  <div class="job-item-meta">
-                    <span>CyberGuard</span>
-                    <span>&bull; $92k - $118k</span>
+              <!-- Job 3: Cisco -->
+              <div class="job-item-card" style="display: flex; align-items: center; gap: 1rem; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                <div class="company-logo-box" style="width: 42px; height: 42px; padding: 6px;">
+                  <img src="assets/logos/cisco.svg" alt="Cisco" onerror="this.parentElement.innerHTML='<div class=\'company-logo-fallback\' style=\'background:#049FD9;\'>CSCO</div>'">
+                </div>
+                <div class="job-item-info" style="flex: 1;">
+                  <div class="job-item-title" style="font-weight: 700; font-size: 0.92rem;"><a href="job-details.html" style="color: var(--text);">Security Analyst (SOC)</a></div>
+                  <div class="job-item-meta" style="font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.5rem; align-items: center;">
+                    <strong>Cisco Systems</strong>
+                    <span>&bull;</span>
+                    <span style="color: var(--primary); font-weight: 600;">$92k - $118k</span>
                   </div>
                 </div>
                 <span class="badge badge-emerald">90% Match</span>

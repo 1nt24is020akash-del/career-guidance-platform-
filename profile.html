@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/visuals.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="assets/js/theme.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -326,96 +327,163 @@
             <!-- Right Column: Skills, Projects & Certifications -->
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-              <!-- Skills Box -->
+              <!-- Skills Box with Visual Proficiency Meters -->
               <div class="card" style="padding: 1.75rem;">
-                <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.15rem;">Technical &amp; Soft Skills</h4>
+                <h4 style="margin-bottom: 1.25rem; color: var(--text); font-size: 1.15rem;">Verified Competency Breakdown</h4>
 
-                <div style="margin-bottom: 1.25rem;">
-                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
-                    Technical Competencies
+                <!-- Skill Meter 1: Python -->
+                <div class="skill-meter-row">
+                  <div class="skill-meter-header">
+                    <span class="skill-meter-label">
+                      <span class="skill-meter-icon">
+                        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                      </span>
+                      Python &amp; Algorithmic Logic
+                    </span>
+                    <strong style="color: var(--primary); font-size: 0.85rem;">95% Mastered</strong>
                   </div>
-                  <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
-                    <span class="badge badge-blue">Python (95%)</span>
-                    <span class="badge badge-teal">PyTorch</span>
-                    <span class="badge badge-blue">TypeScript</span>
-                    <span class="badge badge-teal">React.js</span>
-                    <span class="badge badge-blue">PostgreSQL</span>
-                    <span class="badge badge-teal">Docker</span>
-                    <span class="badge badge-blue">Git / GitHub</span>
-                    <span class="badge badge-teal">FastAPI</span>
+                  <div class="progress-bar-wrap" style="height: 7px; background: rgba(148, 163, 184, 0.2); border-radius: 99px; overflow: hidden;">
+                    <div class="progress-bar-fill" style="width: 95%; height: 100%; background: linear-gradient(90deg, #2563EB, #06B6D4); border-radius: 99px;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Meter 2: PyTorch -->
+                <div class="skill-meter-row">
+                  <div class="skill-meter-header">
+                    <span class="skill-meter-label">
+                      <span class="skill-meter-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                      </span>
+                      PyTorch &amp; Deep Learning
+                    </span>
+                    <strong style="color: #06B6D4; font-size: 0.85rem;">88% Advanced</strong>
+                  </div>
+                  <div class="progress-bar-wrap" style="height: 7px; background: rgba(148, 163, 184, 0.2); border-radius: 99px; overflow: hidden;">
+                    <div class="progress-bar-fill" style="width: 88%; height: 100%; background: linear-gradient(90deg, #0284C7, #10B981); border-radius: 99px;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Meter 3: TypeScript -->
+                <div class="skill-meter-row">
+                  <div class="skill-meter-header">
+                    <span class="skill-meter-label">
+                      <span class="skill-meter-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                      </span>
+                      TypeScript &amp; React Full-Stack
+                    </span>
+                    <strong style="color: var(--primary); font-size: 0.85rem;">84% Proficient</strong>
+                  </div>
+                  <div class="progress-bar-wrap" style="height: 7px; background: rgba(148, 163, 184, 0.2); border-radius: 99px; overflow: hidden;">
+                    <div class="progress-bar-fill" style="width: 84%; height: 100%; background: linear-gradient(90deg, #3B82F6, #8B5CF6); border-radius: 99px;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Meter 4: Cloud & Docker -->
+                <div class="skill-meter-row" style="margin-bottom: 1.5rem;">
+                  <div class="skill-meter-header">
+                    <span class="skill-meter-label">
+                      <span class="skill-meter-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                      </span>
+                      Docker &amp; Cloud Containers
+                    </span>
+                    <strong style="color: #10B981; font-size: 0.85rem;">78% Ready</strong>
+                  </div>
+                  <div class="progress-bar-wrap" style="height: 7px; background: rgba(148, 163, 184, 0.2); border-radius: 99px; overflow: hidden;">
+                    <div class="progress-bar-fill" style="width: 78%; height: 100%; background: linear-gradient(90deg, #10B981, #06B6D4); border-radius: 99px;"></div>
                   </div>
                 </div>
 
                 <div>
-                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
-                    Core Professional Attributes
+                  <div style="font-size: 0.75rem; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem; letter-spacing: 0.05em;">
+                    Additional Verified Tags
                   </div>
                   <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
-                    <span class="badge badge-emerald">Algorithmic Problem Solving</span>
-                    <span class="badge badge-emerald">Cross-Functional Communication</span>
-                    <span class="badge badge-blue">Agile / Scrum</span>
-                    <span class="badge badge-teal">Technical Writing</span>
+                    <span class="badge badge-neutral">PostgreSQL</span>
+                    <span class="badge badge-neutral">FastAPI</span>
+                    <span class="badge badge-neutral">Redis Caching</span>
+                    <span class="badge badge-neutral">Git Workflows</span>
+                    <span class="badge badge-neutral">CI/CD Pipelines</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Featured Projects -->
+              <!-- Featured Projects with Visual Cards -->
               <div class="card" style="padding: 1.75rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                  <h4 style="color: var(--text-primary); font-size: 1.15rem; margin: 0;">Featured Projects</h4>
-                  <span class="badge badge-teal">2 Repositories</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                  <h4 style="color: var(--text); font-size: 1.15rem; margin: 0;">Featured Portfolio Projects</h4>
+                  <span class="badge badge-teal">2 Verified Builds</span>
                 </div>
 
-                <!-- Project 1 -->
-                <div style="padding: 1rem; background: var(--bg-card-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 0.85rem;">
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
-                    <strong style="color: var(--text-primary); font-size: 0.95rem;">Distributed Task Scheduler</strong>
-                    <span class="badge badge-blue">Python &bull; Redis</span>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                  <!-- Project 1 -->
+                  <div class="card card-hover" style="overflow: hidden; padding: 0; border: 1px solid var(--border);">
+                    <div class="project-card-visual" style="height: 140px;">
+                      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Distributed Task Scheduler Infrastructure" loading="lazy">
+                    </div>
+                    <div style="padding: 1.25rem;">
+                      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
+                        <strong style="color: var(--text); font-size: 1.05rem;">Distributed Task Scheduler</strong>
+                        <span class="badge badge-blue">Python &bull; Redis</span>
+                      </div>
+                      <p style="font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.55; color: var(--muted);">
+                        Engineered a fault-tolerant asynchronous job queue with heartbeat workers handling 1,500 tasks/sec.
+                      </p>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        <span style="font-size: 0.8rem; color: var(--muted);">⭐ 48 Stars on GitHub</span>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                          View Code &rarr;
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <p style="font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.5; color: var(--text-secondary);">
-                    Engineered a fault-tolerant asynchronous job queue with heartbeat workers handling 1,500 tasks/sec.
-                  </p>
-                  <a href="#" style="font-size: 0.8rem; color: var(--primary-accent); font-weight: 600;">
-                    View Code Repository &rarr;
-                  </a>
-                </div>
 
-                <!-- Project 2 -->
-                <div style="padding: 1rem; background: var(--bg-card-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
-                    <strong style="color: var(--text-primary); font-size: 0.95rem;">Neural Code Semantic Search</strong>
-                    <span class="badge badge-teal">PyTorch &bull; Vector DB</span>
+                  <!-- Project 2 -->
+                  <div class="card card-hover" style="overflow: hidden; padding: 0; border: 1px solid var(--border);">
+                    <div class="project-card-visual" style="height: 140px;">
+                      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Neural Code Semantic Search Graph" loading="lazy">
+                    </div>
+                    <div style="padding: 1.25rem;">
+                      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
+                        <strong style="color: var(--text); font-size: 1.05rem;">Neural Code Semantic Search</strong>
+                        <span class="badge badge-teal">PyTorch &bull; Vector DB</span>
+                      </div>
+                      <p style="font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.55; color: var(--muted);">
+                        Built an embedding transformer indexing over 40,000 open-source functions with 92% retrieval recall.
+                      </p>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        <span style="font-size: 0.8rem; color: var(--muted);">🚀 Deployed on HuggingFace</span>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                          View Code &rarr;
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <p style="font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.5; color: var(--text-secondary);">
-                    Built an embedding transformer indexing over 40,000 open-source functions with 92% retrieval recall.
-                  </p>
-                  <a href="#" style="font-size: 0.8rem; color: var(--secondary-accent); font-weight: 600;">
-                    View Code Repository &rarr;
-                  </a>
                 </div>
               </div>
 
               <!-- Verified Certifications -->
               <div class="card" style="padding: 1.75rem;">
-                <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.15rem;">Verified Certifications</h4>
+                <h4 style="margin-bottom: 1rem; color: var(--text); font-size: 1.15rem;">Verified Certifications</h4>
                 <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-                  <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--bg-card-subtle); border: 1px solid var(--border-color); color: var(--success); display: flex; align-items: center; justify-content: center; font-weight: 800;">
-                      &check;
+                  <div style="display: flex; align-items: center; gap: 0.85rem;">
+                    <div class="company-logo-box" style="width: 42px; height: 42px; padding: 6px;">
+                      <img src="assets/logos/amazon.svg" alt="AWS Logo">
                     </div>
                     <div>
-                      <strong style="color: var(--text-primary); font-size: 0.88rem; display: block;">AWS Certified Cloud Practitioner</strong>
-                      <span style="font-size: 0.78rem; color: var(--text-muted);">Issued Nov 2025 &bull; Verification ID: AWSCP-88219</span>
+                      <strong style="color: var(--text); font-size: 0.9rem; display: block;">AWS Certified Cloud Practitioner</strong>
+                      <span style="font-size: 0.78rem; color: var(--muted);">Issued Nov 2025 &bull; Verification ID: AWSCP-88219</span>
                     </div>
                   </div>
 
-                  <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--bg-card-subtle); border: 1px solid var(--border-color); color: var(--primary-accent); display: flex; align-items: center; justify-content: center; font-weight: 800;">
-                      &check;
+                  <div style="display: flex; align-items: center; gap: 0.85rem;">
+                    <div class="company-logo-box" style="width: 42px; height: 42px; padding: 6px;">
+                      <img src="assets/logos/google.svg" alt="Google Cloud Logo">
                     </div>
                     <div>
-                      <strong style="color: var(--text-primary); font-size: 0.88rem; display: block;">DeepLearning.AI Machine Learning Specialization</strong>
-                      <span style="font-size: 0.78rem; color: var(--text-muted);">Issued Aug 2025 &bull; Verification ID: DLAI-94021</span>
+                      <strong style="color: var(--text); font-size: 0.9rem; display: block;">Google Cloud Machine Learning Engineer</strong>
+                      <span style="font-size: 0.78rem; color: var(--muted);">Issued Aug 2025 &bull; Verification ID: GC-ML-94021</span>
                     </div>
                   </div>
                 </div>

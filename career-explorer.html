@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/visuals.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="assets/js/theme.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -276,15 +277,16 @@
           <div class="grid-3" style="gap: 2rem; margin-bottom: 3.5rem;">
 
             <!-- Card 1: AI/ML Engineer -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" alt="AI Neural Network" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="AI Neural Architecture" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-blue" style="backdrop-filter: blur(8px);">+36% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">9,800+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">AI / ML Engineer</h3>
-                  <span class="badge badge-blue">+36% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">AI / ML Engineer</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Train deep neural networks, fine-tune foundation LLMs, and construct production data retrieval pipelines.
                 </p>
@@ -303,15 +305,16 @@
             </div>
 
             <!-- Card 2: Software Developer -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Software Developer" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Software Developer Workstation" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-emerald" style="backdrop-filter: blur(8px);">+22% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">14,200+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">Software Developer</h3>
-                  <span class="badge badge-emerald">+22% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Software Developer</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Architect full-stack applications, robust microservices, and high-concurrency databases.
                 </p>
@@ -330,15 +333,16 @@
             </div>
 
             <!-- Card 3: Cloud Architect -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Network" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Network Topologies" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-teal" style="backdrop-filter: blur(8px);">+25% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">8,400+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">Cloud Solutions Architect</h3>
-                  <span class="badge badge-teal">+25% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Cloud Solutions Architect</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Engineer multi-cloud topologies, serverless infrastructure, and high-availability clusters.
                 </p>
@@ -357,15 +361,16 @@
             </div>
 
             <!-- Card 4: Cybersecurity Analyst -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity & Defense Command" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-rose" style="backdrop-filter: blur(8px);">+32% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">6,700+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">Cybersecurity Analyst</h3>
-                  <span class="badge badge-rose">+32% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Cybersecurity Analyst</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Defend corporate infrastructure against vulnerabilities and orchestrate penetration testing.
                 </p>
@@ -384,15 +389,16 @@
             </div>
 
             <!-- Card 5: Data Scientist -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data Analytics" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Analytics & Statistical Modeling" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-blue" style="backdrop-filter: blur(8px);">+28% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">11,100+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">Data Scientist</h3>
-                  <span class="badge badge-blue">+28% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Data Scientist</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Transform enterprise data streams into predictive statistical insights and business algorithms.
                 </p>
@@ -411,15 +417,16 @@
             </div>
 
             <!-- Card 6: UI/UX Product Designer -->
-            <div class="card card-hover" style="display: flex; flex-direction: column;">
-              <div style="height: 190px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="card card-hover" style="display: flex; flex-direction: column; overflow: hidden; padding: 0;">
+              <div class="career-card-visual">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Product Design System" loading="lazy">
+                <div class="career-card-visual-overlay">
+                  <span class="badge badge-teal" style="backdrop-filter: blur(8px);">+18% Growth</span>
+                  <span style="color: #FFFFFF; font-size: 0.82rem; font-weight: 700;">5,300+ Openings</span>
+                </div>
               </div>
               <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
-                  <h3 style="font-size: 1.25rem;">UI/UX Product Designer</h3>
-                  <span class="badge badge-teal">+18% Growth</span>
-                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">UI/UX Product Designer</h3>
                 <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
                   Craft immersive digital customer journeys, robust design systems, and prototype interfaces.
                 </p>

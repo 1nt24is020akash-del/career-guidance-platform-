@@ -7,6 +7,7 @@
 const companies = [
   {
     id: "google",
+    logoSvg: "assets/logos/google.svg",
     name: "Google",
     logoText: "G",
     badgeClass: "badge-google",
@@ -19,6 +20,7 @@ const companies = [
   },
   {
     id: "microsoft",
+    logoSvg: "assets/logos/microsoft.svg",
     name: "Microsoft",
     logoText: "MS",
     badgeClass: "badge-microsoft",
@@ -31,6 +33,7 @@ const companies = [
   },
   {
     id: "amazon",
+    logoSvg: "assets/logos/amazon.svg",
     name: "Amazon",
     logoText: "A",
     badgeClass: "badge-amazon",
@@ -43,6 +46,7 @@ const companies = [
   },
   {
     id: "apple",
+    logoSvg: "assets/logos/apple.svg",
     name: "Apple",
     logoText: "",
     badgeClass: "badge-apple",
@@ -55,6 +59,7 @@ const companies = [
   },
   {
     id: "meta",
+    logoSvg: "assets/logos/meta.svg",
     name: "Meta",
     logoText: "M",
     badgeClass: "badge-meta",
@@ -67,6 +72,7 @@ const companies = [
   },
   {
     id: "nvidia",
+    logoSvg: "assets/logos/nvidia.svg",
     name: "NVIDIA",
     logoText: "NV",
     badgeClass: "badge-nvidia",
@@ -79,6 +85,7 @@ const companies = [
   },
   {
     id: "adobe",
+    logoSvg: "assets/logos/adobe.svg",
     name: "Adobe",
     logoText: "A",
     badgeClass: "badge-adobe",
@@ -91,6 +98,7 @@ const companies = [
   },
   {
     id: "jpmorgan",
+    logoSvg: "assets/logos/jpmorgan.svg",
     name: "JPMorgan Chase",
     logoText: "JPMC",
     badgeClass: "badge-jpmorgan",
@@ -103,6 +111,7 @@ const companies = [
   },
   {
     id: "accenture",
+    logoSvg: "assets/logos/uber.svg",
     name: "Accenture",
     logoText: ">acc",
     badgeClass: "badge-accenture",
@@ -115,6 +124,7 @@ const companies = [
   },
   {
     id: "deloitte",
+    logoSvg: "assets/logos/deloitte.svg",
     name: "Deloitte",
     logoText: "D.",
     badgeClass: "badge-deloitte",
@@ -127,6 +137,7 @@ const companies = [
   },
   {
     id: "uber",
+    logoSvg: "assets/logos/uber.svg",
     name: "Uber",
     logoText: "Uber",
     badgeClass: "badge-uber",
@@ -139,6 +150,7 @@ const companies = [
   },
   {
     id: "atlassian",
+    logoSvg: "assets/logos/atlassian.svg",
     name: "Atlassian",
     logoText: "ATL",
     badgeClass: "badge-atlassian",
@@ -151,6 +163,7 @@ const companies = [
   },
   {
     id: "cisco",
+    logoSvg: "assets/logos/cisco.svg",
     name: "Cisco",
     logoText: "CSCO",
     badgeClass: "badge-cisco",
@@ -163,6 +176,7 @@ const companies = [
   },
   {
     id: "intel",
+    logoSvg: "assets/logos/intel.svg",
     name: "Intel",
     logoText: "INTC",
     badgeClass: "badge-intel",
@@ -175,6 +189,7 @@ const companies = [
   },
   {
     id: "ibm",
+    logoSvg: "assets/logos/ibm.svg",
     name: "IBM",
     logoText: "IBM",
     badgeClass: "badge-ibm",
@@ -187,6 +202,7 @@ const companies = [
   },
   {
     id: "oracle",
+    logoSvg: "assets/logos/oracle.svg",
     name: "Oracle",
     logoText: "ORCL",
     badgeClass: "badge-oracle",
@@ -199,6 +215,7 @@ const companies = [
   },
   {
     id: "salesforce",
+    logoSvg: "assets/logos/salesforce.svg",
     name: "Salesforce",
     logoText: "CRM",
     badgeClass: "badge-salesforce",
@@ -211,6 +228,7 @@ const companies = [
   },
   {
     id: "goldman",
+    logoSvg: "assets/logos/goldman.svg",
     name: "Goldman Sachs",
     logoText: "GS",
     badgeClass: "badge-goldman",
@@ -223,6 +241,7 @@ const companies = [
   },
   {
     id: "tcs",
+    logoSvg: "assets/logos/tcs.svg",
     name: "TCS",
     logoText: "TCS",
     badgeClass: "badge-tcs",
@@ -235,6 +254,7 @@ const companies = [
   },
   {
     id: "infosys",
+    logoSvg: "assets/logos/infosys.svg",
     name: "Infosys",
     logoText: "INFY",
     badgeClass: "badge-infosys",
@@ -247,6 +267,7 @@ const companies = [
   },
   {
     id: "walmart",
+    logoSvg: "assets/logos/walmart.svg",
     name: "Walmart Global Tech",
     logoText: "WMT",
     badgeClass: "badge-walmart",
@@ -262,6 +283,7 @@ const companies = [
 const jobs = [
   {
     id: "job-1",
+    logoSvg: "assets/logos/job-1.svg",
     company: "Google",
     logoText: "G",
     badgeClass: "badge-google",
@@ -283,6 +305,7 @@ const jobs = [
   },
   {
     id: "job-2",
+    logoSvg: "assets/logos/job-2.svg",
     company: "NVIDIA",
     logoText: "NV",
     badgeClass: "badge-nvidia",
@@ -304,6 +327,7 @@ const jobs = [
   },
   {
     id: "job-3",
+    logoSvg: "assets/logos/job-3.svg",
     company: "Microsoft",
     logoText: "MS",
     badgeClass: "badge-microsoft",
@@ -325,6 +349,7 @@ const jobs = [
   },
   {
     id: "job-4",
+    logoSvg: "assets/logos/job-4.svg",
     company: "Atlassian",
     logoText: "ATL",
     badgeClass: "badge-atlassian",
@@ -346,6 +371,7 @@ const jobs = [
   },
   {
     id: "job-5",
+    logoSvg: "assets/logos/job-5.svg",
     company: "Amazon",
     logoText: "A",
     badgeClass: "badge-amazon",
@@ -367,6 +393,7 @@ const jobs = [
   },
   {
     id: "job-6",
+    logoSvg: "assets/logos/job-6.svg",
     company: "Walmart Global Tech",
     logoText: "WMT",
     badgeClass: "badge-walmart",
@@ -388,6 +415,7 @@ const jobs = [
   },
   {
     id: "job-7",
+    logoSvg: "assets/logos/job-7.svg",
     company: "JPMorgan Chase",
     logoText: "JPMC",
     badgeClass: "badge-jpmorgan",
@@ -409,6 +437,7 @@ const jobs = [
   },
   {
     id: "job-8",
+    logoSvg: "assets/logos/job-8.svg",
     company: "Adobe",
     logoText: "A",
     badgeClass: "badge-adobe",
@@ -430,6 +459,7 @@ const jobs = [
   },
   {
     id: "job-9",
+    logoSvg: "assets/logos/job-9.svg",
     company: "Accenture",
     logoText: ">acc",
     badgeClass: "badge-accenture",
@@ -451,6 +481,7 @@ const jobs = [
   },
   {
     id: "job-10",
+    logoSvg: "assets/logos/job-10.svg",
     company: "Deloitte",
     logoText: "D.",
     badgeClass: "badge-deloitte",

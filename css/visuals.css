@@ -1,0 +1,380 @@
+/* ==========================================================================
+   NEXORA — VISUAL CONTENT & REAL-WORLD IMAGERY DESIGN SYSTEM
+   Professional Photography Frames, Real Company Logos, Visual Cards & Badges
+   ========================================================================== */
+
+/* --- 1. Real Company Logo System --- */
+.company-logo-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md, 12px);
+  background: var(--surface, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body[data-theme="dark"] .company-logo-box,
+body:has(#theme-toggle:checked) .company-logo-box {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.company-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.company-logo-box:hover img {
+  transform: scale(1.12);
+}
+
+.company-logo-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display, sans-serif);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+/* Company Hire Card Lift on Hover */
+.company-hire-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border);
+  position: relative;
+  border-radius: var(--radius-md, 12px);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company-hire-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15), 0 8px 10px -6px rgba(37, 99, 235, 0.1);
+}
+
+.company-hire-card:hover .company-logo-box {
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+/* --- 2. Hero Interactive Floating Cards --- */
+.hero-visual-container {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl, 20px);
+  overflow: visible;
+}
+
+.hero-main-photo-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.hero-main-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-main-photo-wrap:hover img {
+  transform: scale(1.03);
+}
+
+/* Glassmorphism Floating Cards */
+.hero-float-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-md, 14px);
+  padding: 0.85rem 1.15rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: heroFloat 4s ease-in-out infinite alternate;
+  pointer-events: auto;
+}
+
+body[data-theme="dark"] .hero-float-card,
+body:has(#theme-toggle:checked) .hero-float-card {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.hero-float-card.top-left {
+  top: -16px;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.hero-float-card.bottom-right {
+  bottom: -18px;
+  right: -20px;
+  animation-delay: 2s;
+}
+
+.hero-float-card.mid-right {
+  top: 38%;
+  right: -28px;
+  animation-delay: 1s;
+}
+
+@keyframes heroFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+@media (max-width: 992px) {
+  .hero-float-card.top-left {
+    top: -10px;
+    left: -10px;
+  }
+  .hero-float-card.bottom-right {
+    bottom: -10px;
+    right: -10px;
+  }
+  .hero-float-card.mid-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-float-card {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  .hero-float-card.top-left {
+    top: 10px;
+    left: 10px;
+  }
+  .hero-float-card.bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Floating Tech Icon Badges */
+.floating-tech-badge {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38BDF8;
+  box-shadow: 0 6px 18px rgba(6, 182, 212, 0.3);
+  z-index: 12;
+  transition: transform 0.25s ease;
+}
+
+.floating-tech-badge:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.floating-tech-badge svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* --- 3. Career Card Imagery --- */
+.career-card-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #0F172A;
+}
+
+.career-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .career-card-visual img {
+  transform: scale(1.06);
+}
+
+.career-card-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* --- 4. Project Card Imagery (Profile Page) --- */
+.project-card-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #0F172A;
+}
+
+.project-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .project-card-visual img {
+  transform: scale(1.05);
+}
+
+/* --- 5. Rich Job Card Metadata Strip --- */
+.job-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1.15rem;
+  margin: 0.65rem 0 0.95rem 0;
+}
+
+.job-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.job-meta-pill strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.job-meta-pill svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--primary);
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* --- 6. Visual Skill Meters (Profile Page) --- */
+.skill-meter-row {
+  margin-bottom: 1.15rem;
+}
+
+.skill-meter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.skill-meter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skill-meter-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.skill-meter-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* --- 7. Top Companies Logo Strip Carousel --- */
+.companies-logo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+}
+
+.company-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+}
+
+.company-strip-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-strip-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
