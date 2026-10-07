@@ -83,6 +83,53 @@
       line-height: 1.55;
       overflow-x: auto;
     }
+    .assessment-header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+    }
+    .assessment-header-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .assessment-demo-card {
+      padding: 2.25rem;
+    }
+    @media (max-width: 680px) {
+      .assessment-header-inner {
+        flex-wrap: wrap;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        gap: 0.5rem;
+      }
+      .assessment-title-sub {
+        display: none;
+      }
+      .assessment-demo-card {
+        padding: 1.25rem 1rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .assessment-header-inner {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .assessment-header-inner .theme-switch span:not(.theme-switch-icon) {
+        display: none;
+      }
+      .assessment-header-inner .theme-switch {
+        padding: 0.35rem 0.5rem;
+        min-height: 38px;
+        min-width: 38px;
+      }
+    }
   </style>
   <script src="assets/js/theme.js"></script>
 </head>
@@ -99,21 +146,21 @@
     </aside>
 
     <!-- Assessment Top Header -->
-    <header style="height: 72px; background: var(--bg-card); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm);">
-      <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: space-between;">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <a href="skill-assessment.html" class="btn btn-secondary btn-sm">&larr; Exit Simulator</a>
-          <div style="height: 24px; width: 1px; background: var(--border-color);"></div>
-          <div>
-            <strong style="color: var(--text-primary); font-size: 0.95rem; display: block;">PyTorch &amp; Deep Learning Foundations</strong>
-            <span style="font-size: 0.75rem; color: var(--text-muted);">Section 2 of 4 &bull; Advanced Autograd &amp; Inference</span>
+    <header class="assessment-header">
+      <div class="container assessment-header-inner">
+        <div class="assessment-header-left" style="display: flex; align-items: center; gap: 0.75rem; min-width: 0; flex: 1;">
+          <a href="skill-assessment.html" class="btn btn-secondary btn-sm" style="flex-shrink: 0;">&larr; Exit</a>
+          <div style="height: 20px; width: 1px; background: var(--border-color); flex-shrink: 0;"></div>
+          <div style="min-width: 0; overflow: hidden;">
+            <strong style="color: var(--text-primary); font-size: 0.92rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PyTorch &amp; Deep Learning Foundations</strong>
+            <span class="assessment-title-sub" style="font-size: 0.75rem; color: var(--text-muted); display: block;">Section 2 of 4 &bull; Advanced Autograd</span>
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 1.25rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem;">
-            <span style="color: var(--text-muted);">Remaining:</span>
-            <span class="badge badge-rose" style="font-size: 0.85rem; font-weight: 700;">14:38</span>
+        <div class="assessment-header-actions" style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+          <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">Time:</span>
+            <span class="badge badge-rose" style="font-size: 0.82rem; font-weight: 700;">14:38</span>
           </div>
 
           <!-- Theme Toggle Switch -->
@@ -127,13 +174,13 @@
             <span>Theme</span>
           </label>
 
-          <a href="#results" class="btn btn-primary btn-sm">Submit Test</a>
+          <a href="#results" class="btn btn-primary btn-sm">Submit</a>
         </div>
       </div>
     </header>
 
     <!-- Main Question Canvas -->
-    <main class="container" style="max-width: 920px; padding-top: 2.5rem; padding-bottom: 3.5rem; flex: 1;">
+    <main class="container" style="max-width: 920px; padding-top: 2rem; padding-bottom: 3.5rem; flex: 1;">
 
       <!-- Progress Bar & Stepper Meta -->
       <div style="margin-bottom: 2rem;">
@@ -147,7 +194,7 @@
       </div>
 
       <!-- Question Card 3 -->
-      <div class="card" style="padding: 2.5rem; box-shadow: var(--shadow-md);">
+      <div class="card assessment-demo-card" style="box-shadow: var(--shadow-md);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
           <span class="badge badge-blue">Question #03 &bull; Autograd Mechanics</span>
           <span class="badge badge-teal">2.0 Points</span>

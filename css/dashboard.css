@@ -7,7 +7,7 @@
 .portal-layout,
 .app-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
   min-height: 100vh;
   position: relative;
   background-color: var(--background);

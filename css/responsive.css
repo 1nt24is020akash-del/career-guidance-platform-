@@ -1,16 +1,69 @@
 /* ==========================================================================
-   CAREERNOVA — RESPONSIVE STYLESHEET
-   Fluid Media Queries & CSS-Only Mobile Drawer
+   CAREERNOVA — MASTER RESPONSIVE DESIGN SYSTEM
+   Universal Responsive Shell: Phone (320px+) to Ultra-Wide (2560px+)
+   Pure CSS-Only Mobile Drawers & Zero-Horizontal Overflow Architecture
    ========================================================================== */
+
+/* --- Absolute Zero-Overflow Guard --- */
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+}
 
 #sidebar-toggle {
   display: none;
 }
 
-/* --- Breakpoint: <= 1200px --- */
+/* Base Card & Container Bounds */
+.card,
+.panel,
+.portal-content,
+.container {
+  min-width: 0;
+}
+
+/* Horizontal scrollable bars without breaking parent bounds */
+.pill-filter-group,
+.filter-chips,
+.prompt-chips,
+.category-filter-bar,
+.tags-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* Table Responsive Scrolling */
+.card:has(table),
+.table-responsive,
+.table-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  min-width: 0 !important;
+}
+
+/* --- Breakpoint: <= 1200px (Laptops / Small Desktops) --- */
 @media (max-width: 1200px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,79 +71,42 @@
   }
 }
 
-/* --- Breakpoint: <= 992px --- */
+/* --- Breakpoint: <= 992px (Tablets & Mobile Viewports) --- */
 @media (max-width: 992px) {
   :root {
     --sidebar-width: 0px;
   }
 
-  /* Landing Navbar Drawer */
-  .mobile-nav-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* Portal Master Layout Stacking */
+  .portal-layout,
+  .app-layout {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
   }
 
-  .nav-links-wrap {
-    position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    right: 0;
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.25rem;
-    display: none;
-    box-shadow: var(--shadow-xl);
-    z-index: 998;
-    max-height: calc(100vh - var(--nav-height));
-    overflow-y: auto;
+  .portal-main,
+  .app-main,
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
-  .nav-links-wrap .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    width: 100%;
-    margin: 0;
+  .portal-content,
+  .app-content {
+    padding: 1.5rem 1.25rem !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
-  .nav-links-wrap .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links-wrap .nav-links li a {
-    display: block;
-    padding: 0.6rem 0;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  .nav-links-wrap .nav-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-  }
-
-  .nav-links-wrap .nav-actions .btn {
-    width: 100%;
-  }
-
-  /* Trigger open state */
-  #nav-toggle:checked ~ .page-wrapper .navbar .nav-links-wrap,
-  #nav-toggle:checked ~ .navbar .nav-links-wrap {
-    display: flex;
-  }
-
-  /* Dashboard App / Portal Sidebar Drawer */
+  /* Portal Sidebar Mobile Drawer */
   .app-sidebar,
   .portal-sidebar {
-    width: 270px;
-    transform: translateX(-100%);
+    width: 280px !important;
+    max-width: 85vw !important;
+    transform: translateX(-100%) !important;
     box-shadow: var(--shadow-xl);
     position: fixed !important;
     top: 0;
@@ -98,70 +114,151 @@
     left: 0;
     height: 100vh !important;
     z-index: 1000 !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
   #sidebar-toggle:checked ~ .app-layout .app-sidebar,
   #sidebar-toggle:checked ~ .page-wrapper .app-layout .app-sidebar,
   #sidebar-toggle:checked ~ .portal-layout .portal-sidebar,
   #sidebar-toggle:checked ~ .page-wrapper .portal-layout .portal-sidebar {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
 
   #sidebar-toggle:checked ~ .portal-layout .portal-sidebar-backdrop,
   #sidebar-toggle:checked ~ .page-wrapper .portal-layout .portal-sidebar-backdrop,
   #sidebar-toggle:checked ~ .app-layout .portal-sidebar-backdrop,
   #sidebar-toggle:checked ~ .page-wrapper .app-layout .portal-sidebar-backdrop {
-    display: block;
-  }
-
-  .app-main,
-  .portal-main {
-    margin-left: 0;
-    width: 100%;
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999;
   }
 
   .sidebar-mobile-toggle-btn {
     display: inline-flex !important;
+    min-width: 44px;
+    min-height: 44px;
   }
 
-  /* Grids */
-  .grid-2 {
-    grid-template-columns: 1fr;
+  /* Two-Column Tool Grids Stack to 1 Column */
+  .grid-2,
+  .builder-layout,
+  .chat-layout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
+
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
+
   .hero-split-grid {
     grid-template-columns: 1fr !important;
     gap: 2.5rem !important;
   }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Resume Sheet Preview Container */
+  .resume-sheet-preview,
+  .builder-preview-panel {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Touch Target Enhancement */
+  button,
+  .btn,
+  .sidebar-link,
+  .mobile-nav-btn,
+  .icon-action-btn,
+  .theme-switch {
+    min-height: 44px;
   }
 }
 
-/* --- Breakpoint: <= 768px --- */
+/* --- Breakpoint: <= 768px (Tablets & Large Phones) --- */
 @media (max-width: 768px) {
   html {
     font-size: 15px;
   }
 
   .section-py {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
   }
 
-  .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
+  /* Tablets maintain 2 columns for KPIs and cards */
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
   }
 
-  .form-row, .form-row-3 {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Portal Topbar Mobile Refinement */
+  .portal-topbar,
+  .app-topbar {
+    padding: 0 1rem !important;
+    gap: 0.65rem !important;
+    min-width: 0 !important;
+  }
+
+  .portal-topbar-left {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+    gap: 0.65rem !important;
+  }
+
+  .portal-topbar-left h3 {
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin: 0 !important;
+  }
+
+  .portal-topbar-left p {
+    display: none !important;
   }
 
   .topbar-search {
-    display: none;
+    display: none !important;
+  }
+
+  .topbar-actions {
+    flex-shrink: 0 !important;
+    gap: 0.45rem !important;
+  }
+
+  /* Hide auxiliary action buttons in portal topbar on mobile */
+  .topbar-actions .btn {
+    display: none !important;
+  }
+
+  /* Compact icon-only theme switch on mobile topbar */
+  .topbar-actions .theme-switch {
+    padding: 0.35rem 0.55rem !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+  .topbar-actions .theme-switch span:not(.theme-switch-icon) {
+    display: none !important;
   }
 
   .readiness-gauge {
@@ -182,24 +279,120 @@
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
+  }
+
+  /* Modal Cards Responsive Boundaries */
+  .css-modal-card {
+    width: 94% !important;
+    max-width: 94% !important;
+    padding: 1.5rem !important;
+    margin: 2rem auto !important;
+    max-height: 88vh !important;
+    overflow-y: auto !important;
   }
 }
 
-/* --- Breakpoint: <= 480px --- */
-@media (max-width: 480px) {
-  .app-content {
-    padding: 1.25rem 1rem;
+/* --- Breakpoint: <= 600px (Assessment Simulator, Compact Modals & Phone Grids) --- */
+@media (max-width: 600px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
 
+  .css-modal-card [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .option-card-label {
+    padding: 0.85rem 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .assessment-header-inner {
+    flex-wrap: wrap !important;
+    gap: 0.65rem !important;
+    padding: 0.65rem 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .assessment-header-inner .theme-switch span:not(.theme-switch-icon) {
+    display: none !important;
+  }
+}
+
+/* --- Breakpoint: <= 480px (Compact Mobile Screens: 320px - 480px) --- */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .portal-content,
+  .app-content {
+    padding: 1.15rem 0.85rem !important;
+  }
+
+  .portal-topbar,
   .app-topbar {
-    padding: 0 1rem;
+    padding: 0 0.75rem !important;
+    height: 56px !important;
   }
 
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 0.75rem;
   }
   .hero-actions .btn {
     width: 100%;
+  }
+
+  /* Compact Hero Metric Pills */
+  .hero-stats-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Floating AI Assistant Button position */
+  .floating-ai-btn {
+    right: 16px !important;
+    bottom: 16px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  /* Card inner padding on ultra compact devices */
+  .card,
+  .job-card,
+  .kpi-card {
+    padding: 1.15rem 1rem !important;
+  }
+}
+
+/* --- Breakpoint: <= 360px (Ultra Compact Screens) --- */
+@media (max-width: 360px) {
+  .portal-topbar-left h3 {
+    max-width: 110px !important;
+  }
+
+  .topbar-actions {
+    gap: 0.25rem !important;
+  }
+
+  .topbar-actions .icon-action-btn,
+  .topbar-actions .theme-switch {
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
   }
 }
