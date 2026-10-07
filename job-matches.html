@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Matches &amp; Opportunities — CareerNova</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+  <!-- Mobile Sidebar Drawer Checkbox -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle Sidebar">
+
+  <div class="page-wrapper">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype &bull; Demo Listings</span>
+      <span>Top Enterprise Opportunities &bull; Official Careers Portals Linked &bull; Pure HTML5 &amp; CSS3</span>
+    </aside>
+
+    <div class="portal-layout">
+
+      <!-- Mobile Sidebar Backdrop Overlay -->
+      <label for="sidebar-toggle" class="portal-sidebar-backdrop" aria-label="Close sidebar"></label>
+
+      <!-- UNIFIED PORTAL SIDEBAR (260px Sticky) -->
+      <aside class="portal-sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            Career<span>Nova</span>
+          </a>
+        </div>
+
+        <div class="sidebar-nav-wrap">
+          <div class="sidebar-group-title">Main Portal</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="recommendations.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Career Matches</span>
+                <span class="badge badge-emerald sidebar-badge">98% Fit</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>My Profile</span>
+                <span class="badge badge-blue sidebar-badge">85%</span>
+              </a>
+            </li>
+            <li>
+              <a href="career-explorer.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                <span>Career Explorer</span>
+              </a>
+            </li>
+            <li>
+              <a href="ai-assistant.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 4a6 6 0 100 12 6 6 0 000-12z"/></svg>
+                <span>AI Assistant</span>
+              </a>
+            </li>
+            <li>
+              <a href="job-matches.html" class="sidebar-link active">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                <span>Job Matches</span>
+                <span class="badge badge-teal sidebar-badge">34</span>
+              </a>
+            </li>
+            <li>
+              <a href="skill-assessment.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                <span>Skill Assessment</span>
+              </a>
+            </li>
+            <li>
+              <a href="learning-roadmap.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                <span>Learning Roadmap</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-group-title">Career Workspace</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="resume-builder.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>Resume Builder</span>
+              </a>
+            </li>
+            <li>
+              <a href="saved-jobs.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                <span>Saved Jobs</span>
+              </a>
+            </li>
+            <li>
+              <a href="applications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Applications</span>
+              </a>
+            </li>
+            <li>
+              <a href="notifications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                <span>Notifications</span>
+                <span class="badge badge-rose sidebar-badge">3</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <a href="profile.html" class="user-mini-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex Rivera" class="user-avatar">
+            <div class="user-mini-info">
+              <div class="user-mini-name">Alex Rivera</div>
+              <div class="user-mini-role">B.S. Computer Science '26</div>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+      <!-- PORTAL MAIN CONTENT -->
+      <main class="portal-main">
+
+        <!-- UNIFIED TOPBAR -->
+        <header class="portal-topbar">
+          <div class="portal-topbar-left">
+            <label for="sidebar-toggle" class="sidebar-mobile-toggle-btn" aria-label="Toggle menu">
+              <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </label>
+            <div>
+              <h3 style="font-size: 1.15rem; margin: 0; color: var(--text);">Job Opportunities &amp; Matching</h3>
+              <p style="font-size: 0.8rem; margin: 0; color: var(--muted);">Algorithmic fit scoring based on your verified skills</p>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <!-- Search Bar -->
+            <div class="topbar-search">
+              <div class="input-icon-wrap">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" class="form-control" placeholder="Search Google, NVIDIA, Microsoft...">
+              </div>
+            </div>
+
+            <!-- Theme Toggle Switch -->
+            <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+              <span class="theme-switch-icon icon-sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="theme-switch-icon icon-moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </span>
+              <span>Theme</span>
+            </label>
+
+            <!-- Notifications Icon -->
+            <a href="notifications.html" class="icon-action-btn" title="Notifications">
+              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <span class="notification-count"></span>
+            </a>
+
+            <!-- Avatar -->
+            <a href="profile.html">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex" class="user-avatar" style="width: 36px; height: 36px;">
+            </a>
+          </div>
+        </header>
+
+        <!-- PAGE CONTENT BODY -->
+        <div class="portal-content">
+
+          <!-- HEADER TITLE & ACTIONS -->
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Verified Openings</span>
+              <h1 style="font-size: 2.1rem; margin: 0 0 0.4rem 0;">Explore Tech Opportunities</h1>
+              <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">
+                Showing 34 curated tech positions across Fortune 500 innovators and leading product giants.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="saved-jobs.html" class="btn btn-secondary btn-sm">Saved Jobs (3)</a>
+              <a href="applications.html" class="btn btn-outline btn-sm">Application Tracker (4)</a>
+            </div>
+          </div>
+
+          <!-- SECTION: TOP COMPANIES HIRING -->
+          <div style="margin-bottom: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <h3 style="font-size: 1.25rem; margin: 0; color: var(--text);">Top Companies Hiring</h3>
+              <span style="font-size: 0.82rem; color: var(--muted);">Direct hiring partnerships</span>
+            </div>
+
+            <!-- Top Companies Cards Grid -->
+            <div class="top-companies-grid">
+              
+              <!-- Google -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-google">G</span>
+                    <div class="company-hire-meta">
+                      <h4>Google</h4>
+                      <span>Technology &bull; Global</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">24 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Software Engineer (96%)</strong>
+                  </div>
+                </div>
+                <a href="https://careers.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- NVIDIA -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-nvidia">NV</span>
+                    <div class="company-hire-meta">
+                      <h4>NVIDIA</h4>
+                      <span>AI &amp; GPU Systems</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">20 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Deep Learning Eng (98%)</strong>
+                  </div>
+                </div>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/careers/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Microsoft -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-microsoft">MS</span>
+                    <div class="company-hire-meta">
+                      <h4>Microsoft</h4>
+                      <span>Cloud &amp; Azure</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">18 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Cloud Architect (93%)</strong>
+                  </div>
+                </div>
+                <a href="https://careers.microsoft.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Amazon -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-amazon">A</span>
+                    <div class="company-hire-meta">
+                      <h4>Amazon</h4>
+                      <span>AWS Cloud Infrastructure</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">31 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">SDE I (AWS Cloud) (91%)</strong>
+                  </div>
+                </div>
+                <a href="https://www.amazon.jobs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Apple -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-apple"></span>
+                    <div class="company-hire-meta">
+                      <h4>Apple</h4>
+                      <span>Hardware &amp; iOS Services</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">12 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Full Stack Services (89%)</strong>
+                  </div>
+                </div>
+                <a href="https://jobs.apple.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Meta -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-meta">M</span>
+                    <div class="company-hire-meta">
+                      <h4>Meta</h4>
+                      <span>AI Infrastructure &amp; Apps</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">15 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Production Systems (88%)</strong>
+                  </div>
+                </div>
+                <a href="https://www.metacareers.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Adobe -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-adobe">A</span>
+                    <div class="company-hire-meta">
+                      <h4>Adobe</h4>
+                      <span>Creative Cloud Digital</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">14 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Frontend Engineer (92%)</strong>
+                  </div>
+                </div>
+                <a href="https://careers.adobe.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- JPMorgan Chase -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-jpmorgan">JPMC</span>
+                    <div class="company-hire-meta">
+                      <h4>JPMorgan Chase</h4>
+                      <span>Global Fintech Core</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">27 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Associate Software (94%)</strong>
+                  </div>
+                </div>
+                <a href="https://careers.jpmorgan.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Accenture -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-accenture">&gt;acc</span>
+                    <div class="company-hire-meta">
+                      <h4>Accenture</h4>
+                      <span>Enterprise Consulting</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">45 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Cloud App Analyst (86%)</strong>
+                  </div>
+                </div>
+                <a href="https://www.accenture.com/in-en/careers" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+              <!-- Deloitte -->
+              <div class="company-hire-card">
+                <div>
+                  <div class="company-hire-header">
+                    <span class="brand-badge badge-deloitte">D.</span>
+                    <div class="company-hire-meta">
+                      <h4>Deloitte</h4>
+                      <span>Risk &amp; Cloud Advisory</span>
+                    </div>
+                  </div>
+                  <div class="company-hire-roles">22 Open Roles</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem;">
+                    Best Fit: <strong style="color: var(--text);">Security Consultant (84%)</strong>
+                  </div>
+                </div>
+                <a href="https://www2.deloitte.com/us/en/careers.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">
+                  Explore Jobs &rarr;
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- QUICK COMPANY FILTER BAR -->
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.65rem;">
+              Filter by Company:
+            </div>
+            <div class="company-filter-bar">
+              <a href="#all" class="company-filter-chip active">All Companies (25)</a>
+              <a href="#google" class="company-filter-chip">Google (24)</a>
+              <a href="#nvidia" class="company-filter-chip">NVIDIA (20)</a>
+              <a href="#microsoft" class="company-filter-chip">Microsoft (18)</a>
+              <a href="#amazon" class="company-filter-chip">Amazon (31)</a>
+              <a href="#apple" class="company-filter-chip">Apple (12)</a>
+              <a href="#meta" class="company-filter-chip">Meta (15)</a>
+              <a href="#adobe" class="company-filter-chip">Adobe (14)</a>
+              <a href="#atlassian" class="company-filter-chip">Atlassian (11)</a>
+              <a href="#jpmorgan" class="company-filter-chip">JPMorgan Chase (27)</a>
+              <a href="#walmart" class="company-filter-chip">Walmart Tech (25)</a>
+              <a href="#accenture" class="company-filter-chip">Accenture (45)</a>
+              <a href="#deloitte" class="company-filter-chip">Deloitte (22)</a>
+            </div>
+          </div>
+
+          <!-- FILTER BAR & CONTROLS -->
+          <div class="card" style="padding: 1.5rem; margin-bottom: 2rem;">
+            <form action="job-matches.html" method="get">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; align-items: flex-end;">
+                
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label">Search Role / Skill</label>
+                  <div class="input-icon-wrap">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="search" class="form-control" placeholder="e.g. React, Python, Cloud...">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label">Location / Mode</label>
+                  <div class="select-wrap">
+                    <select class="form-control">
+                      <option value="all">All Locations</option>
+                      <option value="bengaluru">Bengaluru, India</option>
+                      <option value="hyderabad">Hyderabad, India</option>
+                      <option value="mumbai">Mumbai, India</option>
+                      <option value="noida">Noida / Gurugram</option>
+                      <option value="remote">Remote Worldwide</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label">Experience Level</label>
+                  <div class="select-wrap">
+                    <select class="form-control">
+                      <option value="all">All Levels</option>
+                      <option value="entry">Entry Level (0–2 yrs)</option>
+                      <option value="mid">Mid Level (2–5 yrs)</option>
+                      <option value="senior">Senior (5+ yrs)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label">Sort Opportunities</label>
+                  <div class="select-wrap">
+                    <select class="form-control">
+                      <option value="match" selected>Sort by: Best Match %</option>
+                      <option value="latest">Sort by: Latest Posted</option>
+                      <option value="salary">Sort by: Highest Compensation</option>
+                      <option value="company">Sort by: Company (A–Z)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Filter Jobs
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- JOB CARDS LIST -->
+          <div>
+
+            <!-- JOB CARD 1: NVIDIA (98%) -->
+            <article class="portal-job-card" id="nvidia">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-nvidia" title="NVIDIA">NV</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Deep Learning Software Engineer — PyTorch Inference</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>NVIDIA</strong>
+                      <span>&bull;</span>
+                      <span>Bengaluru, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-neutral">On-Site</span>
+                      <span>&bull;</span>
+                      <span>1–4 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-excellent">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  98% Excellent Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Python (95% Mastered)</span>
+                    <span class="match-check-chip">&check; Deep Learning Foundations</span>
+                    <span class="match-check-chip">&check; Autograd Optimization</span>
+                    <span class="match-check-chip">&check; Linear Algebra</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; CUDA Kernel Tuning</span>
+                    <span class="gap-check-chip">&cir; TensorRT Serialization</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹28 – ₹42 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($140k – $180k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>AI Systems &amp; Accelerated Compute</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 1 day ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://www.nvidia.com/en-us/about-nvidia/careers/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on NVIDIA Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 2: GOOGLE (96%) -->
+            <article class="portal-job-card" id="google">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-google" title="Google">G</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Software Engineer III — Core Search Infrastructure</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Google</strong>
+                      <span>&bull;</span>
+                      <span>Bengaluru, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>1–3 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-excellent">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  96% Excellent Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Algorithms &amp; Problem Solving (90%)</span>
+                    <span class="match-check-chip">&check; Data Structures</span>
+                    <span class="match-check-chip">&check; Linux Environment</span>
+                    <span class="match-check-chip">&check; Big-O Complexity</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; Distributed Raft Consensus</span>
+                    <span class="gap-check-chip">&cir; C++ Low-Level Memory Buffers</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹24 – ₹36 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($130k – $165k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Search Indexing &amp; Retrieval</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 2 days ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://careers.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Google Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 3: ATLASSIAN (94%) -->
+            <article class="portal-job-card" id="atlassian">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-atlassian" title="Atlassian">ATL</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Full Stack Software Engineer — Jira Cloud Core</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Atlassian</strong>
+                      <span>&bull;</span>
+                      <span>Remote First (India Base)</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-emerald">Remote</span>
+                      <span>&bull;</span>
+                      <span>1–3 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-excellent">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  94% Excellent Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; React Component Architecture</span>
+                    <span class="match-check-chip">&check; Node.js Services</span>
+                    <span class="match-check-chip">&check; SQL Schema Modeling</span>
+                    <span class="match-check-chip">&check; Modern CSS</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; GraphQL Apollo Subgraphs</span>
+                    <span class="gap-check-chip">&cir; Redis Cluster Caching</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹25 – ₹35 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($125k – $155k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Collaborative Workflow Tools</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 4 days ago &bull; Direct Referral Tier</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://www.atlassian.com/company/careers" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Atlassian Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 4: ADOBE (93%) -->
+            <article class="portal-job-card" id="adobe">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-adobe" title="Adobe">A</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Frontend Engineer — Creative Cloud Web Applications</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Adobe</strong>
+                      <span>&bull;</span>
+                      <span>Noida, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>1–3 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-strong">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  93% Strong Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; HTML5 &amp; CSS3 Layouts</span>
+                    <span class="match-check-chip">&check; JavaScript (ES6+)</span>
+                    <span class="match-check-chip">&check; Component Lifecycle</span>
+                    <span class="match-check-chip">&check; Glassmorphism &amp; UI</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; WebGL Shader Pipelines</span>
+                    <span class="gap-check-chip">&cir; WebAssembly (WASM) Modules</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹19 – ₹27 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($110k – $140k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Digital Media Web Platforms</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 1 week ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://careers.adobe.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Adobe Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 5: MICROSOFT (91%) -->
+            <article class="portal-job-card" id="microsoft">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-microsoft" title="Microsoft">MS</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Azure Cloud Solution Engineer</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Microsoft</strong>
+                      <span>&bull;</span>
+                      <span>Hyderabad, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>2–5 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-strong">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  91% Strong Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Cloud Architecture Basics</span>
+                    <span class="match-check-chip">&check; REST Web APIs</span>
+                    <span class="match-check-chip">&check; Git Workflows</span>
+                    <span class="match-check-chip">&check; Docker Containers</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; Azure Resource Manager (ARM)</span>
+                    <span class="gap-check-chip">&cir; Terraform Orchestration</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹22 – ₹32 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($120k – $150k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Azure Infrastructure &amp; AI Cloud</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 3 days ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://careers.microsoft.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Microsoft Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 6: JPMORGAN CHASE (84%) -->
+            <article class="portal-job-card" id="jpmorgan">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-jpmorgan" title="JPMorgan Chase">JPMC</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Fintech Application Developer — Core Banking</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>JPMorgan Chase</strong>
+                      <span>&bull;</span>
+                      <span>Mumbai, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>1–3 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-good">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  84% Good Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Relational SQL Modeling</span>
+                    <span class="match-check-chip">&check; Backend Service Logic</span>
+                    <span class="match-check-chip">&check; Secure Web Foundations</span>
+                    <span class="match-check-chip">&check; Version Control</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; Spring Boot Microservices</span>
+                    <span class="gap-check-chip">&cir; PCI-DSS Banking Standards</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹18 – ₹28 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($110k – $140k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Corporate &amp; Investment Banking Tech</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 6 days ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://careers.jpmorgan.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on JPMC Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 7: ACCENTURE (78%) -->
+            <article class="portal-job-card" id="accenture">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-accenture" title="Accenture">&gt;acc</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Associate Cloud Engineer — Client Solutions</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Accenture</strong>
+                      <span>&bull;</span>
+                      <span>Bengaluru, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>0–2 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-potential">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  78% Potential Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Linux Shell Basics</span>
+                    <span class="match-check-chip">&check; Python Fundamentals</span>
+                    <span class="match-check-chip">&check; TCP/IP Networking</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; ITIL Service Operations</span>
+                    <span class="gap-check-chip">&cir; Multi-Cloud Governance</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹9 – ₹15 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($60k – $85k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Global Technology Transformation</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 1 week ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://www.accenture.com/in-en/careers" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Accenture Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOB CARD 8: DELOITTE (72%) -->
+            <article class="portal-job-card" id="deloitte">
+              <div class="job-card-top-row">
+                <div class="job-company-identity">
+                  <span class="brand-badge badge-deloitte" title="Deloitte">D.</span>
+                  <div class="job-role-header">
+                    <h3><a href="job-details.html">Cyber Threat &amp; Risk Advisory Analyst</a></h3>
+                    <div class="job-company-meta-line">
+                      <strong>Deloitte</strong>
+                      <span>&bull;</span>
+                      <span>Hyderabad, India</span>
+                      <span>&bull;</span>
+                      <span class="badge badge-teal">Hybrid</span>
+                      <span>&bull;</span>
+                      <span>1–3 Years Exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="match-badge match-badge-potential">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  72% Potential Match
+                </div>
+              </div>
+
+              <!-- Match Analysis Box -->
+              <div class="job-match-analysis">
+                <div>
+                  <div class="analysis-col-title matching">
+                    &check; Why This Matches You
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="match-check-chip">&check; Operating Systems Architecture</span>
+                    <span class="match-check-chip">&check; Network Protocols</span>
+                    <span class="match-check-chip">&check; Python Automation</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="analysis-col-title gap">
+                    &cir; Skills to Improve
+                  </div>
+                  <div class="analysis-chips-wrap">
+                    <span class="gap-check-chip">&cir; Splunk SIEM Architecture</span>
+                    <span class="gap-check-chip">&cir; MITRE ATT&amp;CK Framework</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strip: Details & Compensation -->
+              <div class="job-details-strip">
+                <div class="job-detail-pill compensation">
+                  <span>Compensation:</span>
+                  <strong>₹11 – ₹18 LPA</strong>
+                  <span style="font-size: 0.8rem; color: var(--muted);">($70k – $95k USD)</span>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Job Type:</span>
+                  <strong>Full Time</strong>
+                </div>
+                <div class="job-detail-pill">
+                  <span>Department:</span>
+                  <strong>Cyber Risk Services</strong>
+                </div>
+              </div>
+
+              <!-- Actions Strip -->
+              <div class="job-actions-strip">
+                <span class="time-posted">Posted 2 weeks ago &bull; Verified Partner Role</span>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                  <a href="#saved-modal" class="btn btn-secondary btn-sm" title="Save Job">
+                    ♡ Save
+                  </a>
+                  <a href="job-details.html" class="btn btn-outline btn-sm">
+                    View Details
+                  </a>
+                  <a href="https://www2.deloitte.com/us/en/careers.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Apply on Deloitte Careers &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- PURE CSS MODAL: JOB SAVED CONFIRMATION -->
+    <div id="saved-modal" class="css-modal" aria-hidden="true">
+      <div class="css-modal-card">
+        <a href="#" class="css-modal-close" aria-label="Close modal">&times;</a>
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.12); color: var(--success); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text);">Position Bookmarked!</h3>
+          <p style="color: var(--muted); font-size: 0.92rem;">
+            This opportunity has been saved to your portal workspace. You can track application deadlines and customize your resume for this specific role.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+          <a href="#" class="btn btn-secondary">Keep Browsing</a>
+          <a href="saved-jobs.html" class="btn btn-primary">Go to Saved Jobs &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/portal.js"></script>
+  <script src="assets/js/jobs-data.js"></script>
+  <script src="assets/js/jobs.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

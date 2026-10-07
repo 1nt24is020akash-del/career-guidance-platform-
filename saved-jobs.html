@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Jobs &amp; Bookmarks — CareerNova</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle Sidebar">
+
+  <div class="page-wrapper">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Supports CSS-Only Light &amp; Dark Modes</span>
+    </aside>
+
+    <div class="portal-layout">
+
+      <!-- Mobile Sidebar Backdrop Overlay -->
+      <label for="sidebar-toggle" class="portal-sidebar-backdrop" aria-label="Close sidebar"></label>
+
+      <!-- UNIFIED PORTAL SIDEBAR (260px Sticky) -->
+      <aside class="portal-sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            Career<span>Nova</span>
+          </a>
+        </div>
+
+        <div class="sidebar-nav-wrap">
+          <div class="sidebar-group-title">Main Portal</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="recommendations.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Career Matches</span>
+                <span class="badge badge-emerald sidebar-badge">98% Fit</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="career-explorer.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                <span>Career Explorer</span>
+              </a>
+            </li>
+            <li>
+              <a href="ai-assistant.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 4a6 6 0 100 12 6 6 0 000-12z"/></svg>
+                <span>AI Assistant</span>
+              </a>
+            </li>
+            <li>
+              <a href="job-matches.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                <span>Job Matches</span>
+              </a>
+            </li>
+            <li>
+              <a href="skill-assessment.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                <span>Skill Assessment</span>
+              </a>
+            </li>
+            <li>
+              <a href="learning-roadmap.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                <span>Learning Roadmap</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-group-title">Career Workspace</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="resume-builder.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>Resume Builder</span>
+              </a>
+            </li>
+            <li>
+              <a href="saved-jobs.html" class="sidebar-link active">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                <span>Saved Jobs</span>
+                <span class="badge badge-blue sidebar-badge">3</span>
+              </a>
+            </li>
+            <li>
+              <a href="applications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Applications</span>
+              </a>
+            </li>
+            <li>
+              <a href="notifications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                <span>Notifications</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <a href="profile.html" class="user-mini-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex Rivera" class="user-avatar">
+            <div class="user-mini-info">
+              <div class="user-mini-name">Alex Rivera</div>
+              <div class="user-mini-role">B.S. Computer Science '26</div>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+      <!-- PORTAL MAIN CONTENT -->
+      <main class="portal-main">
+
+        <!-- UNIFIED TOPBAR -->
+        <header class="portal-topbar">
+          <div class="portal-topbar-left">
+            <label for="sidebar-toggle" class="sidebar-mobile-toggle-btn" aria-label="Toggle menu">
+              <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </label>
+            <div>
+              <h3 style="font-size: 1.15rem; margin: 0; color: var(--text);">Saved Jobs &amp; Bookmarks</h3>
+              <p style="font-size: 0.8rem; margin: 0; color: var(--muted);">Roles saved for upcoming application deadlines</p>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <!-- Theme Toggle Switch -->
+            <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+              <span class="theme-switch-icon icon-sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="theme-switch-icon icon-moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </span>
+              <span>Theme</span>
+            </label>
+
+            <!-- Notifications Icon -->
+            <a href="notifications.html" class="icon-action-btn" title="Notifications">
+              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <span class="notification-count"></span>
+            </a>
+
+            <!-- Avatar -->
+            <a href="profile.html">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex" class="user-avatar" style="width: 36px; height: 36px;">
+            </a>
+
+            <a href="job-matches.html" class="btn btn-primary btn-sm">Find More Jobs &rarr;</a>
+          </div>
+        </header>
+
+        <div class="portal-content">
+
+          <!-- Filter Pills -->
+          <div class="pill-filter-group" style="margin-bottom: 1.75rem;">
+            <div class="pill-filter-item">
+              <input type="radio" name="saved-filter" id="sf-all" checked>
+              <label for="sf-all">All Saved (3)</label>
+            </div>
+            <div class="pill-filter-item">
+              <input type="radio" name="saved-filter" id="sf-high">
+              <label for="sf-high">High Match &gt;90% (2)</label>
+            </div>
+            <div class="pill-filter-item">
+              <input type="radio" name="saved-filter" id="sf-remote">
+              <label for="sf-remote">Remote Roles (2)</label>
+            </div>
+          </div>
+
+          <!-- Saved Job Cards List -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+            <!-- Saved Job 1 -->
+            <div class="card card-hover" style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.85rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center;">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=100&q=80" alt="Synthetix AI" style="width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem;"><a href="job-details.html">Junior Machine Learning Engineer</a></h4>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <strong style="color: var(--text-primary);">Synthetix AI</strong>
+                      <span>&bull;</span>
+                      <span>San Francisco, CA (Remote)</span>
+                      <span>&bull;</span>
+                      <span style="color: var(--primary-accent); font-weight: 600;">$115k - $140k</span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge-blue" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">98% Match</span>
+              </div>
+
+              <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                Fine-tune open-weights models (PEFT, QLoRA), construct low-latency inference pipelines, and implement automated safety evaluation suites.
+              </p>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Saved 2 days ago &bull; Deadline in 14 days</span>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="saved-jobs.html" class="btn btn-outline btn-sm">Remove</a>
+                  <a href="job-details.html" class="btn btn-secondary btn-sm">View Details</a>
+                  <a href="job-details.html#apply" class="btn btn-primary btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saved Job 2 -->
+            <div class="card card-hover" style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.85rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center;">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80" alt="CloudScale Systems" style="width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem;"><a href="job-details.html">Associate Full-Stack Developer</a></h4>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <strong style="color: var(--text-primary);">CloudScale Systems</strong>
+                      <span>&bull;</span>
+                      <span>Austin, TX (Hybrid)</span>
+                      <span>&bull;</span>
+                      <span style="color: var(--primary-accent); font-weight: 600;">$98k - $125k</span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge-teal" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">94% Match</span>
+              </div>
+
+              <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                Develop developer consoles using TypeScript, React, and GraphQL with high-concurrency Node.js backends.
+              </p>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Saved Oct 2, 2026 &bull; Deadline in 5 days</span>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="saved-jobs.html" class="btn btn-outline btn-sm">Remove</a>
+                  <a href="job-details.html" class="btn btn-secondary btn-sm">View Details</a>
+                  <a href="job-details.html#apply" class="btn btn-primary btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saved Job 3 -->
+            <div class="card card-hover" style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.85rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center;">
+                  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=100&q=80" alt="CyberGuard Security" style="width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem;"><a href="job-details.html">Security Operations Analyst (SOC)</a></h4>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <strong style="color: var(--text-primary);">CyberGuard Security</strong>
+                      <span>&bull;</span>
+                      <span>Washington, D.C. (Remote Option)</span>
+                      <span>&bull;</span>
+                      <span style="color: var(--primary-accent); font-weight: 600;">$92k - $118k</span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge-emerald" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">90% Match</span>
+              </div>
+
+              <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                Monitor telemetry across endpoints, investigate abnormal traffic patterns, and build automated incident response playbooks.
+              </p>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Saved Sep 29, 2026 &bull; Rolling Review</span>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="saved-jobs.html" class="btn btn-outline btn-sm">Remove</a>
+                  <a href="job-details.html" class="btn btn-secondary btn-sm">View Details</a>
+                  <a href="job-details.html#apply" class="btn btn-primary btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/portal.js"></script>
+  <script src="assets/js/saved-jobs.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

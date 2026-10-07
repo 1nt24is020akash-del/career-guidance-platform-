@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerNova — Smarter Career Discovery &amp; Intelligent Job Matching</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Pure CSS Theme Toggle Master Input -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+  <!-- Mobile Nav Checkbox Toggle -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Navigation Drawer">
+
+  <div class="page-wrapper">
+
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Supports CSS-Only Light &amp; Dark Modes</span>
+    </aside>
+
+    <!-- Redesigned Clean Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <!-- Left: Brand Logo -->
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          Career<span>Nova</span>
+        </a>
+
+        <!-- Center: Desktop Navigation Links -->
+        <div class="nav-links-wrap">
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="recommendations.html">Recommendations</a></li>
+              <li><a href="career-explorer.html">Explore Careers</a></li>
+              <li><a href="job-matches.html">Find Jobs</a></li>
+              <li><a href="skill-assessment.html">Skill Assessment</a></li>
+              <li><a href="learning-roadmap.html">Roadmaps</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </nav>
+
+          <!-- Right: Theme Switch, Auth Actions -->
+          <div class="nav-actions">
+            <!-- Theme Toggle Switch (Pure CSS) -->
+            <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+              <span class="theme-switch-icon icon-sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="theme-switch-icon icon-moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </span>
+              <span>Theme</span>
+            </label>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer Hamburger -->
+        <label for="nav-toggle" class="mobile-nav-btn" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. HERO SECTION -->
+      <section class="section-py" style="padding-top: 4.5rem; padding-bottom: 4.5rem; background: var(--bg-main);">
+        <div class="container">
+          <div class="hero-split-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center;">
+            
+            <!-- Left Content -->
+            <div>
+              <div class="section-tag" style="margin-bottom: 1.25rem;">
+                Smarter Career Discovery
+              </div>
+              <h1 style="margin-bottom: 1.25rem;">
+                Build Your Future. <span class="gradient-text">Find Your Direction.</span>
+              </h1>
+              <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; max-width: 540px;">
+                Explore career opportunities, identify your strengths, build industry-ready skills, and discover roles that align with your ambitions.
+              </p>
+              
+              <!-- Hero Buttons -->
+              <div class="hero-actions" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <a href="recommendations.html" class="btn btn-primary btn-lg">
+                  View Career Matches
+                  <svg viewBox="0 0 24 24" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="skill-assessment.html" class="btn btn-secondary btn-lg">
+                  Take Skill Assessment
+                </a>
+                <a href="career-explorer.html" class="btn btn-outline btn-lg">
+                  Explore 500+ Roles
+                </a>
+              </div>
+
+              <!-- Compact Trust & Value Row -->
+              <div style="display: flex; gap: 2rem; padding-top: 1.75rem; border-top: 1px solid var(--border-color); flex-wrap: wrap;">
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 1.25rem; font-family: var(--font-display); display: block;">40,000+</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-secondary);">Students Guided</span>
+                </div>
+                <div>
+                  <strong style="color: var(--primary-accent); font-size: 1.25rem; font-family: var(--font-display); display: block;">98%</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-secondary);">Top Match Accuracy</span>
+                </div>
+                <div>
+                  <strong style="color: var(--secondary-accent); font-size: 1.25rem; font-family: var(--font-display); display: block;">500+</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-secondary);">Curated Paths</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Visual: High-quality collaborative photo + 4 floating cards -->
+            <div style="position: relative;">
+              <div class="card" style="padding: 0.75rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                <div style="border-radius: var(--radius-lg); overflow: hidden; height: 380px;">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students and mentors collaborating on tech projects" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+              </div>
+
+              <!-- Floating Card 1: Career Match -->
+              <div class="card hero-float-card" style="position: absolute; top: -15px; left: -20px; box-shadow: var(--shadow-md);">
+                <div style="width: 40px; height: 40px; border-radius: var(--radius-full); background: var(--soft-teal); color: var(--secondary-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-display); font-size: 0.95rem;">
+                  98%
+                </div>
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Top Career Match</div>
+                  <strong style="font-size: 0.88rem; color: var(--text-primary);">AI / ML Engineer</strong>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Recommended Role -->
+              <div class="card hero-float-card" style="position: absolute; bottom: 25px; left: -20px; box-shadow: var(--shadow-md);">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: var(--soft-blue); color: var(--primary-accent); display: flex; align-items: center; justify-content: center;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Fastest Placement</div>
+                  <strong style="font-size: 0.88rem; color: var(--text-primary);">Full Stack Dev (94%)</strong>
+                </div>
+              </div>
+
+              <!-- Floating Card 3: Skills to Develop -->
+              <div class="card hero-float-card" style="position: absolute; top: 30px; right: -20px; box-shadow: var(--shadow-md);">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: var(--soft-amber); color: var(--warning); display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-display);">
+                  3
+                </div>
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Key Skills</div>
+                  <strong style="font-size: 0.88rem; color: var(--text-primary);">To Job-Ready</strong>
+                </div>
+              </div>
+
+              <!-- Floating Card 4: Learning Progress -->
+              <div class="card hero-float-card" style="position: absolute; bottom: -20px; right: -15px; min-width: 200px; box-shadow: var(--shadow-md);">
+                <div style="width: 100%;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.35rem;">
+                    <span style="color: var(--text-secondary); font-weight: 600;">Learning Progress</span>
+                    <strong style="color: var(--primary-accent);">75%</strong>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill progress-blue" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUSTED BY LEARNERS SOCIAL PROOF BAR -->
+      <section style="padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface);">
+        <div class="container">
+          <p style="text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; margin-bottom: 1.25rem;">
+            Trusted by students &amp; engineers from top institutions and tech pioneers
+          </p>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 3.5rem; flex-wrap: wrap; opacity: 0.8;">
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em;">Stanford University</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em;">MIT OpenCourse</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em;">Google Alumni</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em;">Stripe Scale</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em;">Microsoft Learn</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PLATFORM BENEFITS -->
+      <section class="section-py" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Why Choose CareerNova</span>
+            <h2>Architected for Accelerated Professional Growth</h2>
+            <p>Traditional job portals leave students overwhelmed. CareerNova replaces guesswork with structured progression.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card card-hover" style="padding: 2rem;">
+              <div class="kpi-icon-wrap icon-blue" style="margin-bottom: 1.25rem;">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Precision Role Matching</h3>
+              <p style="font-size: 0.92rem;">
+                Our algorithmic model aligns verified coursework, GitHub code repositories, and strengths directly with hiring manager criteria.
+              </p>
+            </div>
+
+            <div class="card card-hover" style="padding: 2rem;">
+              <div class="kpi-icon-wrap icon-teal" style="margin-bottom: 1.25rem;">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Verified Competency Benchmarks</h3>
+              <p style="font-size: 0.92rem;">
+                Complete modular problem-solving tests to earn authenticated digital badges that prove your coding capability beyond a static resume.
+              </p>
+            </div>
+
+            <div class="card card-hover" style="padding: 2rem;">
+              <div class="kpi-icon-wrap icon-emerald" style="margin-bottom: 1.25rem;">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Milestone-Driven Roadmaps</h3>
+              <p style="font-size: 0.92rem;">
+                Step-by-step curriculum roadmaps taking you from syntax fundamentals to real-world capstone portfolio deployment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. HOW IT WORKS -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Guided Progression</span>
+            <h2>How CareerNova Works</h2>
+            <p>Four systematic steps designed to take you from uncertain student to career-ready specialist.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card" style="padding: 1.75rem;">
+              <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); color: var(--primary-accent); margin-bottom: 0.75rem;">
+                01
+              </div>
+              <h4 style="margin-bottom: 0.5rem;">Build Your Profile</h4>
+              <p style="font-size: 0.88rem;">Catalog your education, degree, projects, and programming proficiencies.</p>
+            </div>
+
+            <div class="card" style="padding: 1.75rem;">
+              <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); color: var(--secondary-accent); margin-bottom: 0.75rem;">
+                02
+              </div>
+              <h4 style="margin-bottom: 0.5rem;">Assess Your Skills</h4>
+              <p style="font-size: 0.88rem;">Complete modular benchmarks to measure real-world coding capability.</p>
+            </div>
+
+            <div class="card" style="padding: 1.75rem;">
+              <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); color: var(--primary-accent); margin-bottom: 0.75rem;">
+                03
+              </div>
+              <h4 style="margin-bottom: 0.5rem;">Follow Your Roadmap</h4>
+              <p style="font-size: 0.88rem;">Follow stage-by-stage learning milestones to bridge critical skill gaps.</p>
+            </div>
+
+            <div class="card" style="padding: 1.75rem;">
+              <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); color: var(--secondary-accent); margin-bottom: 0.75rem;">
+                04
+              </div>
+              <h4 style="margin-bottom: 0.5rem;">Apply With Confidence</h4>
+              <p style="font-size: 0.88rem;">Match with verified hiring opportunities aligned with your verified score.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXPLORE POPULAR CAREERS -->
+      <section class="section-py" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.5rem;">In-Demand Disciplines</span>
+              <h2>Explore Popular Careers</h2>
+              <p style="margin: 0;">Verified growth indicators, core skill sets, and realistic roadmaps.</p>
+            </div>
+            <a href="career-explorer.html" class="btn btn-secondary btn-sm">View All Careers &rarr;</a>
+          </div>
+
+          <div class="grid-3">
+            <!-- Card 1 -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 180px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Software Developer" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                  <h3 style="font-size: 1.2rem;">Software Developer</h3>
+                  <span class="badge badge-emerald">+22% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 1rem;">Architect and deploy full-stack applications, microservices, and databases.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.25rem;">
+                  <span class="badge badge-neutral">TypeScript</span>
+                  <span class="badge badge-neutral">React</span>
+                  <span class="badge badge-neutral">Node.js</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary-accent); font-size: 0.95rem;">$95k - $160k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 180px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" alt="AI Engineer" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                  <h3 style="font-size: 1.2rem;">AI / ML Engineer</h3>
+                  <span class="badge badge-blue">+36% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 1rem;">Train neural networks, fine-tune foundation models, and optimize inference.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.25rem;">
+                  <span class="badge badge-neutral">Python</span>
+                  <span class="badge badge-neutral">PyTorch</span>
+                  <span class="badge badge-neutral">Vector DBs</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary-accent); font-size: 0.95rem;">$120k - $210k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 180px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Engineer" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                  <h3 style="font-size: 1.2rem;">Cloud Solutions Architect</h3>
+                  <span class="badge badge-teal">+25% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 1rem;">Deploy scalable multi-cloud infrastructure and resilient CI/CD pipelines.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.25rem;">
+                  <span class="badge badge-neutral">AWS</span>
+                  <span class="badge badge-neutral">Kubernetes</span>
+                  <span class="badge badge-neutral">Terraform</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary-accent); font-size: 0.95rem;">$110k - $185k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. FEATURED JOB OPPORTUNITIES -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Recent Openings</span>
+              <h2>Featured Job Opportunities</h2>
+              <p style="margin: 0;">Roles matched with top candidates across innovative startups and enterprises.</p>
+            </div>
+            <a href="job-matches.html" class="btn btn-secondary btn-sm">Browse 34 Active Jobs &rarr;</a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Job 1 -->
+            <div class="card card-hover" style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center;">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=100&q=80" alt="Synthetix AI" style="width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem;"><a href="job-details.html">Junior Machine Learning Engineer</a></h4>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <strong style="color: var(--text-primary);">Synthetix AI</strong>
+                      <span>&bull;</span>
+                      <span>San Francisco, CA (Remote)</span>
+                      <span>&bull;</span>
+                      <span style="color: var(--primary-accent); font-weight: 600;">$115k - $140k</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <span class="badge badge-blue">98% Match</span>
+                  <a href="job-details.html" class="btn btn-secondary btn-sm">View Details</a>
+                  <a href="job-details.html#apply" class="btn btn-primary btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="card card-hover" style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center;">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80" alt="CloudScale" style="width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem;"><a href="job-details.html">Associate Full-Stack Developer</a></h4>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <strong style="color: var(--text-primary);">CloudScale Systems</strong>
+                      <span>&bull;</span>
+                      <span>Austin, TX (Hybrid)</span>
+                      <span>&bull;</span>
+                      <span style="color: var(--primary-accent); font-weight: 600;">$98k - $125k</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <span class="badge badge-teal">94% Match</span>
+                  <a href="job-details.html" class="btn btn-secondary btn-sm">View Details</a>
+                  <a href="job-details.html#apply" class="btn btn-primary btn-sm">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. AI CAREER GUIDANCE PREVIEW -->
+      <section class="section-py" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;" class="hero-split-grid">
+            <div>
+              <span class="section-tag">Intelligent Advisory</span>
+              <h2>Instant Clarity with NovaAdvisor</h2>
+              <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
+                Ask deep questions about skill requirements, interview standards, salary benchmarks, and tailored learning paths.
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                <div style="padding: 0.85rem 1.15rem; background: var(--bg-card-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.9rem;">
+                  💡 <strong>Prompt:</strong> "Which career suits my Python &amp; SQL skills best?"
+                </div>
+                <div style="padding: 0.85rem 1.15rem; background: var(--bg-card-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.9rem;">
+                  🚀 <strong>Prompt:</strong> "What are my biggest skill gaps for junior AI engineering?"
+                </div>
+              </div>
+
+              <a href="ai-assistant.html" class="btn btn-primary btn-lg">Launch AI Assistant Prototype &rarr;</a>
+            </div>
+
+            <!-- Chat Preview Box -->
+            <div class="card" style="padding: 1.75rem; box-shadow: var(--shadow-lg);">
+              <div style="display: flex; align-items: center; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1.25rem;">
+                <div class="nav-logo-icon" style="width: 32px; height: 32px;">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 0.95rem; display: block;">NovaAdvisor</strong>
+                  <span style="font-size: 0.76rem; color: var(--secondary-accent);">Candidate Profile Synced</span>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem;">
+                <div style="padding: 0.85rem 1rem; background: var(--bg-card-subtle); border-radius: var(--radius-md); border-left: 3px solid var(--primary-accent);">
+                  <strong>AI Analysis:</strong> Based on your 95% Python proficiency and math coursework, your highest compatibility track is <strong>AI / Machine Learning Engineer (98% Match)</strong>.
+                </div>
+                <div style="padding: 0.85rem 1rem; background: var(--soft-teal); border-radius: var(--radius-md); color: var(--text-primary);">
+                  🎯 <strong>Next Recommended Step:</strong> Begin Stage 3 (Deep Neural Networks with PyTorch) on your Learning Roadmap.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. SKILL DEVELOPMENT & LEARNING ROADMAP PREVIEW -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Structured Roadmaps</span>
+            <h2>Master In-Demand Skills Step-by-Step</h2>
+            <p>From programming fundamentals to enterprise capstone projects, follow validated stage milestones.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card card-hover" style="padding: 2rem;">
+              <span class="badge badge-blue" style="margin-bottom: 0.75rem;">Stage 1 &bull; 4 Weeks</span>
+              <h4 style="margin-bottom: 0.5rem;">Programming Fundamentals</h4>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Data structures, memory allocation, recursion, and Big-O computational bounds.</p>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill progress-emerald" style="width: 100%;"></div></div>
+              <span style="font-size: 0.78rem; color: var(--success); font-weight: 700; margin-top: 0.5rem; display: block;">✓ Completed</span>
+            </div>
+
+            <div class="card card-hover" style="padding: 2rem;">
+              <span class="badge badge-teal" style="margin-bottom: 0.75rem;">Stage 2 &bull; 6 Weeks</span>
+              <h4 style="margin-bottom: 0.5rem;">Frontend Architecture</h4>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Semantic HTML5, CSS Grid/Flexbox layouts, React state, and bundle optimization.</p>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill progress-emerald" style="width: 100%;"></div></div>
+              <span style="font-size: 0.78rem; color: var(--success); font-weight: 700; margin-top: 0.5rem; display: block;">✓ Completed</span>
+            </div>
+
+            <div class="card card-hover" style="padding: 2rem;">
+              <span class="badge badge-blue" style="margin-bottom: 0.75rem;">Stage 3 &bull; 6 Weeks</span>
+              <h4 style="margin-bottom: 0.5rem;">Backend &amp; Concurrency</h4>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Node.js, Express, REST APIs, OAuth2 authentication, and middleware.</p>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill progress-blue" style="width: 75%;"></div></div>
+              <span style="font-size: 0.78rem; color: var(--primary-accent); font-weight: 700; margin-top: 0.5rem; display: block;">▶ In Progress (75%)</span>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="learning-roadmap.html" class="btn btn-secondary">Explore All 5 Interactive Roadmaps &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. STUDENT SUCCESS STORIES -->
+      <section class="section-py" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Real Success</span>
+            <h2>Trusted by Ambitious Candidates</h2>
+            <p>Illustrative testimonials from students and career pivoters who accelerated their trajectory with CareerNova.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card" style="padding: 2rem; display: flex; flex-direction: column;">
+              <div style="color: #F59E0B; margin-bottom: 0.75rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1;">
+                "CareerNova removed the uncertainty from preparing for software engineer interviews. The roadmaps gave me a concrete week-by-week curriculum."
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" style="width: 42px; height: 42px; border-radius: var(--radius-full); object-fit: cover;">
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 0.9rem; display: block;">Elena Rostova</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-secondary);">Junior Frontend Dev @ CloudScale</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="padding: 2rem; display: flex; flex-direction: column;">
+              <div style="color: #F59E0B; margin-bottom: 0.75rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1;">
+                "The PyTorch assessment directly highlighted which linear algebra concepts I was missing. It made my preparation focused and high-impact."
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marcus Chen" style="width: 42px; height: 42px; border-radius: var(--radius-full); object-fit: cover;">
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 0.9rem; display: block;">Marcus Chen</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-secondary);">ML Intern @ Synthetix AI</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="padding: 2rem; display: flex; flex-direction: column;">
+              <div style="color: #F59E0B; margin-bottom: 0.75rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1;">
+                "Comparing cybersecurity with cloud engineering in the Career Explorer gave me crystal-clear direction before graduating college."
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Aisha Patel" style="width: 42px; height: 42px; border-radius: var(--radius-full); object-fit: cover;">
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 0.9rem; display: block;">Aisha Patel</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-secondary);">Cyber Defense Trainee @ CyberGuard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FREQUENTLY ASKED QUESTIONS -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container" style="max-width: 800px;">
+          <div class="section-header">
+            <span class="section-tag">Frequently Asked Questions</span>
+            <h2>Common Questions Answered</h2>
+            <p>Learn more about how CareerNova computes compatibility scores and organizes roadmaps.</p>
+          </div>
+
+          <details class="faq-item" open>
+            <summary>How does the compatibility match score work?</summary>
+            <div class="faq-answer">
+              Our match algorithm cross-evaluates your verified assessment proficiencies, declared projects, and career preferences against live industry skill matrices.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is this platform free for college students?</summary>
+            <div class="faq-answer">
+              Yes! Students have full access to profile management, career exploration, skill tests, and roadmap tracking without paywalls.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I print or export my resume?</summary>
+            <div class="faq-answer">
+              Yes! Use the built-in Resume Builder page and press Ctrl+P (or Cmd+P on Mac) to generate a clean, monochrome paper-ready resume handled by our dedicated print stylesheet.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does the CSS-only theme switcher function?</summary>
+            <div class="faq-answer">
+              CareerNova utilizes modern CSS pseudo-classes and CSS variables, allowing immediate toggling between Light and Dark mode directly within your browser without JavaScript.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 10. FINAL CALL TO ACTION -->
+      <section class="section-py" style="background: var(--bg-secondary); text-align: center;">
+        <div class="container" style="max-width: 820px;">
+          <div class="card" style="padding: 4rem 2rem; background: var(--grad-subtle); border-color: rgba(37, 99, 235, 0.2);">
+            <span class="badge badge-blue" style="margin-bottom: 1rem;">Launch Your Future</span>
+            <h2 style="font-size: clamp(2rem, 3.8vw, 2.75rem); margin-bottom: 1rem;">
+              Your Dream Career Starts With A Clear Direction.
+            </h2>
+            <p style="font-size: 1.1rem; max-width: 580px; margin: 0 auto 2rem auto; line-height: 1.7;">
+              Join thousands of aspiring engineers, data scientists, and designers navigating their tech career path with confidence.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="register.html" class="btn btn-primary btn-lg">Get Started Free</a>
+              <a href="dashboard.html" class="btn btn-secondary btn-lg">View Dashboard Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 11. PROFESSIONAL FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              Career<span>Nova</span>
+            </a>
+            <p>
+              A modern, intelligent career guidance and job matching platform built strictly with pure HTML5 and CSS3.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>Explore</h5>
+            <ul class="footer-links">
+              <li><a href="career-explorer.html">Career Explorer</a></li>
+              <li><a href="job-matches.html">Job Matches</a></li>
+              <li><a href="learning-roadmap.html">Learning Roadmaps</a></li>
+              <li><a href="skill-assessment.html">Skill Assessments</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Tools</h5>
+            <ul class="footer-links">
+              <li><a href="ai-assistant.html">AI Career Advisor</a></li>
+              <li><a href="assessment-demo.html">Test Simulator</a></li>
+              <li><a href="resume-builder.html">Resume Builder</a></li>
+              <li><a href="saved-jobs.html">Saved Jobs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Portal</h5>
+            <ul class="footer-links">
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="profile.html">My Profile</a></li>
+              <li><a href="applications.html">Applications</a></li>
+              <li><a href="settings.html">Account Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Get Started</h5>
+            <p style="font-size: 0.88rem; margin-bottom: 1rem;">Experience the complete prototype platform today.</p>
+            <a href="register.html" class="btn btn-primary btn-sm btn-block">Create Free Account</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 CareerNova Platform. Built exclusively with HTML5 &amp; CSS3.</div>
+          <div class="footer-legal-links">
+            <a href="about.html">Architecture</a>
+            <a href="about.html">Privacy &amp; Ethics</a>
+            <a href="about.html">System Design</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="assets/js/public.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

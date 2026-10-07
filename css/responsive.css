@@ -1,0 +1,205 @@
+/* ==========================================================================
+   CAREERNOVA — RESPONSIVE STYLESHEET
+   Fluid Media Queries & CSS-Only Mobile Drawer
+   ========================================================================== */
+
+#sidebar-toggle {
+  display: none;
+}
+
+/* --- Breakpoint: <= 1200px --- */
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- Breakpoint: <= 992px --- */
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  /* Landing Navbar Drawer */
+  .mobile-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links-wrap {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    display: none;
+    box-shadow: var(--shadow-xl);
+    z-index: 998;
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
+  }
+
+  .nav-links-wrap .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links-wrap .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links-wrap .nav-links li a {
+    display: block;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .nav-links-wrap .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .nav-links-wrap .nav-actions .btn {
+    width: 100%;
+  }
+
+  /* Trigger open state */
+  #nav-toggle:checked ~ .page-wrapper .navbar .nav-links-wrap,
+  #nav-toggle:checked ~ .navbar .nav-links-wrap {
+    display: flex;
+  }
+
+  /* Dashboard App / Portal Sidebar Drawer */
+  .app-sidebar,
+  .portal-sidebar {
+    width: 270px;
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh !important;
+    z-index: 1000 !important;
+  }
+
+  #sidebar-toggle:checked ~ .app-layout .app-sidebar,
+  #sidebar-toggle:checked ~ .page-wrapper .app-layout .app-sidebar,
+  #sidebar-toggle:checked ~ .portal-layout .portal-sidebar,
+  #sidebar-toggle:checked ~ .page-wrapper .portal-layout .portal-sidebar {
+    transform: translateX(0);
+  }
+
+  #sidebar-toggle:checked ~ .portal-layout .portal-sidebar-backdrop,
+  #sidebar-toggle:checked ~ .page-wrapper .portal-layout .portal-sidebar-backdrop,
+  #sidebar-toggle:checked ~ .app-layout .portal-sidebar-backdrop,
+  #sidebar-toggle:checked ~ .page-wrapper .app-layout .portal-sidebar-backdrop {
+    display: block;
+  }
+
+  .app-main,
+  .portal-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sidebar-mobile-toggle-btn {
+    display: inline-flex !important;
+  }
+
+  /* Grids */
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Breakpoint: <= 768px --- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section-py {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row, .form-row-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .topbar-search {
+    display: none;
+  }
+
+  .readiness-gauge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- Breakpoint: <= 480px --- */
+@media (max-width: 480px) {
+  .app-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .app-topbar {
+    padding: 0 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+}

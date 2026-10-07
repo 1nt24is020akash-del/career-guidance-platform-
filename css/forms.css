@@ -1,0 +1,380 @@
+/* ==========================================================================
+   CAREERNOVA — FORM COMPONENTS & CONTROLS
+   Clean, Refined Form Architecture Supporting Both Light & Dark Themes
+   ========================================================================== */
+
+/* --- Form Groups & Layout --- */
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-label .label-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-label .required-mark {
+  color: var(--error);
+  margin-left: 0.2rem;
+}
+
+/* --- Input, Textarea & Select Elements --- */
+.form-control {
+  width: 100%;
+  padding: 0.72rem 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control:hover {
+  border-color: #CBD5E1;
+}
+
+.form-control:focus {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: var(--bg-input-focus);
+}
+
+textarea.form-control {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* --- Input with Icon Wrap --- */
+.input-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-icon-wrap svg {
+  position: absolute;
+  left: 0.95rem;
+  width: 17px;
+  height: 17px;
+  stroke: var(--text-muted);
+  stroke-width: 2;
+  fill: none;
+  pointer-events: none;
+  transition: stroke var(--transition-fast);
+}
+
+.input-icon-wrap .form-control {
+  padding-left: 2.65rem;
+}
+
+.input-icon-wrap .form-control:focus ~ svg,
+.input-icon-wrap:focus-within svg {
+  stroke: var(--primary-accent);
+}
+
+/* --- Select Dropdown --- */
+.select-wrap {
+  position: relative;
+}
+
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 2.6rem;
+}
+
+select.form-control option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 1.15rem;
+  top: 50%;
+  transform: translateY(-70%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  pointer-events: none;
+}
+
+/* --- Checkboxes & Radios (Pure CSS) --- */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.5rem;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  background: var(--bg-input);
+  cursor: pointer;
+  margin-top: 0.2rem;
+  display: grid;
+  place-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.form-check input[type="radio"] {
+  border-radius: var(--radius-full);
+}
+
+.form-check input[type="checkbox"]:checked,
+.form-check input[type="radio"]:checked {
+  background: var(--primary-accent);
+  border-color: var(--primary-accent);
+}
+
+.form-check input[type="checkbox"]:checked::before {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.form-check input[type="radio"]:checked::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #FFFFFF;
+  border-radius: var(--radius-full);
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* --- Switch Toggle (Pure CSS) --- */
+.switch-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  transition: border-color var(--transition-fast);
+}
+
+.switch-wrap:hover {
+  border-color: var(--border-focus);
+}
+
+.switch-input {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch-input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-toggle {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--border-color);
+  border-radius: 34px;
+  transition: 0.25s;
+}
+
+.slider-toggle::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.switch-input input:checked + .slider-toggle {
+  background: var(--primary-accent);
+}
+
+.switch-input input:checked + .slider-toggle::before {
+  transform: translateX(20px);
+}
+
+/* --- Range Slider --- */
+input[type="range"].form-range {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+  outline: none;
+  margin: 0.85rem 0 0.4rem 0;
+}
+
+input[type="range"].form-range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+input[type="range"].form-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* --- Filter Chips (Radio/Checkbox Pills) --- */
+.pill-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill-filter-item input {
+  display: none;
+}
+
+.pill-filter-item label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pill-filter-item label:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+}
+
+.pill-filter-item input:checked + label {
+  background: var(--primary-subtle);
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+/* --- File Upload Dropzone --- */
+.file-dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  background: var(--bg-card-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  display: block;
+}
+
+.file-dropzone:hover {
+  border-color: var(--primary-accent);
+  background: var(--primary-subtle);
+}
+
+.file-dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--soft-blue);
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.85rem auto;
+}
+
+.dropzone-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Native HTML Validation Feedback */
+.form-control:not(:placeholder-shown):invalid {
+  border-color: var(--error);
+}
+
+.form-control:not(:placeholder-shown):valid {
+  border-color: var(--success);
+}

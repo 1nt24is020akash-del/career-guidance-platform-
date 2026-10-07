@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About CareerNova — Mission, Philosophy &amp; Architecture</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Navigation">
+
+  <div class="page-wrapper">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Supports CSS-Only Light &amp; Dark Modes</span>
+    </aside>
+
+    <!-- Redesigned Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          Career<span>Nova</span>
+        </a>
+
+        <div class="nav-links-wrap">
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="recommendations.html">Recommendations</a></li>
+              <li><a href="career-explorer.html">Explore Careers</a></li>
+              <li><a href="job-matches.html">Find Jobs</a></li>
+              <li><a href="skill-assessment.html">Skill Assessment</a></li>
+              <li><a href="learning-roadmap.html">Roadmaps</a></li>
+              <li><a href="about.html" class="active">About</a></li>
+            </ul>
+          </nav>
+
+          <div class="nav-actions">
+            <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+              <span class="theme-switch-icon icon-sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="theme-switch-icon icon-moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </span>
+              <span>Theme</span>
+            </label>
+
+            <a href="dashboard.html" class="btn btn-secondary btn-sm">Dashboard</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+          </div>
+        </div>
+
+        <label for="nav-toggle" class="mobile-nav-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container">
+          <div class="section-header" style="max-width: 840px;">
+            <span class="section-tag">Our Vision &amp; Philosophy</span>
+            <h1 style="font-size: clamp(2rem, 3.8vw, 3rem); margin-bottom: 1rem;">
+              Empowering the Next Generation of <span class="gradient-text">Tech Builders</span>
+            </h1>
+            <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">
+              CareerNova bridges the gap between academic preparation and real-world software scale through transparent skill benchmarks, milestone trajectories, and intelligent matching.
+            </p>
+          </div>
+
+          <!-- Mission Cards 3-Grid -->
+          <div class="grid-3" style="margin-top: 3rem;">
+            <div class="card" style="padding: 2.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--bg-card-subtle); color: var(--primary-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; border: 1px solid var(--border-color);">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Democratize Guidance</h3>
+              <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0;">
+                Every aspiring software developer and data engineer deserves access to the exact industry roadmaps, toolchains, and project standards utilized by top silicon engineering teams.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 2.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--bg-card-subtle); color: var(--secondary-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; border: 1px solid var(--border-color);">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Verified Competency</h3>
+              <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0;">
+                Replace unvetted resumes with verified skill scorecards, capstone code assessments, and practical execution benchmarks that give recruiters genuine, high-fidelity signal.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 2.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--bg-card-subtle); color: var(--success); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; border: 1px solid var(--border-color);">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Ethical Transparency</h3>
+              <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0;">
+                We champion explainable career matching where candidates understand exactly why a role was recommended and what specific skill gaps to address to unlock it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pure HTML5 & CSS3 Architecture Section -->
+      <section class="section-py" style="background: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;" class="hero-split-grid">
+            <div>
+              <span class="badge badge-teal" style="margin-bottom: 1rem;">Architectural Discipline</span>
+              <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 1rem; color: var(--text-primary);">
+                100% Pure HTML5 &amp; CSS3 Engineering
+              </h2>
+              <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                This entire platform is crafted without JavaScript, TypeScript, React, Bootstrap, or external component libraries. We demonstrate the extraordinary capabilities of native modern web standards:
+              </p>
+
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; font-size: 0.92rem;">
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-secondary); line-height: 1.6;">
+                  <span style="color: var(--primary-accent); font-weight: 800; font-size: 1.1rem;">&check;</span>
+                  <span><strong>CSS-Only Theme Switching:</strong> Native checkbox toggle driving immediate variable swapping for Light and Dark modes without JavaScript.</span>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-secondary); line-height: 1.6;">
+                  <span style="color: var(--primary-accent); font-weight: 800; font-size: 1.1rem;">&check;</span>
+                  <span><strong>Zero-JS Interactive Tabs:</strong> Radio button state mechanics for multi-track roadmap exploration and category filtering.</span>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-secondary); line-height: 1.6;">
+                  <span style="color: var(--primary-accent); font-weight: 800; font-size: 1.1rem;">&check;</span>
+                  <span><strong>Semantic Native HTML5:</strong> Validation pseudo-classes (<code style="color: var(--primary-accent);">:valid</code>, <code style="color: var(--primary-accent);">:invalid</code>), accessible form controls, and native <code style="color: var(--primary-accent);">&lt;details&gt;</code> accordions.</span>
+                </li>
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-secondary); line-height: 1.6;">
+                  <span style="color: var(--primary-accent); font-weight: 800; font-size: 1.1rem;">&check;</span>
+                  <span><strong>Production Print Stylesheet:</strong> Dedicated <code style="color: var(--primary-accent);">@media print</code> rules for clean monochrome physical resume exporting via <kbd style="background: var(--bg-card-subtle); padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid var(--border-color); font-weight: 700;">Ctrl+P</kbd>.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Code Showcase Box -->
+            <div class="card" style="padding: 2rem; background: #0F172A; border-color: #1E293B; color: #F8FAFC;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <div style="display: flex; gap: 0.4rem;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+                </div>
+                <span style="font-family: monospace; font-size: 0.75rem; color: #94A3B8;">variables.css &bull; pure-css-tokens</span>
+              </div>
+              <pre style="font-family: monospace; font-size: 0.82rem; color: #CBD5E1; line-height: 1.6; overflow-x: auto; margin: 0;"><code>/* Light Mode (Default SaaS) */
+:root {
+  --bg-main: #F5F7FB;
+  --bg-card: #FFFFFF;
+  --primary-accent: #2563EB;
+  --secondary-accent: #0D9488;
+  --text-primary: #172033;
+  --border-color: #E2E8F0;
+}
+
+/* Dark Mode (CSS-Only Toggle) */
+body:has(#theme-toggle:checked) {
+  --bg-main: #101827;
+  --bg-card: #1D2A40;
+  --primary-accent: #60A5FA;
+  --secondary-accent: #2DD4BF;
+  --text-primary: #F8FAFC;
+  --border-color: #334155;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership & Advisory Team -->
+      <section class="section-py" style="background: var(--bg-main);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Leadership Team</span>
+            <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 0.5rem; color: var(--text-primary);">
+              Guided by Tech Visionaries
+            </h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+              Illustrative leadership profiles bringing together senior engineering, educational design, and career technology.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <!-- Member 1 -->
+            <div class="card" style="padding: 2rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&q=80" alt="Dr. Maya Vance" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; border: 3px solid var(--primary-accent); box-shadow: var(--shadow-sm);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--text-primary);">Dr. Maya Vance</h3>
+              <div style="font-size: 0.82rem; color: var(--primary-accent); font-weight: 600; margin-bottom: 0.75rem;">Co-Founder &amp; Chief Learning Officer</div>
+              <p style="font-size: 0.85rem; line-height: 1.6; margin: 0; color: var(--text-secondary);">
+                Former CS Professor and research advisor focusing on autonomous curriculum scaffolding and algorithmic competency benchmarking.
+              </p>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="card" style="padding: 2rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&q=80" alt="David Sterling" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; border: 3px solid var(--secondary-accent); box-shadow: var(--shadow-sm);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--text-primary);">David Sterling</h3>
+              <div style="font-size: 0.82rem; color: var(--secondary-accent); font-weight: 600; margin-bottom: 0.75rem;">Co-Founder &amp; Head of Product</div>
+              <p style="font-size: 0.85rem; line-height: 1.6; margin: 0; color: var(--text-secondary);">
+                12+ years directing platform design and candidate matching engines across leading Silicon Valley software scale-ups.
+              </p>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="card" style="padding: 2rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=240&q=80" alt="Soraia Rahman" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; border: 3px solid var(--success); box-shadow: var(--shadow-sm);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--text-primary);">Soraia Rahman</h3>
+              <div style="font-size: 0.82rem; color: var(--success); font-weight: 600; margin-bottom: 0.75rem;">VP of Industry Partnerships</div>
+              <p style="font-size: 0.85rem; line-height: 1.6; margin: 0; color: var(--text-secondary);">
+                Liaison connecting university engineering departments directly with tech hiring managers across 250+ enterprise partners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section-py" style="text-align: center; border-top: 1px solid var(--border-color); background: var(--bg-card);">
+        <div class="container" style="max-width: 700px;">
+          <h2 style="margin-bottom: 1rem; font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: var(--text-primary);">Experience the Complete Platform</h2>
+          <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.05rem;">
+            Take control of your engineering trajectory today. Explore live roadmaps, job opportunities, and skill benchmarks.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="register.html" class="btn btn-primary btn-lg">Create Free Account</a>
+            <a href="dashboard.html" class="btn btn-secondary btn-lg">View Dashboard Demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              Career<span>Nova</span>
+            </div>
+            <p class="footer-desc">
+              Next-generation career discovery and job matching platform empowering students and professionals to unlock their potential.
+            </p>
+          </div>
+          <div>
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="career-explorer.html">Career Explorer</a></li>
+              <li><a href="job-matches.html">Job Matching</a></li>
+              <li><a href="ai-assistant.html">AI Career Assistant</a></li>
+              <li><a href="skill-assessment.html">Skill Assessments</a></li>
+              <li><a href="learning-roadmap.html">Roadmaps</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="footer-heading">Student Hub</h5>
+            <ul class="footer-links">
+              <li><a href="dashboard.html">Student Dashboard</a></li>
+              <li><a href="saved-jobs.html">Saved Jobs</a></li>
+              <li><a href="applications.html">Application Tracker</a></li>
+              <li><a href="resume-builder.html">Resume Builder</a></li>
+              <li><a href="profile.html">Student Profile</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="about.html">About CareerNova</a></li>
+              <li><a href="notifications.html">Notifications</a></li>
+              <li><a href="settings.html">Account Settings</a></li>
+              <li><a href="login.html">Sign In</a></li>
+              <li><a href="register.html">Create Account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 CareerNova Platform. Built exclusively with pure HTML5 and CSS3.</p>
+          <div class="footer-legal-links">
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Terms of Service</a>
+            <a href="about.html">System Status</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/public.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

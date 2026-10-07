@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Explorer — High-Impact Tech Roles | CareerNova</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+  <!-- Mobile Sidebar Drawer Checkbox -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle Sidebar">
+
+  <div class="page-wrapper">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Supports CSS-Only Light &amp; Dark Modes</span>
+    </aside>
+
+    <div class="portal-layout">
+
+      <!-- Mobile Sidebar Backdrop Overlay -->
+      <label for="sidebar-toggle" class="portal-sidebar-backdrop" aria-label="Close sidebar"></label>
+
+      <!-- UNIFIED PORTAL SIDEBAR -->
+      <aside class="portal-sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            Career<span>Nova</span>
+          </a>
+        </div>
+
+        <div class="sidebar-nav-wrap">
+          <div class="sidebar-group-title">Main Portal</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="recommendations.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Career Matches</span>
+                <span class="badge badge-emerald sidebar-badge">98% Fit</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>My Profile</span>
+                <span class="badge badge-blue sidebar-badge">85%</span>
+              </a>
+            </li>
+            <li>
+              <a href="career-explorer.html" class="sidebar-link active">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                <span>Career Explorer</span>
+              </a>
+            </li>
+            <li>
+              <a href="ai-assistant.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 4a6 6 0 100 12 6 6 0 000-12z"/></svg>
+                <span>AI Assistant</span>
+              </a>
+            </li>
+            <li>
+              <a href="job-matches.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                <span>Job Matches</span>
+                <span class="badge badge-teal sidebar-badge">34</span>
+              </a>
+            </li>
+            <li>
+              <a href="skill-assessment.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                <span>Skill Assessment</span>
+              </a>
+            </li>
+            <li>
+              <a href="learning-roadmap.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                <span>Learning Roadmap</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-group-title">Career Workspace</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="resume-builder.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>Resume Builder</span>
+              </a>
+            </li>
+            <li>
+              <a href="saved-jobs.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                <span>Saved Jobs</span>
+              </a>
+            </li>
+            <li>
+              <a href="applications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Applications</span>
+              </a>
+            </li>
+            <li>
+              <a href="notifications.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                <span>Notifications</span>
+                <span class="badge badge-rose sidebar-badge">3</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html" class="sidebar-link">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <a href="profile.html" class="user-mini-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex Rivera" class="user-avatar">
+            <div class="user-mini-info">
+              <div class="user-mini-name">Alex Rivera</div>
+              <div class="user-mini-role">B.S. Computer Science '26</div>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+      <!-- PORTAL MAIN CONTENT -->
+      <main class="portal-main">
+
+        <!-- UNIFIED TOPBAR -->
+        <header class="portal-topbar">
+          <div class="portal-topbar-left">
+            <label for="sidebar-toggle" class="sidebar-mobile-toggle-btn" aria-label="Toggle menu">
+              <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </label>
+            <div>
+              <h3 style="font-size: 1.15rem; margin: 0; color: var(--text);">Career Explorer</h3>
+              <p style="font-size: 0.8rem; margin: 0; color: var(--muted);">Explore 500+ curated tech disciplines and trajectory roadmaps</p>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <!-- Search Bar -->
+            <div class="topbar-search">
+              <div class="input-icon-wrap">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" class="form-control" placeholder="Search roles, skills, or companies...">
+              </div>
+            </div>
+
+            <!-- Theme Toggle Switch -->
+            <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+              <span class="theme-switch-icon icon-sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="theme-switch-icon icon-moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </span>
+              <span>Theme</span>
+            </label>
+
+            <!-- Notifications Icon -->
+            <a href="notifications.html" class="icon-action-btn" title="Notifications">
+              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <span class="notification-count"></span>
+            </a>
+
+            <!-- Avatar -->
+            <a href="profile.html">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Alex" class="user-avatar" style="width: 36px; height: 36px;">
+            </a>
+          </div>
+        </header>
+
+        <!-- PAGE CONTENT BODY -->
+        <div class="portal-content">
+
+          <!-- Header Intro -->
+          <div style="margin-bottom: 2rem;">
+            <span class="section-tag" style="margin-bottom: 0.5rem;">Industry Horizon</span>
+            <h1 style="font-size: 2.1rem; margin: 0 0 0.4rem 0;">High-Growth <span class="gradient-text">Tech Career Paths</span></h1>
+            <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">
+              Comprehensive role breakdowns, required skill architectures, compensation bands, and milestone roadmaps.
+            </p>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="card" style="padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
+            <form action="career-explorer.html" method="get">
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <div class="input-icon-wrap" style="flex: 2; min-width: 260px;">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="search" class="form-control" placeholder="Search by role title (e.g. AI Engineer, Cloud, Security)...">
+                </div>
+
+                <div class="select-wrap" style="flex: 1; min-width: 180px;">
+                  <select class="form-control">
+                    <option value="all">All Industries</option>
+                    <option value="ai">AI &amp; Data Intelligence</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="cloud">Cloud &amp; DevOps</option>
+                    <option value="cyber">Cybersecurity &amp; Defense</option>
+                    <option value="design">Product &amp; UI/UX</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="padding: 0.72rem 1.75rem;">
+                  Search Careers
+                </button>
+              </div>
+
+              <!-- Filter Pills -->
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
+                <span style="font-size: 0.8rem; color: var(--muted); font-weight: 600;">Popular Filters:</span>
+                <div class="pill-filter-group">
+                  <div class="pill-filter-item">
+                    <input type="radio" name="career-pill" id="cf-all" checked>
+                    <label for="cf-all">All Roles (12)</label>
+                  </div>
+                  <div class="pill-filter-item">
+                    <input type="radio" name="career-pill" id="cf-ai">
+                    <label for="cf-ai">AI &amp; Machine Learning</label>
+                  </div>
+                  <div class="pill-filter-item">
+                    <input type="radio" name="career-pill" id="cf-fullstack">
+                    <label for="cf-fullstack">Full-Stack Development</label>
+                  </div>
+                  <div class="pill-filter-item">
+                    <input type="radio" name="career-pill" id="cf-cloud">
+                    <label for="cf-cloud">Cloud Systems</label>
+                  </div>
+                  <div class="pill-filter-item">
+                    <input type="radio" name="career-pill" id="cf-security">
+                    <label for="cf-security">Cyber Defense</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Careers Grid (6 Cards) -->
+          <div class="grid-3" style="gap: 2rem; margin-bottom: 3.5rem;">
+
+            <!-- Card 1: AI/ML Engineer -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" alt="AI Neural Network" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">AI / ML Engineer</h3>
+                  <span class="badge badge-blue">+36% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Train deep neural networks, fine-tune foundation LLMs, and construct production data retrieval pipelines.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">PyTorch</span>
+                    <span class="badge badge-neutral">Python</span>
+                    <span class="badge badge-neutral">Vector DBs</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$120k – $210k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Software Developer -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Software Developer" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">Software Developer</h3>
+                  <span class="badge badge-emerald">+22% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Architect full-stack applications, robust microservices, and high-concurrency databases.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">TypeScript</span>
+                    <span class="badge badge-neutral">Node.js</span>
+                    <span class="badge badge-neutral">React</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$95k – $160k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Cloud Architect -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Network" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">Cloud Solutions Architect</h3>
+                  <span class="badge badge-teal">+25% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Engineer multi-cloud topologies, serverless infrastructure, and high-availability clusters.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">AWS</span>
+                    <span class="badge badge-neutral">Kubernetes</span>
+                    <span class="badge badge-neutral">Terraform</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$110k – $185k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Cybersecurity Analyst -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">Cybersecurity Analyst</h3>
+                  <span class="badge badge-rose">+32% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Defend corporate infrastructure against vulnerabilities and orchestrate penetration testing.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">SIEM</span>
+                    <span class="badge badge-neutral">SOC</span>
+                    <span class="badge badge-neutral">Linux</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$90k – $155k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Data Scientist -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data Analytics" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">Data Scientist</h3>
+                  <span class="badge badge-blue">+28% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Transform enterprise data streams into predictive statistical insights and business algorithms.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">Python</span>
+                    <span class="badge badge-neutral">Pandas</span>
+                    <span class="badge badge-neutral">SQL</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$105k – $175k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: UI/UX Product Designer -->
+            <div class="card card-hover" style="display: flex; flex-direction: column;">
+              <div style="height: 190px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h3 style="font-size: 1.25rem;">UI/UX Product Designer</h3>
+                  <span class="badge badge-teal">+18% Growth</span>
+                </div>
+                <p style="font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem; color: var(--muted);">
+                  Craft immersive digital customer journeys, robust design systems, and prototype interfaces.
+                </p>
+                <div style="margin-bottom: 1.25rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                    <span class="badge badge-neutral">Figma</span>
+                    <span class="badge badge-neutral">Design Systems</span>
+                    <span class="badge badge-neutral">User Research</span>
+                  </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--primary); font-size: 0.95rem;">$85k – $145k</strong>
+                  <a href="career-details.html" class="btn btn-outline btn-sm">Explore Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Career Path Comparison Matrix -->
+          <div class="section-header" style="max-width: 680px; margin-bottom: 1.5rem; text-align: left;">
+            <span class="section-tag">Direct Evaluation</span>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.35rem;">Career Path Comparison Matrix</h2>
+            <p style="color: var(--muted); font-size: 0.92rem;">Directly benchmark entry barriers, growth velocity, and core stacks to identify your ideal trajectory.</p>
+          </div>
+
+          <div class="matrix-table-wrap" style="margin-bottom: 2rem;">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Career Discipline</th>
+                  <th>Salary Range</th>
+                  <th>5-Yr Growth</th>
+                  <th>Learning Curve</th>
+                  <th>Market Demand</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong style="color: var(--text); font-size: 0.95rem; display: block;">AI / ML Engineer</strong>
+                    <span style="font-size: 0.8rem; color: var(--muted);">PyTorch, CUDA, Transformers</span>
+                  </td>
+                  <td style="color: var(--primary); font-weight: 600;">$120k - $210k</td>
+                  <td><span class="badge badge-blue">+36%</span></td>
+                  <td style="color: var(--muted); font-size: 0.85rem;">Advanced (Math heavy)</td>
+                  <td><span class="badge badge-emerald">Extremely High</span></td>
+                  <td><a href="career-details.html" class="btn btn-secondary btn-sm">Explore</a></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong style="color: var(--text); font-size: 0.95rem; display: block;">Full-Stack Developer</strong>
+                    <span style="font-size: 0.8rem; color: var(--muted);">TypeScript, React, Node, SQL</span>
+                  </td>
+                  <td style="color: var(--primary); font-weight: 600;">$95k - $160k</td>
+                  <td><span class="badge badge-emerald">+22%</span></td>
+                  <td style="color: var(--muted); font-size: 0.85rem;">Moderate</td>
+                  <td><span class="badge badge-emerald">High</span></td>
+                  <td><a href="career-details.html" class="btn btn-secondary btn-sm">Explore</a></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong style="color: var(--text); font-size: 0.95rem; display: block;">Cloud Solutions Architect</strong>
+                    <span style="font-size: 0.8rem; color: var(--muted);">AWS, Kubernetes, Terraform</span>
+                  </td>
+                  <td style="color: var(--primary); font-weight: 600;">$110k - $185k</td>
+                  <td><span class="badge badge-teal">+25%</span></td>
+                  <td style="color: var(--muted); font-size: 0.85rem;">Moderate - High</td>
+                  <td><span class="badge badge-emerald">High</span></td>
+                  <td><a href="career-details.html" class="btn btn-secondary btn-sm">Explore</a></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong style="color: var(--text); font-size: 0.95rem; display: block;">Cybersecurity Analyst</strong>
+                    <span style="font-size: 0.8rem; color: var(--muted);">Network Defense, SIEM, Linux</span>
+                  </td>
+                  <td style="color: var(--primary); font-weight: 600;">$90k - $155k</td>
+                  <td><span class="badge badge-rose">+32%</span></td>
+                  <td style="color: var(--muted); font-size: 0.85rem;">Moderate</td>
+                  <td><span class="badge badge-emerald">Critical</span></td>
+                  <td><a href="career-details.html" class="btn btn-secondary btn-sm">Explore</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+  </div>
+  <script src="assets/js/portal.js"></script>
+  <script src="assets/js/career-explorer.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

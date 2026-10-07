@@ -1,0 +1,189 @@
+/* ==========================================================================
+   CAREERNOVA — GLOBAL DESIGN SYSTEM & TOKENS
+   Pure CSS3 Variables: Light Mode (Default) & Premium Dark Mode
+   Linear / Stripe / Vercel Grade Visual Aesthetic
+   Fully Compatible with Persistent [data-theme="dark"] and [data-theme="light"]
+   ========================================================================== */
+
+:root,
+:root[data-theme="light"],
+[data-theme="light"],
+body[data-theme="light"] {
+  color-scheme: light;
+
+  /* --- Strict Design System Tokens --- */
+  --primary: #2563EB;             /* Core Royal Blue */
+  --primary-hover: #1D4ED8;
+  --secondary: #0D9488;           /* Modern Teal */
+  --secondary-hover: #0F766E;
+  --accent: #06B6D4;              /* Vibrant Cyan Accent */
+  --background: #F8FAFC;          /* Clean, crisp off-white canvas */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;             /* Pure white elevated cards */
+  --surface-subtle: #F1F5F9;      /* Subtle secondary surface */
+  --surface-secondary: #F1F5F9;
+  --surface-hover: #F8FAFC;
+  --text: #0F172A;                /* Deep Slate / Navy primary text */
+  --text-secondary: #64748B;
+  --muted: #64748B;               /* Secondary subtitle & caption text */
+  --border: #E2E8F0;              /* Ultra-subtle crisp border */
+  --border-subtle: #F1F5F9;
+  --border-focus: #93C5FD;
+  --success: #10B981;             /* Emerald success */
+  --success-subtle: #ECFDF5;
+  --warning: #F59E0B;             /* Amber warning */
+  --warning-subtle: #FFFBEB;
+  --danger: #EF4444;              /* Coral red error */
+  --danger-subtle: #FEF2F2;
+
+  /* Backward Compatibility Aliases for Platform */
+  --bg-main: var(--background);
+  --bg-secondary: #FFFFFF;
+  --bg-card: var(--surface);
+  --bg-card-subtle: #F8FAFC;
+  --bg-elevated: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-input-focus: #FFFFFF;
+  --bg-navbar: rgba(255, 255, 255, 0.88);
+  --bg-sidebar: #FFFFFF;
+  --bg-sidebar-active: #EFF6FF;
+
+  --text-primary: var(--text);
+  --text-muted: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  --primary-accent: var(--primary);
+  --primary-subtle: #EFF6FF;
+  --secondary-accent: var(--secondary);
+  --secondary-subtle: #F0FDFA;
+  --border-color: var(--border);
+  --error: var(--danger);
+
+  --soft-blue: #DBEAFE;
+  --soft-teal: #CCFBF1;
+  --soft-amber: #FEF3C7;
+  --soft-rose: #FFE4E6;
+
+  /* Premium Gradients */
+  --grad-primary: linear-gradient(135deg, #2563EB 0%, #0D9488 100%);
+  --grad-primary-hover: linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%);
+  --grad-accent: linear-gradient(135deg, #0284C7 0%, #0D9488 100%);
+  --grad-subtle: linear-gradient(135deg, #EFF6FF 0%, #F0FDFA 100%);
+  --grad-hero-badge: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(13, 148, 136, 0.08) 100%);
+  --grad-surface: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+
+  /* Multi-Layered Diffuse Shadows (Stripe / Vercel Style) */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+  --shadow-xl: 0 20px 40px -8px rgba(15, 23, 42, 0.1), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  --shadow-accent: 0 8px 24px -4px rgba(37, 99, 235, 0.22);
+  --shadow-glow-teal: 0 8px 24px -4px rgba(13, 148, 136, 0.22);
+  --shadow: var(--shadow-md);
+
+  /* Modern SaaS Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Dimensions */
+  --container-max: 1240px;
+  --nav-height: 72px;
+  --sidebar-width: 260px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   PREMIUM DARK THEME OVERRIDES (Deep Navy/Slate, High-Contrast Elegance)
+   Activated via: [data-theme="dark"] on <html> OR CSS fallback toggle
+   ========================================================================== */
+
+:root[data-theme="dark"],
+[data-theme="dark"],
+body[data-theme="dark"],
+body:has(#theme-toggle:checked),
+#theme-toggle:checked ~ .page-wrapper {
+  color-scheme: dark;
+
+  --primary: #60A5FA;
+  --primary-hover: #3B82F6;
+  --secondary: #2DD4BF;
+  --secondary-hover: #14B8A6;
+  --accent: #38BDF8;
+  --background: #0B0F19;         /* Deep Midnight Charcoal */
+  --bg: #0B0F19;
+  --surface: #141E33;            /* Elevated Slate Navy */
+  --surface-subtle: #101827;
+  --surface-secondary: #101827;
+  --surface-hover: #1A2640;
+  --text: #F8FAFC;               /* Crisp pure off-white */
+  --text-secondary: #94A3B8;
+  --muted: #94A3B8;              /* Soft neutral slate */
+  --border: #22304A;             /* Subtle refined dark border */
+  --border-subtle: #19253B;
+  --border-focus: #60A5FA;
+  --success: #34D399;
+  --success-subtle: rgba(52, 211, 153, 0.12);
+  --warning: #FBBF24;
+  --warning-subtle: rgba(251, 191, 36, 0.12);
+  --danger: #F87171;
+  --danger-subtle: rgba(248, 113, 113, 0.12);
+
+  /* Backward Compatibility Aliases */
+  --bg-main: var(--background);
+  --bg-secondary: #101827;
+  --bg-card: var(--surface);
+  --bg-card-subtle: #101827;
+  --bg-elevated: #1A2640;
+  --bg-input: #101827;
+  --bg-input-focus: #141E33;
+  --bg-navbar: rgba(11, 15, 25, 0.88);
+  --bg-sidebar: #0E1524;
+  --bg-sidebar-active: rgba(96, 165, 250, 0.12);
+
+  --text-primary: var(--text);
+  --text-muted: #64748B;
+  --text-inverse: #0B0F19;
+
+  --primary-accent: var(--primary);
+  --primary-subtle: rgba(96, 165, 250, 0.15);
+  --secondary-accent: var(--secondary);
+  --secondary-subtle: rgba(45, 212, 191, 0.15);
+  --border-color: var(--border);
+  --error: var(--danger);
+
+  --soft-blue: rgba(96, 165, 250, 0.15);
+  --soft-teal: rgba(45, 212, 191, 0.15);
+  --soft-amber: rgba(251, 191, 36, 0.15);
+  --soft-rose: rgba(244, 63, 94, 0.15);
+
+  --grad-primary: linear-gradient(135deg, #3B82F6 0%, #14B8A6 100%);
+  --grad-primary-hover: linear-gradient(135deg, #2563EB 0%, #0D9488 100%);
+  --grad-accent: linear-gradient(135deg, #38BDF8 0%, #2DD4BF 100%);
+  --grad-subtle: linear-gradient(135deg, rgba(96, 165, 250, 0.08) 0%, rgba(45, 212, 191, 0.08) 100%);
+  --grad-hero-badge: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(45, 212, 191, 0.15) 100%);
+  --grad-surface: linear-gradient(180deg, #141E33 0%, #0E1524 100%);
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 16px -2px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 14px 32px -4px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 24px 48px -6px rgba(0, 0, 0, 0.65);
+  --shadow-accent: 0 8px 24px -4px rgba(96, 165, 250, 0.28);
+  --shadow-glow-teal: 0 8px 24px -4px rgba(45, 212, 191, 0.28);
+  --shadow: var(--shadow-md);
+}

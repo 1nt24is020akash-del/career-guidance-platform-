@@ -1,0 +1,336 @@
+/* ==========================================================================
+   CAREERNOVA — GLOBAL STYLES & FOUNDATIONS
+   Modern, Clean, Enterprise SaaS Foundation (Linear / Stripe Quality)
+   ========================================================================== */
+
+@import url('variables.css');
+
+/* --- Reset & Box Sizing --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Theme Toggle Master Switch */
+#theme-toggle {
+  display: none;
+}
+
+/* Master Page Wrapper for CSS theme inheritance */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  transition: color var(--transition-normal);
+}
+
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1.05rem; }
+h6 { font-size: 0.95rem; }
+
+p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  transition: color var(--transition-normal);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Gradient Text Utility (Blue to Teal) --- */
+.gradient-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* --- Layout Container --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* --- Subtle Prototype Notice Banner --- */
+.prototype-banner {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  position: relative;
+  z-index: 100;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+.prototype-pill {
+  background: var(--soft-blue);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* --- Grid Systems --- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* --- Section Spacing --- */
+.section-py {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--soft-blue);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.section-header h2 {
+  margin-bottom: 0.85rem;
+}
+.section-header p {
+  font-size: 1.05rem;
+}
+
+/* --- Decorative Background Dot Mesh --- */
+.bg-grid-mesh {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* --- Empty States Component --- */
+.empty-state {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+.empty-state-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 1.5rem;
+}
+.empty-state-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.empty-state-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* --- Loading Skeleton Simulator --- */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-subtle) 25%, var(--border-subtle) 50%, var(--surface-subtle) 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.8s infinite;
+  border-radius: var(--radius-xs);
+}
+@keyframes skeletonLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Clean Footer --- */
+.site-footer {
+  margin-top: auto;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4.5rem 0 2rem 0;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+.footer-brand p {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 0.92rem;
+  max-width: 320px;
+  color: var(--muted);
+}
+.footer-heading {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+.footer-links a:hover {
+  color: var(--primary);
+  padding-left: 4px;
+}
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-legal-links a {
+  color: var(--muted);
+}
+.footer-legal-links a:hover {
+  color: var(--text);
+}
+.footer-social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+.footer-social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: all var(--transition-fast);
+}
+.footer-social-icon:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}

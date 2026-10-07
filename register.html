@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Account — CareerNova</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body style="min-height: 100vh; background: var(--bg-main);">
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+
+  <div class="page-wrapper" style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Supports CSS-Only Light &amp; Dark Modes</span>
+    </aside>
+
+    <!-- Top Corner Bar (Nav back & Theme Switch) -->
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem;">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        Career<span>Nova</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <!-- Theme Toggle Switch -->
+        <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+          <span class="theme-switch-icon icon-sun">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </span>
+          <span class="theme-switch-icon icon-moon">
+            <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </span>
+          <span>Theme</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Main Registration Container -->
+    <main class="container" style="max-width: 620px; padding-top: 2.5rem; padding-bottom: 3.5rem; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h2 style="font-size: 1.85rem; color: var(--text-primary); margin-bottom: 0.4rem;">Start Your Career Journey</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0;">Build your candidate profile to unlock custom roadmaps, skill benchmarks, and job matches.</p>
+      </div>
+
+      <!-- Registration Card -->
+      <div class="card" style="padding: 2.25rem 2.25rem; box-shadow: var(--shadow-md);">
+        <form action="dashboard.html" method="get">
+          <!-- Name Row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name" class="form-label">
+                First Name <span class="required-mark">*</span>
+              </label>
+              <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Alex" required value="Alex">
+            </div>
+            <div class="form-group">
+              <label for="last_name" class="form-label">
+                Last Name <span class="required-mark">*</span>
+              </label>
+              <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Rivera" required value="Rivera">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="reg_email" class="form-label">
+              University / Work Email <span class="required-mark">*</span>
+            </label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <input type="email" id="reg_email" name="email" class="form-control" placeholder="alex.rivera@stanford.edu" required value="alex.rivera@stanford.edu">
+            </div>
+          </div>
+
+          <!-- Academic Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="degree" class="form-label">Major / Field of Study <span class="required-mark">*</span></label>
+              <div class="select-wrap">
+                <select id="degree" name="degree" class="form-control" required>
+                  <option value="cs" selected>Computer Science &amp; Eng.</option>
+                  <option value="ds">Data Science &amp; Analytics</option>
+                  <option value="it">Information Technology</option>
+                  <option value="se">Software Engineering</option>
+                  <option value="other">Other Engineering / Sciences</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="grad_year" class="form-label">Graduation Year <span class="required-mark">*</span></label>
+              <div class="select-wrap">
+                <select id="grad_year" name="grad_year" class="form-control" required>
+                  <option value="2026" selected>Class of 2026</option>
+                  <option value="2027">Class of 2027</option>
+                  <option value="2028">Class of 2028</option>
+                  <option value="graduated">Recent Graduate (Alumni)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Career Interests (CSS Filter Pills) -->
+          <div class="form-group">
+            <label class="form-label">Primary Career Track Interests <span class="label-hint">Select all that apply</span></label>
+            <div class="pill-filter-group" style="margin-top: 0.35rem;">
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-sw" checked>
+                <label for="track-sw">Software Engineering</label>
+              </div>
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-ai" checked>
+                <label for="track-ai">AI &amp; Machine Learning</label>
+              </div>
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-ds">
+                <label for="track-ds">Data Science</label>
+              </div>
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-cyber">
+                <label for="track-cyber">Cybersecurity</label>
+              </div>
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-cloud" checked>
+                <label for="track-cloud">Cloud &amp; DevOps</label>
+              </div>
+              <div class="pill-filter-item">
+                <input type="checkbox" id="track-ux">
+                <label for="track-ux">UI/UX Design</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="reg_password" class="form-label">
+              Password <span class="required-mark">*</span>
+              <span class="label-hint">At least 8 characters</span>
+            </label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <input type="password" id="reg_password" name="password" class="form-control" placeholder="••••••••••••" minlength="8" required value="SecurePass2026!">
+            </div>
+          </div>
+
+          <!-- Consent Checkbox -->
+          <div style="margin: 1.25rem 0 1.75rem 0;">
+            <label class="form-check">
+              <input type="checkbox" required checked>
+              <span class="form-check-label" style="font-size: 0.85rem; color: var(--text-secondary);">
+                I agree to the <a href="about.html" style="color: var(--primary-accent); font-weight: 500;">Terms of Service</a> and acknowledge the AI prototype platform guidelines.
+              </span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Create Account &amp; Access Dashboard &rarr;
+          </button>
+        </form>
+      </div>
+
+      <!-- Login Link -->
+      <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+        Already have an account? <a href="login.html" style="font-weight: 600; color: var(--primary-accent);">Log in here</a>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.25rem;">
+        <a href="index.html" style="font-size: 0.85rem; color: var(--text-muted);">&larr; Return to Homepage</a>
+      </div>
+    </main>
+
+    <!-- Minimal Auth Footer -->
+    <footer style="padding: 1.25rem 0; text-align: center; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-color); background: var(--bg-card);">
+      &copy; 2026 CareerNova Platform &bull; Pure HTML5 &amp; CSS3 Architecture
+    </footer>
+  </div>
+
+  <script src="assets/js/public.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>

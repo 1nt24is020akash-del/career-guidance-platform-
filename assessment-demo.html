@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment Simulator: PyTorch &amp; Deep Learning — CareerNova</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .option-card-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.15rem 1.4rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      margin-bottom: 0.85rem;
+      user-select: none;
+    }
+    .option-card-label:hover {
+      border-color: var(--primary-accent);
+      background: var(--bg-card-subtle);
+      transform: translateX(3px);
+    }
+    .option-card-label input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      margin: 0;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .option-card-label input[type="radio"]:checked {
+      border-color: var(--primary-accent);
+      background: var(--primary-accent);
+    }
+    .option-card-label input[type="radio"]:checked::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #FFFFFF;
+      border-radius: 50%;
+    }
+    .option-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+    .code-snippet-box {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+  </style>
+  <script src="assets/js/theme.js"></script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; background: var(--bg-main);">
+
+  <!-- Theme Toggle Master Checkbox -->
+  <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark Mode">
+
+  <div class="page-wrapper" style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Prototype Notice Banner -->
+    <aside class="prototype-banner">
+      <span class="prototype-pill">UI Prototype</span>
+      <span>Pure HTML5 &amp; CSS3 Implementation &bull; Interactive test simulator without backend evaluation</span>
+    </aside>
+
+    <!-- Assessment Top Header -->
+    <header style="height: 72px; background: var(--bg-card); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm);">
+      <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="skill-assessment.html" class="btn btn-secondary btn-sm">&larr; Exit Simulator</a>
+          <div style="height: 24px; width: 1px; background: var(--border-color);"></div>
+          <div>
+            <strong style="color: var(--text-primary); font-size: 0.95rem; display: block;">PyTorch &amp; Deep Learning Foundations</strong>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Section 2 of 4 &bull; Advanced Autograd &amp; Inference</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem;">
+            <span style="color: var(--text-muted);">Remaining:</span>
+            <span class="badge badge-rose" style="font-size: 0.85rem; font-weight: 700;">14:38</span>
+          </div>
+
+          <!-- Theme Toggle Switch -->
+          <label for="theme-toggle" class="theme-switch" title="Toggle Light / Dark Mode">
+            <span class="theme-switch-icon icon-sun">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </span>
+            <span class="theme-switch-icon icon-moon">
+              <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </span>
+            <span>Theme</span>
+          </label>
+
+          <a href="#results" class="btn btn-primary btn-sm">Submit Test</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Question Canvas -->
+    <main class="container" style="max-width: 920px; padding-top: 2.5rem; padding-bottom: 3.5rem; flex: 1;">
+
+      <!-- Progress Bar & Stepper Meta -->
+      <div style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.88rem;">
+          <span style="color: var(--text-secondary);">Question <strong>3</strong> of <strong>5</strong> in this demonstration</span>
+          <span style="color: var(--primary-accent); font-weight: 700;">60% Completed</span>
+        </div>
+        <div class="progress-bar-wrap" style="height: 8px;">
+          <div class="progress-bar-fill progress-blue" style="width: 60%;"></div>
+        </div>
+      </div>
+
+      <!-- Question Card 3 -->
+      <div class="card" style="padding: 2.5rem; box-shadow: var(--shadow-md);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <span class="badge badge-blue">Question #03 &bull; Autograd Mechanics</span>
+          <span class="badge badge-teal">2.0 Points</span>
+        </div>
+
+        <h2 style="font-size: 1.35rem; margin-bottom: 1rem; line-height: 1.5; color: var(--text-primary);">
+          In the following PyTorch forward pass, what is the exact difference between <code style="color: var(--primary-accent); background: var(--bg-card-subtle); padding: 0.15rem 0.4rem; border-radius: 4px;">torch.no_grad()</code> versus <code style="color: var(--primary-accent); background: var(--bg-card-subtle); padding: 0.15rem 0.4rem; border-radius: 4px;">model.eval()</code> during evaluation?
+        </h2>
+
+        <!-- Code Snippet -->
+        <div class="code-snippet-box">
+<span style="color: #60A5FA;">with</span> torch.no_grad():
+    model.eval()
+    outputs = model(inputs)
+    loss = criterion(outputs, labels)
+        </div>
+
+        <form action="#results" method="get">
+          <!-- Multiple Choice Options -->
+          <label class="option-card-label">
+            <input type="radio" name="q3" value="A">
+            <span class="option-letter">A</span>
+            <span style="font-size: 0.92rem; color: var(--text-primary);">
+              <code>torch.no_grad()</code> disables gradient tracking graphs to save memory, while <code>model.eval()</code> modifies the runtime behavior of layers like Dropout and BatchNorm.
+            </span>
+          </label>
+
+          <label class="option-card-label" style="border-color: var(--primary-accent); background: var(--bg-card-subtle);">
+            <input type="radio" name="q3" value="B" checked>
+            <span class="option-letter" style="background: var(--primary-accent); color: #FFFFFF;">B</span>
+            <span style="font-size: 0.92rem; color: var(--text-primary); font-weight: 500;">
+              They perform identical operations; <code>model.eval()</code> is merely a syntactic alias for disabling gradient calculation.
+            </span>
+          </label>
+
+          <label class="option-card-label">
+            <input type="radio" name="q3" value="C">
+            <span class="option-letter">C</span>
+            <span style="font-size: 0.92rem; color: var(--text-primary);">
+              <code>torch.no_grad()</code> freezes the weights of the model permanently until <code>model.train()</code> is called.
+            </span>
+          </label>
+
+          <label class="option-card-label">
+            <input type="radio" name="q3" value="D">
+            <span class="option-letter">D</span>
+            <span style="font-size: 0.92rem; color: var(--text-primary);">
+              <code>model.eval()</code> clears CUDA cache memory buffers, whereas <code>no_grad()</code> forces single-precision FP32 computation.
+            </span>
+          </label>
+
+          <!-- Question Navigation Stepper Controls -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+            <a href="skill-assessment.html" class="btn btn-secondary">
+              &larr; Previous Question
+            </a>
+
+            <div style="display: flex; gap: 0.75rem;">
+              <button type="button" class="btn btn-outline">Flag for Review</button>
+              <button type="submit" class="btn btn-primary">
+                Next Question &rarr;
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Question Palette -->
+      <div class="card" style="padding: 1.25rem; margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Question Map:</span>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="#q1" class="btn btn-secondary btn-sm" style="width: 38px; padding: 0.4rem 0; text-align: center; border-color: var(--success); color: var(--success); font-weight: 700;">1✓</a>
+          <a href="#q2" class="btn btn-secondary btn-sm" style="width: 38px; padding: 0.4rem 0; text-align: center; border-color: var(--success); color: var(--success); font-weight: 700;">2✓</a>
+          <a href="#q3" class="btn btn-primary btn-sm" style="width: 38px; padding: 0.4rem 0; text-align: center; font-weight: 700;">3</a>
+          <a href="#q4" class="btn btn-secondary btn-sm" style="width: 38px; padding: 0.4rem 0; text-align: center;">4</a>
+          <a href="#q5" class="btn btn-secondary btn-sm" style="width: 38px; padding: 0.4rem 0; text-align: center;">5</a>
+        </div>
+        <span style="font-size: 0.78rem; color: var(--text-muted);">Green = Answered &bull; Blue = Active Question</span>
+      </div>
+
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer style="padding: 1.5rem 0; text-align: center; font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid var(--border-color); background: var(--bg-card);">
+      CareerNova Automated Testing Engine &bull; Prototype Environment &bull; Pure HTML5 &amp; CSS3
+    </footer>
+  </div>
+
+  <!-- PURE CSS TEST RESULTS MODAL -->
+  <div id="results" class="css-modal" aria-hidden="true">
+    <div class="css-modal-card" style="max-width: 680px;">
+      <a href="#" class="css-modal-close" aria-label="Close modal">&times;</a>
+
+      <div style="text-align: center; margin-bottom: 1.75rem;">
+        <div style="width: 64px; height: 64px; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.12); color: var(--success); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+          <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span class="badge badge-emerald" style="margin-bottom: 0.5rem;">Benchmark Completed &bull; Authenticated</span>
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--text);">Assessment Results</h2>
+        <p style="color: var(--muted); font-size: 0.92rem; margin: 0;">
+          PyTorch &amp; Deep Learning Foundations Diagnostic
+        </p>
+      </div>
+
+      <!-- Score KPI Row -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.75rem;">
+        <div class="card" style="padding: 1.25rem; text-align: center; background: var(--surface-subtle);">
+          <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Overall Score</div>
+          <div style="font-size: 2.2rem; font-weight: 800; font-family: var(--font-display); color: var(--success); line-height: 1.1; margin: 0.35rem 0;">92 / 100</div>
+          <span style="font-size: 0.78rem; color: var(--text); font-weight: 600;">Top 4th Percentile</span>
+        </div>
+        <div class="card" style="padding: 1.25rem; text-align: center; background: var(--surface-subtle);">
+          <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Top Career Fit</div>
+          <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-display); color: var(--primary); margin: 0.5rem 0 0.2rem 0;">98% Match</div>
+          <span style="font-size: 0.8rem; color: var(--text); font-weight: 600;">AI / ML Engineer</span>
+        </div>
+      </div>
+
+      <!-- Strengths & Weaknesses Breakdown -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.75rem;">
+        <div class="card card-subtle" style="padding: 1.25rem;">
+          <strong style="color: var(--success); font-size: 0.82rem; text-transform: uppercase; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.65rem;">
+            &check; Verified Strengths
+          </strong>
+          <ul style="font-size: 0.85rem; color: var(--text); line-height: 1.6; margin: 0; padding-left: 1.15rem;">
+            <li>Autograd computation graphs</li>
+            <li>Loss function formulation</li>
+            <li>Inference latency optimization</li>
+          </ul>
+        </div>
+        <div class="card card-subtle" style="padding: 1.25rem;">
+          <strong style="color: var(--warning); font-size: 0.82rem; text-transform: uppercase; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.65rem;">
+            ! Area to Polish
+          </strong>
+          <ul style="font-size: 0.85rem; color: var(--text); line-height: 1.6; margin: 0; padding-left: 1.15rem;">
+            <li>Multi-GPU Distributed DDP</li>
+            <li>Quantization (INT8/FP16)</li>
+            <li>TorchScript deployment</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Recommended Action Links -->
+      <div style="display: flex; gap: 0.85rem; justify-content: flex-end; flex-wrap: wrap; padding-top: 1rem; border-top: 1px solid var(--border);">
+        <a href="dashboard.html" class="btn btn-secondary">Candidate Portal</a>
+        <a href="learning-roadmap.html" class="btn btn-secondary">View Roadmap</a>
+        <a href="recommendations.html" class="btn btn-primary">
+          View 4 Career Matches (98%)
+          <svg viewBox="0 0 24 24" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/assessment.js"></script>
+  <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
+  <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
+    <span class="floating-ai-pulse"></span>
+    <span class="floating-ai-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6Z" fill="rgba(255,255,255,0.95)" stroke="none"/>
+        <path d="M19 2L19.8 5.2L23 6L19.8 6.8L19 10L18.2 6.8L15 6L18.2 5.2Z" fill="#38BDF8" stroke="none"/>
+      </svg>
+    </span>
+    <span class="floating-ai-status" title="NovaAdvisor Active"></span>
+    <span class="floating-ai-tooltip">Ask Nova AI ✨</span>
+  </a>
+
+</body>
+</html>
