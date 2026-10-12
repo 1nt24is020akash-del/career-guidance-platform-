@@ -82,6 +82,39 @@
       });
     }
 
+    // Hydrate form from candidate profile
+    function hydrateFromProfile() {
+      try {
+        const profile = JSON.parse(localStorage.getItem('nexora-profile') || 'null');
+        if (profile) {
+          if (nameInput && profile.name) nameInput.value = profile.name;
+          if (emailInput && profile.email) emailInput.value = profile.email;
+          if (locInput && profile.location) locInput.value = profile.location;
+          if (eduInput && (profile.university || profile.degree)) {
+            eduInput.value = (profile.university || 'Stanford University') + ' — ' + (profile.degree || profile.headline || 'B.S. in Computer Science');
+          }
+          if (summaryInput && profile.bio) summaryInput.value = profile.bio;
+          if (skillsInput && profile.skills && Array.isArray(profile.skills)) {
+            skillsInput.value = profile.skills.join(', ');
+          }
+        }
+      } catch (err) {}
+    }
+
+    hydrateFromProfile();
+
+    function syncAll() {
+      syncName();
+      syncContact();
+      syncSummary();
+      syncEdu();
+      syncProjects();
+      syncSkills();
+    }
+
+    // Initial Sync
+    syncAll();
+
     // Attach Event Listeners
     if (nameInput) nameInput.addEventListener('input', syncName);
     if (emailInput) emailInput.addEventListener('input', syncContact);
@@ -93,17 +126,38 @@
     if (proj1Input) proj1Input.addEventListener('input', syncProjects);
     if (skillsInput) skillsInput.addEventListener('input', syncSkills);
 
+    // Resume Import Handler
+    const importFileInput = document.getElementById('import-resume-file');
+    if (importFileInput) {
+      importFileInput.addEventListener('change', function (e) {
+        if (e.target.files && e.target.files[0]) {
+          const file = e.target.files[0];
+          // Save resume metadata
+          const resumeData = {
+            fileName: file.name,
+            fileSize: (file.size / 1024).toFixed(1) + ' KB',
+            uploadDate: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+            status: 'Verified & Active'
+          };
+          localStorage.setItem('nexora-resume', JSON.stringify(resumeData));
+
+          // If profile exists, make sure name and edu are synced
+          hydrateFromProfile();
+          syncAll();
+
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.toast(`Imported "${file.name}"! Candidate preview updated.`, 'success');
+          }
+        }
+      });
+    }
+
     // Form Submit (Prevent page reload)
     const form = document.querySelector('.builder-layout form');
     if (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        syncName();
-        syncContact();
-        syncSummary();
-        syncEdu();
-        syncProjects();
-        syncSkills();
+        syncAll();
         if (window.NEXORAPortal) {
           window.NEXORAPortal.toast('Resume preview updated live!', 'success');
         }

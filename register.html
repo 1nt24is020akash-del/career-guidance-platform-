@@ -76,13 +76,13 @@
               <label for="first_name" class="form-label">
                 First Name <span class="required-mark">*</span>
               </label>
-              <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Alex" required value="Alex">
+              <input type="text" id="first_name" name="first_name" class="form-control" placeholder="e.g. Rahul" required>
             </div>
             <div class="form-group">
               <label for="last_name" class="form-label">
                 Last Name <span class="required-mark">*</span>
               </label>
-              <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Rivera" required value="Rivera">
+              <input type="text" id="last_name" name="last_name" class="form-control" placeholder="e.g. Sharma" required>
             </div>
           </div>
 
@@ -93,7 +93,7 @@
             </label>
             <div class="input-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <input type="email" id="reg_email" name="email" class="form-control" placeholder="alex.rivera@stanford.edu" required value="alex.rivera@stanford.edu">
+              <input type="email" id="reg_email" name="email" class="form-control" placeholder="e.g. rahul@university.edu" required>
             </div>
           </div>
 
@@ -107,6 +107,8 @@
                   <option value="ds">Data Science &amp; Analytics</option>
                   <option value="it">Information Technology</option>
                   <option value="se">Software Engineering</option>
+                  <option value="me">Mechanical Engineering</option>
+                  <option value="ee">Electrical &amp; Electronics</option>
                   <option value="other">Other Engineering / Sciences</option>
                 </select>
               </div>
@@ -121,6 +123,15 @@
                   <option value="graduated">Recent Graduate (Alumni)</option>
                 </select>
               </div>
+            </div>
+          </div>
+
+          <!-- University / Institution -->
+          <div class="form-group">
+            <label for="reg_university" class="form-label">College / University Name</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <input type="text" id="reg_university" name="university" class="form-control" placeholder="e.g. Stanford University or IIT Delhi">
             </div>
           </div>
 
@@ -163,7 +174,7 @@
             </label>
             <div class="input-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              <input type="password" id="reg_password" name="password" class="form-control" placeholder="••••••••••••" minlength="8" required value="SecurePass2026!">
+              <input type="password" id="reg_password" name="password" class="form-control" placeholder="••••••••••••" minlength="8" required>
             </div>
           </div>
 
@@ -201,6 +212,8 @@
   </div>
 
   <script src="assets/js/public.js"></script>
+  <script src="assets/js/portal.js"></script>
+  <script src="assets/js/auth.js"></script>
   <!-- Floating AI Assistant Launcher (Right Bottom Corner) -->
   <a href="ai-assistant.html" class="floating-ai-btn" id="floating-ai-btn" aria-label="Ask AI Career Assistant" title="Chat with NovaAdvisor AI">
     <span class="floating-ai-pulse"></span>

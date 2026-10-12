@@ -314,9 +314,16 @@
 
             <!-- LEFT COLUMN: Form Inputs Panel (Hidden in Print) -->
             <div class="card no-print" style="padding: 2rem;">
-              <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                 <span>Candidate Information</span>
-                <span class="badge badge-teal">Live Editor</span>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <label class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 0.35rem 0.65rem; cursor: pointer;" title="Import PDF or DOCX Resume">
+                    <input type="file" id="import-resume-file" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+                    <svg viewBox="0 0 24 24" width="14" height="14" style="margin-right: 4px; stroke: currentColor; fill: none; stroke-width: 2;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Import Resume
+                  </label>
+                  <span class="badge badge-teal">Live Editor</span>
+                </div>
               </h3>
 
               <form action="resume-builder.html" method="get">

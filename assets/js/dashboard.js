@@ -50,9 +50,23 @@
 
       // Update User Name greeting if present
       if (profile && profile.name) {
-        const greeting = document.querySelector('.portal-topbar h3, .portal-content h1');
-        if (greeting && greeting.textContent.includes('Welcome back')) {
-          greeting.innerHTML = `Welcome back, <strong>${profile.name.split(' ')[0]}</strong>!`;
+        const firstName = profile.firstName || profile.name.split(' ')[0];
+        const greeting = document.querySelector('.portal-topbar h3');
+        if (greeting) {
+          greeting.textContent = `Good morning, ${firstName} 👋`;
+        }
+      }
+
+      // Update Top Recommendation Banner based on candidate track
+      if (profile && profile.targetTrack) {
+        const recTitle = document.querySelector('.card h4');
+        if (recTitle && recTitle.textContent.includes('Top Recommendation:')) {
+          recTitle.textContent = `Top Recommendation: ${profile.targetTrack} Engineer`;
+        }
+        const recSub = document.querySelector('.card h4 + p');
+        if (recSub && profile.skills && profile.skills.length > 0) {
+          const topSkills = profile.skills.slice(0, 3).join(', ');
+          recSub.textContent = `Based on your chosen ${profile.targetTrack} track and competencies in ${topSkills}. Direct openings active.`;
         }
       }
     } catch (e) {}

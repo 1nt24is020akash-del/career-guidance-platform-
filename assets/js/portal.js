@@ -328,33 +328,169 @@
     }, 3200);
   }
 
-  // 6. User Profile Card Hydration
+  // 6. User Profile Card Hydration & Dynamic Greeting
   function syncUserProfile() {
     var profile = getStorage(STORAGE_KEYS.profile, null);
     if (!profile) return;
 
+    var firstName = profile.firstName || (profile.name ? profile.name.split(' ')[0] : 'Alex');
+
+    // Update names
     var nameElements = document.querySelectorAll('.user-mini-name');
     nameElements.forEach(function (el) {
       el.textContent = profile.name || 'Alex Rivera';
     });
 
+    // Update headlines / roles
     var roleElements = document.querySelectorAll('.user-mini-role');
     roleElements.forEach(function (el) {
       el.textContent = profile.headline || "B.S. Computer Science '26";
     });
 
+    // Update topbar greetings
+    var greetingHeaders = document.querySelectorAll('.portal-topbar h3');
+    greetingHeaders.forEach(function (h3) {
+      if (h3.textContent.includes('Good morning') || h3.textContent.includes('Welcome back')) {
+        h3.textContent = 'Good morning, ' + firstName + ' 👋';
+      }
+    });
+
+    // Update user menu email
+    var emailElements = document.querySelectorAll('.user-menu-email');
+    emailElements.forEach(function (el) {
+      el.textContent = profile.email || 'candidate@nexora.io';
+    });
+
+    // Update avatars
     if (profile.avatar) {
       var avatars = document.querySelectorAll('.user-avatar');
       avatars.forEach(function (img) {
         if (img.tagName.toLowerCase() === 'img') {
           img.src = profile.avatar;
-          img.alt = profile.name || 'Alex';
+          img.alt = profile.name || 'User';
         }
       });
     }
   }
 
-  // 7. Mount Floating AI Assistant Button at bottom right corner
+  // 7. Mount Interactive User Session Controls (Topbar Dropdown & Sidebar Logout)
+  function mountUserSessionControls() {
+    var profile = getStorage(STORAGE_KEYS.profile, {
+      name: 'Alex Rivera',
+      email: 'alex.rivera@stanford.edu',
+      headline: "B.S. Computer Science '26"
+    });
+
+    // 7A. Mount Sidebar Quick Logout Button
+    var footer = document.querySelector('.sidebar-footer');
+    if (footer && !footer.querySelector('.sidebar-logout-btn')) {
+      var miniCard = footer.querySelector('.user-mini-card');
+      if (miniCard) {
+        var row = document.createElement('div');
+        row.className = 'sidebar-user-row';
+        miniCard.parentNode.insertBefore(row, miniCard);
+        row.appendChild(miniCard);
+
+        var logoutBtn = document.createElement('button');
+        logoutBtn.type = 'button';
+        logoutBtn.className = 'sidebar-logout-btn action-logout-btn';
+        logoutBtn.title = 'Log Out of NEXORA';
+        logoutBtn.setAttribute('aria-label', 'Log Out');
+        logoutBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>';
+        row.appendChild(logoutBtn);
+      }
+    }
+
+    // 7B. Mount Topbar User Profile Menu & Dropdown
+    var topbarActions = document.querySelector('.portal-topbar .topbar-actions, .app-topbar .topbar-actions');
+    if (topbarActions && !topbarActions.querySelector('.topbar-user-wrap')) {
+      var existingAvatarLink = topbarActions.querySelector('a[href="profile.html"]:has(img), a:last-child:has(img.user-avatar)');
+      var avatarSrc = profile.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80';
+
+      var userWrap = document.createElement('div');
+      userWrap.className = 'topbar-user-wrap';
+      userWrap.id = 'topbar-user-wrap';
+
+      userWrap.innerHTML = [
+        '<button type="button" class="topbar-user-btn" id="topbar-user-btn" aria-label="Account Menu" aria-expanded="false">',
+        '  <img src="' + avatarSrc + '" alt="' + (profile.name || 'User') + '" class="user-avatar">',
+        '  <svg class="chevron-down" viewBox="0 0 24 24" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>',
+        '</button>',
+        '<div class="topbar-user-menu" id="topbar-user-dropdown">',
+        '  <div class="user-menu-header">',
+        '    <strong class="user-mini-name">' + (profile.name || 'Alex Rivera') + '</strong>',
+        '    <span class="user-menu-email">' + (profile.email || 'alex.rivera@stanford.edu') + '</span>',
+        '  </div>',
+        '  <div class="user-menu-divider"></div>',
+        '  <a href="profile.html" class="user-menu-item">',
+        '    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+        '    <span>My Profile</span>',
+        '  </a>',
+        '  <a href="resume-builder.html" class="user-menu-item">',
+        '    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+        '    <span>Resume Builder</span>',
+        '  </a>',
+        '  <a href="settings.html" class="user-menu-item">',
+        '    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
+        '    <span>Settings</span>',
+        '  </a>',
+        '  <div class="user-menu-divider"></div>',
+        '  <button type="button" class="user-menu-item user-menu-logout action-logout-btn">',
+        '    <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
+        '    <span>Log Out</span>',
+        '  </button>',
+        '</div>'
+      ].join('');
+
+      if (existingAvatarLink) {
+        existingAvatarLink.replaceWith(userWrap);
+      } else {
+        topbarActions.appendChild(userWrap);
+      }
+
+      // Dropdown toggle behavior
+      var userBtn = userWrap.querySelector('.topbar-user-btn');
+      userBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = userWrap.classList.toggle('open');
+        userBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!userWrap.contains(e.target)) {
+          userWrap.classList.remove('open');
+          userBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Attach logout action handler to all logout buttons
+    document.querySelectorAll('.action-logout-btn').forEach(function (btn) {
+      if (!btn.dataset.wired) {
+        btn.dataset.wired = 'true';
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          logoutUser();
+        });
+      }
+    });
+  }
+
+  // Logout routine
+  function logoutUser() {
+    try {
+      localStorage.removeItem(STORAGE_KEYS.session);
+    } catch (err) {}
+
+    showToast('Signing out of NEXORA...', 'info');
+
+    setTimeout(function () {
+      window.location.href = 'login.html?logout=true';
+    }, 350);
+  }
+
+  // 8. Mount Floating AI Assistant Button at bottom right corner
   function mountFloatingAiButton() {
     var btn = document.getElementById('floating-ai-btn');
     if (!btn) {
@@ -394,12 +530,13 @@
     }
   }
 
-  // 8. Global initialization
+  // 9. Global initialization
   function initPortal() {
     seedDefaultData();
     highlightActiveNavigation();
     updateBadgeCounters();
     setupMobileDrawer();
+    mountUserSessionControls();
     syncUserProfile();
     mountFloatingAiButton();
   }
@@ -471,7 +608,9 @@
 
     getNotifications: function () {
       return getStorage(STORAGE_KEYS.notifications, []);
-    }
+    },
+
+    logout: logoutUser
   };
 
   // Expose Nexora Portal API

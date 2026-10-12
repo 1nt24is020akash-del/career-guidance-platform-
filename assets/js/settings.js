@@ -24,5 +24,20 @@
         window.NEXORAPortal.toast('Settings saved successfully!', 'success');
       }
     });
+
+    const resetBtn = document.getElementById('reset-demo-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        if (confirm('Reset all saved candidate data and restore original baseline?')) {
+          localStorage.clear();
+          if (window.NEXORAPortal) {
+            window.NEXORAPortal.toast('Session & demo data reset. Reloading...', 'info');
+          }
+          setTimeout(function () {
+            window.location.reload();
+          }, 350);
+        }
+      });
+    }
   });
 })();

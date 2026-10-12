@@ -855,3 +855,248 @@ body[data-theme="dark"] .circle-bg {
   }
 }
 
+/* ==========================================================================
+   AUTHENTICATION & USER SESSION UI COMPONENTS
+   Logout Actions, Topbar User Menu, & Resume Upload Engine
+   ========================================================================== */
+
+/* --- Sidebar User Footer Row with Quick Logout --- */
+.sidebar-user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+.sidebar-user-row .user-mini-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-logout-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+.sidebar-logout-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+.sidebar-logout-btn:hover {
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.25);
+  transform: translateY(-1px);
+}
+
+/* --- Topbar User Profile Menu & Dropdown --- */
+.topbar-user-wrap {
+  position: relative;
+}
+
+.topbar-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 3px 10px 3px 3px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.topbar-user-btn:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.15);
+}
+.topbar-user-btn .user-avatar {
+  width: 32px;
+  height: 32px;
+}
+.topbar-user-btn .chevron-down {
+  stroke: var(--muted);
+  stroke-width: 2;
+  fill: none;
+  transition: transform var(--transition-fast);
+}
+.topbar-user-wrap.open .topbar-user-btn .chevron-down {
+  transform: rotate(180deg);
+}
+
+.topbar-user-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  padding: 0.5rem 0;
+  z-index: 1000;
+  display: none;
+  animation: userMenuDrop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes userMenuDrop {
+  from { opacity: 0; transform: translateY(-8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.topbar-user-wrap.open .topbar-user-menu {
+  display: block;
+}
+
+.user-menu-header {
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.user-menu-header strong {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 700;
+}
+.user-menu-header span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.user-menu-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.35rem 0;
+}
+
+.user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.user-menu-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--muted);
+  stroke-width: 2;
+  fill: none;
+}
+.user-menu-item:hover {
+  background: var(--surface-subtle);
+  color: var(--primary);
+}
+.user-menu-item:hover svg {
+  stroke: var(--primary);
+}
+
+.user-menu-item.user-menu-logout {
+  color: #EF4444;
+}
+.user-menu-item.user-menu-logout svg {
+  stroke: #EF4444;
+}
+.user-menu-item.user-menu-logout:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #DC2626;
+}
+
+/* --- Resume Upload & Management Card Styles --- */
+.resume-active-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  transition: all var(--transition-fast);
+}
+.resume-active-info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.resume-file-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.resume-file-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+.resume-details {
+  display: flex;
+  flex-direction: column;
+}
+.resume-filename {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.resume-meta {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+.resume-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.upload-progress-container {
+  margin-top: 0.75rem;
+  display: none;
+}
+.upload-progress-bar {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--border);
+  overflow: hidden;
+  position: relative;
+}
+.upload-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2563EB, #06B6D4);
+  transition: width 0.3s ease;
+}
+.upload-status-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
