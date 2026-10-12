@@ -37,7 +37,7 @@
   transition: transform var(--transition-fast);
 }
 .nav-logo:hover {
-  transform: translateY(-1px);
+  transform: translateY(-1.5px);
 }
 
 .nav-logo-icon,
@@ -47,7 +47,7 @@
   border-radius: 13px;
   background: linear-gradient(135deg, #0B132B 0%, #030712 100%);
   border: 1px solid rgba(56, 189, 248, 0.35);
-  box-shadow: 0 4px 18px rgba(6, 182, 212, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 18px rgba(6, 182, 212, 0.28), 0 0 10px rgba(56, 189, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,14 +55,16 @@
   overflow: hidden;
   flex-shrink: 0;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: nexoraBadgeAura 3.6s ease-in-out infinite;
 }
 .nav-logo-icon::after,
 .nexora-badge::after {
   content: '';
   position: absolute;
   inset: -50%;
-  background: radial-gradient(circle at 75% 25%, rgba(56, 189, 248, 0.25) 0%, transparent 60%);
+  background: radial-gradient(circle at 75% 25%, rgba(56, 189, 248, 0.35) 0%, transparent 60%);
   pointer-events: none;
+  animation: nexoraShimmerSweep 5s ease-in-out infinite;
 }
 
 .nav-logo-icon svg,
@@ -70,6 +72,7 @@
   width: 27px;
   height: 27px;
   display: block;
+  overflow: visible;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -84,60 +87,64 @@
   transition: color var(--transition-normal);
 }
 .nav-logo-text .brand-accent {
-  background: linear-gradient(135deg, #06B6D4 0%, #10B981 100%);
+  background: linear-gradient(120deg, #06B6D4 0%, #10B981 30%, #38BDF8 60%, #06B6D4 100%);
+  background-size: 250% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 0.5px;
+  animation: nexoraGradientFlow 4.5s ease-in-out infinite;
 }
 .nav-logo-text .brand-sparkle {
   font-size: 0.95rem;
   color: #38BDF8;
   margin-left: 5px;
-  opacity: 0.7;
   display: inline-block;
   transform-origin: center;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: nexoraSparkleTwinkle 2.8s ease-in-out infinite;
 }
 
 /* Hover Micro-Animations */
 .nav-logo:hover .nav-logo-icon,
 .nav-logo:hover .nexora-badge {
   border-color: rgba(56, 189, 248, 0.85);
-  box-shadow: 0 6px 24px rgba(6, 182, 212, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.65), 0 0 20px rgba(56, 189, 248, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 .nav-logo:hover .nav-logo-icon svg,
 .nav-logo:hover .nexora-badge svg {
-  transform: scale(1.06);
-  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.55));
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.7));
 }
 .nav-logo:hover .nav-logo-icon .nexora-draw-arrow,
 .nav-logo:hover .nexora-badge .nexora-draw-arrow {
-  transform: translate(1px, -1px);
+  transform: translate(2.5px, -2.5px);
 }
 .nav-logo:hover .brand-sparkle {
-  opacity: 1;
-  transform: scale(1.25) rotate(18deg);
+  transform: scale(1.4) rotate(36deg);
   color: #06B6D4;
-  text-shadow: 0 0 8px rgba(6, 182, 212, 0.8);
+  text-shadow: 0 0 12px rgba(6, 182, 212, 1), 0 0 20px rgba(16, 185, 129, 0.8);
 }
 
-/* Page-Load SVG Drawing Animation */
+/* Master NEXORA Logo Keyframe Animations */
 .nexora-draw-n {
   stroke-dasharray: 90;
   stroke-dashoffset: 90;
-  animation: nexoraReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: nexoraReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards, nexoraStrokePulse 4s ease-in-out 1s infinite;
 }
 .nexora-draw-arrow {
   stroke-dasharray: 35;
   stroke-dashoffset: 35;
+  transform-origin: 23.5px 9.5px;
+  animation: nexoraReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards, nexoraArrowFloat 2.6s ease-in-out 0.9s infinite;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: nexoraReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
 }
 .nexora-glow-dot {
   opacity: 0;
-  animation: nexoraDotPop 0.4s ease 0.6s forwards;
+  transform-origin: 28.5px 4.5px;
+  animation: nexoraDotPop 0.4s ease 0.6s forwards, nexoraDotPulse 1.8s ease-in-out 1s infinite;
 }
+
 @keyframes nexoraReveal {
   to { stroke-dashoffset: 0; }
 }
@@ -145,15 +152,102 @@
   to { opacity: 1; }
 }
 
+@keyframes nexoraBadgeAura {
+  0%, 100% {
+    box-shadow: 0 4px 18px rgba(6, 182, 212, 0.28), 0 0 10px rgba(56, 189, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    border-color: rgba(56, 189, 248, 0.35);
+  }
+  50% {
+    box-shadow: 0 6px 26px rgba(6, 182, 212, 0.55), 0 0 16px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-color: rgba(56, 189, 248, 0.65);
+  }
+}
+
+@keyframes nexoraShimmerSweep {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-8%, 8%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes nexoraStrokePulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(37, 99, 235, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 4px rgba(6, 182, 212, 0.75));
+  }
+}
+
+@keyframes nexoraArrowFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1.6px, -1.6px);
+  }
+}
+
+@keyframes nexoraDotPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 2px #38BDF8);
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px #38BDF8) drop-shadow(0 0 10px #06B6D4);
+  }
+}
+
+@keyframes nexoraSparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.95) rotate(0deg);
+    opacity: 0.65;
+    color: #38BDF8;
+    text-shadow: 0 0 4px rgba(56, 189, 248, 0.4);
+  }
+  50% {
+    transform: scale(1.3) rotate(22deg);
+    opacity: 1;
+    color: #06B6D4;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.9), 0 0 16px rgba(16, 185, 129, 0.6);
+  }
+}
+
+@keyframes nexoraGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .nav-logo-icon,
+  .nexora-badge,
+  .nexora-draw-n,
+  .nexora-draw-arrow,
+  .nexora-glow-dot,
+  .brand-sparkle,
+  .nav-logo-text .brand-accent {
+    animation: none !important;
+  }
   .nexora-draw-n,
   .nexora-draw-arrow {
     stroke-dashoffset: 0 !important;
-    animation: none !important;
   }
   .nexora-glow-dot {
     opacity: 1 !important;
-    animation: none !important;
   }
   .nav-logo:hover .nav-logo-icon,
   .nav-logo:hover .nexora-badge,

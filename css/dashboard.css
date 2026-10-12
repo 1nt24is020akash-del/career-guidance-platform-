@@ -3,25 +3,26 @@
    Shared Shell for All 15 Authenticated Portal Pages
    ========================================================================== */
 
-/* --- Master Portal Grid Layout --- */
+/* --- Master Portal Architecture --- */
 .portal-layout,
 .app-layout {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  display: block;
   min-height: 100vh;
   position: relative;
   background-color: var(--background);
   transition: background-color var(--transition-normal);
 }
 
-/* --- Shared Portal Sidebar --- */
+/* --- Shared Portal Sidebar (Desktop: Fixed 260px) --- */
 .portal-sidebar,
 .app-sidebar,
 .sidebar {
   width: 260px;
   height: 100vh;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  bottom: 0;
   background: var(--surface);
   border-right: 1px solid var(--border);
   display: flex;
@@ -185,7 +186,9 @@
 .portal-main,
 .app-main,
 .main-content {
+  margin-left: 260px;
   min-width: 0;
+  width: calc(100% - 260px);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -205,7 +208,7 @@
   padding: 0 2rem;
   position: sticky;
   top: 0;
-  z-index: 90;
+  z-index: 95;
   transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
