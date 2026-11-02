@@ -1,0 +1,423 @@
+{
+  "page_integrity": [
+    {
+      "page": "index.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 AI Career Intelligence & Opportunity Matching",
+      "js_errors": []
+    },
+    {
+      "page": "about.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Mission, Philosophy & Architecture",
+      "js_errors": []
+    },
+    {
+      "page": "login.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Candidate Portal Sign In",
+      "js_errors": []
+    },
+    {
+      "page": "register.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Create Your Candidate Account",
+      "js_errors": []
+    },
+    {
+      "page": "dashboard.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Student Career Dashboard",
+      "js_errors": []
+    },
+    {
+      "page": "recommendations.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Career Matches & Recommendations",
+      "js_errors": []
+    },
+    {
+      "page": "career-explorer.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Career Explorer & Tech Trajectories",
+      "js_errors": []
+    },
+    {
+      "page": "career-details.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Career Profile & Role Deep Dive",
+      "js_errors": []
+    },
+    {
+      "page": "job-matches.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Job Matches & Opportunities",
+      "js_errors": []
+    },
+    {
+      "page": "job-details.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Job Opportunity Details",
+      "js_errors": []
+    },
+    {
+      "page": "skill-assessment.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Skill Assessment & Benchmarks",
+      "js_errors": []
+    },
+    {
+      "page": "assessment-demo.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Interactive Assessment Simulator",
+      "js_errors": []
+    },
+    {
+      "page": "learning-roadmap.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Learning Roadmaps & Milestones",
+      "js_errors": []
+    },
+    {
+      "page": "resume-builder.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Intelligent Resume Builder",
+      "js_errors": []
+    },
+    {
+      "page": "saved-jobs.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Saved Jobs & Bookmarks",
+      "js_errors": []
+    },
+    {
+      "page": "applications.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Application Pipeline & Tracking",
+      "js_errors": []
+    },
+    {
+      "page": "notifications.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Notification Center",
+      "js_errors": []
+    },
+    {
+      "page": "settings.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Account Settings & Preferences",
+      "js_errors": []
+    },
+    {
+      "page": "profile.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 Student Profile & Portfolio",
+      "js_errors": []
+    },
+    {
+      "page": "ai-assistant.html",
+      "status": "PASS",
+      "title": "NEXORA \u2014 AI Career Assistant & Advisor",
+      "js_errors": []
+    }
+  ],
+  "viewport_overflow_tests": [
+    {
+      "page": "index.html",
+      "viewport": "Mobile Small (320px)",
+      "width": 320,
+      "scroll_width": 320,
+      "client_width": 320,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Mobile Standard (375px)",
+      "width": 375,
+      "scroll_width": 375,
+      "client_width": 375,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Mobile Large (414px)",
+      "width": 414,
+      "scroll_width": 414,
+      "client_width": 414,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Tablet Portrait (768px)",
+      "width": 768,
+      "scroll_width": 768,
+      "client_width": 768,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Tablet Landscape (1024px)",
+      "width": 1024,
+      "scroll_width": 1024,
+      "client_width": 1024,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Laptop (1366px)",
+      "width": 1366,
+      "scroll_width": 1366,
+      "client_width": 1366,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "viewport": "Desktop Full HD (1920px)",
+      "width": 1920,
+      "scroll_width": 1920,
+      "client_width": 1920,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Mobile Small (320px)",
+      "width": 320,
+      "scroll_width": 320,
+      "client_width": 320,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Mobile Standard (375px)",
+      "width": 375,
+      "scroll_width": 375,
+      "client_width": 375,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Mobile Large (414px)",
+      "width": 414,
+      "scroll_width": 414,
+      "client_width": 414,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Tablet Portrait (768px)",
+      "width": 768,
+      "scroll_width": 768,
+      "client_width": 768,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Tablet Landscape (1024px)",
+      "width": 1024,
+      "scroll_width": 1024,
+      "client_width": 1024,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Laptop (1366px)",
+      "width": 1366,
+      "scroll_width": 1366,
+      "client_width": 1366,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "dashboard.html",
+      "viewport": "Desktop Full HD (1920px)",
+      "width": 1920,
+      "scroll_width": 1920,
+      "client_width": 1920,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Mobile Small (320px)",
+      "width": 320,
+      "scroll_width": 320,
+      "client_width": 320,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Mobile Standard (375px)",
+      "width": 375,
+      "scroll_width": 375,
+      "client_width": 375,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Mobile Large (414px)",
+      "width": 414,
+      "scroll_width": 414,
+      "client_width": 414,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Tablet Portrait (768px)",
+      "width": 768,
+      "scroll_width": 768,
+      "client_width": 768,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Tablet Landscape (1024px)",
+      "width": 1024,
+      "scroll_width": 1024,
+      "client_width": 1024,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Laptop (1366px)",
+      "width": 1366,
+      "scroll_width": 1366,
+      "client_width": 1366,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "profile.html",
+      "viewport": "Desktop Full HD (1920px)",
+      "width": 1920,
+      "scroll_width": 1920,
+      "client_width": 1920,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Mobile Small (320px)",
+      "width": 320,
+      "scroll_width": 320,
+      "client_width": 320,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Mobile Standard (375px)",
+      "width": 375,
+      "scroll_width": 375,
+      "client_width": 375,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Mobile Large (414px)",
+      "width": 414,
+      "scroll_width": 414,
+      "client_width": 414,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Tablet Portrait (768px)",
+      "width": 768,
+      "scroll_width": 768,
+      "client_width": 768,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Tablet Landscape (1024px)",
+      "width": 1024,
+      "scroll_width": 1024,
+      "client_width": 1024,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Laptop (1366px)",
+      "width": 1366,
+      "scroll_width": 1366,
+      "client_width": 1366,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    },
+    {
+      "page": "job-matches.html",
+      "viewport": "Desktop Full HD (1920px)",
+      "width": 1920,
+      "scroll_width": 1920,
+      "client_width": 1920,
+      "has_horizontal_overflow": false,
+      "status": "PASS"
+    }
+  ],
+  "functional_tests": [
+    {
+      "test_id": "TC-AUTH-001",
+      "name": "User Registration & Profile State Initialization",
+      "status": "PASS",
+      "details": "Registered user: Elena Rostova, Track: Software Engineering, Session loggedIn: True"
+    },
+    {
+      "test_id": "TC-DASH-001",
+      "name": "Dashboard Personalization & Authentication Controls",
+      "status": "PASS",
+      "details": "Sidebar name: 'Elena Rostova', Greeting header: 'Good morning, Elena \ud83d\udc4b', Logout button found: True"
+    },
+    {
+      "test_id": "TC-RESUME-001",
+      "name": "Interactive Resume Drag-and-Drop and LocalStorage Metadata",
+      "status": "PASS",
+      "details": "Stored Resume: dummy_resume.pdf, Size: 61 Bytes, Card Visible: True"
+    },
+    {
+      "test_id": "TC-THEME-001",
+      "name": "Dark/Light Theme Switcher & Attribute Sync",
+      "status": "PASS",
+      "details": "Theme toggler operated successfully. Initial: light, Current: dark"
+    },
+    {
+      "test_id": "TC-JOBS-001",
+      "name": "Job Catalog Filtering Engine",
+      "status": "PASS",
+      "details": "Initial jobs rendered: 0, Filtered count: 0"
+    },
+    {
+      "test_id": "TC-AI-001",
+      "name": "AI Assistant Dialogue & Knowledge Retrieval",
+      "status": "PASS",
+      "details": "AI Assistant chat UI loaded and verified"
+    }
+  ],
+  "summary": {
+    "total_tests": 54,
+    "total_passed": 54,
+    "page_integrity_pass_rate": "100.0%",
+    "viewport_pass_rate": "100.0%",
+    "functional_pass_rate": "100.0%"
+  }
+}
